@@ -43,6 +43,7 @@ Example questions:
 
 ```text
 What are the top 5 products by revenue?
+Can you find the top 5 product?
 What is the total revenue?
 How many orders were placed in Cairo?
 What is the average discount across all orders?
@@ -113,7 +114,7 @@ flowchart LR
 
 The hosted planner is data-agnostic within the uploaded CSV: it can use new column names and new analysis questions because the current dataframe profile is included in the planning context. Its role, goal, tools, and plan→execute→verify workflow are defined in the system instructions. The optional RAG dictionary is not required for uploaded-data planning.
 
-The local layer is intentionally conservative. It handles basic schema questions and selected examples without an API, while hosted models provide general open-ended analysis. Unsupported questions produce an explicit limitation instead of a fabricated answer. A generic execution failure produces a separate neutral error message, and neither message exposes provider, model, quota, key, or raw exception details.
+The local layer is intentionally conservative. It normalizes common conversational variations and handles basic schema questions and selected examples without an API, while hosted models provide general open-ended analysis. A ranking request such as "top 5 products" defaults to revenue when a revenue column exists; specify another metric such as quantity when needed. Unsupported questions produce an explicit limitation instead of a fabricated answer. A generic execution failure produces a separate neutral error message, and neither message exposes provider, model, quota, key, or raw exception details.
 
 ### Session persistence
 

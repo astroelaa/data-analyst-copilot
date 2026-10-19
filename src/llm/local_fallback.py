@@ -19,6 +19,7 @@ def make_local_plan(question: str, available_columns: list[str]) -> tuple[Analys
     text = re.sub(r"\s+", " ", question.casefold().strip())
     text = re.sub(r"[?.!,;:]+$", "", text).strip()
     text = re.sub(r"^please[\s,]+", "", text)
+    text = re.sub(r"\bwhat do y do\b", "what do you do", text)
     required = set(available_columns)
 
     def has(*columns: str) -> bool:
@@ -66,7 +67,7 @@ def make_local_plan(question: str, available_columns: list[str]) -> tuple[Analys
             ["Count the dataframe rows.", "Return the row count."],
             "result = pd.DataFrame({'row_count': [len(df)]})",
         )
-    elif has("product", "revenue") and re.search(r"top\s+(\d+)", text) and "product" in text and "revenue" in text:
+    elif has("product", "revenue") and re.search(r"top\s+(\d+)", text) and re.search(r"\bproducts?\b", text):
         count = int(re.search(r"top\s+(\d+)", text).group(1))
         plan = _plan(
             f"Find the top {count} products by total revenue.",
