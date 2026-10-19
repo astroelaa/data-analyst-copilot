@@ -34,6 +34,36 @@ def make_local_plan(question: str, available_columns: list[str]) -> tuple[Analys
             "product",
             "revenue",
         )
+    elif has("region", "revenue") and "average revenue" in text:
+        plan = _plan(
+            "Calculate average revenue by region.",
+            ["region", "revenue"],
+            ["Group rows by region.", "Calculate the average revenue for each region."],
+            "result = df.groupby('region')['revenue'].mean().sort_values(ascending=False).reset_index()",
+            "bar",
+            "region",
+            "revenue",
+        )
+    elif has("region", "revenue") and "revenue" in text and "region" in text:
+        plan = _plan(
+            "Calculate total revenue by region.",
+            ["region", "revenue"],
+            ["Group rows by region.", "Sum revenue for each region.", "Sort the regions by revenue."],
+            "result = df.groupby('region')['revenue'].sum().sort_values(ascending=False).reset_index()",
+            "bar",
+            "region",
+            "revenue",
+        )
+    elif has("order_date", "revenue") and "revenue" in text and ("month" in text or "monthly" in text):
+        plan = _plan(
+            "Calculate total revenue by month.",
+            ["order_date", "revenue"],
+            ["Group rows by the month in order_date.", "Sum revenue for each month.", "Sort the months chronologically."],
+            "result = df.groupby(df['order_date'].dt.to_period('M'))['revenue'].sum().reset_index()",
+            "line",
+            "order_date",
+            "revenue",
+        )
     elif has("revenue") and ("total revenue" in text or "sum of revenue" in text):
         plan = _plan(
             "Calculate total revenue across all orders.",
@@ -55,6 +85,16 @@ def make_local_plan(question: str, available_columns: list[str]) -> tuple[Analys
             ["discount"],
             ["Select the discount column.", "Calculate its mean."],
             "result = pd.DataFrame({'average_discount': [df['discount'].mean()]})",
+        )
+    elif has("category", "order_id") and "order" in text and "category" in text:
+        plan = _plan(
+            "Count unique orders per category.",
+            ["category", "order_id"],
+            ["Group rows by category.", "Count unique order IDs for each category."],
+            "result = df.groupby('category')['order_id'].nunique().reset_index(name='order_count')",
+            "bar",
+            "category",
+            "order_count",
         )
     elif has("category", "quantity") and "quantity" in text and ("category" in text or "per category" in text):
         plan = _plan(
