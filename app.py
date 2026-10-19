@@ -39,15 +39,23 @@ if question:
     st.session_state.messages.append({"role": "user", "content": question})
     with st.chat_message("user"):
         st.markdown(question)
-    try:
-        output = answer(session, question)
-    except Exception as exc:
-        message = f"I could not complete that analysis: {exc}"
-        st.session_state.messages.append({"role": "assistant", "content": message})
-        with st.chat_message("assistant"):
+    with st.chat_message("assistant"):
+        status = st.status("Agent is analyzing your question...", expanded=True)
+        status.write("Reading the dataset and checking the available columns.")
+        try:
+            output = answer(session, question)
+        except Exception as exc:
+            status.update(label="Analysis could not be completed", state="error", expanded=False)
+            message = f"I could not complete that analysis: {exc}"
+            st.session_state.messages.append({"role": "assistant", "content": message})
             st.error(message)
-    else:
-        with st.chat_message("assistant"):
+        else:
+            record = output["record"]
+            status.update(
+                label=f"Analysis complete using {record['model']}",
+                state="complete",
+                expanded=False,
+            )
             st.write(output["plan"].goal)
             st.markdown("\n".join(f"{i}. {step}" for i, step in enumerate(output["plan"].steps, start=1)))
             st.code(output["code"], language="python")
@@ -57,16 +65,17 @@ if question:
                     st.pyplot(output["figure"])
             else:
                 st.error(output["error"])
-            with st.expander("Analysis details"):
+            with st.expander("What the agent did"):
+                st.write("I described the data, created an analysis plan, ran the pandas code, and prepared the result.")
                 st.json(output["trace"])
-                record = output["record"]
+            with st.expander("Analysis details"):
                 st.caption(
                     f"model {record['model']} | tier {record['tier']} | tokens {record['input_tokens']}/{record['output_tokens']} | cost {output['cost']:.6f} | auto-fixed {output['fixed']}"
                 )
                 st.caption("Sources: " + ", ".join(record["citations"]))
-        st.session_state.messages.append(
-            {"role": "assistant", "content": output["plan"].goal}
-        )
+            st.session_state.messages.append(
+                {"role": "assistant", "content": output["plan"].goal}
+            )
 
 st.sidebar.subheader("Session history")
 for item in session.history:
