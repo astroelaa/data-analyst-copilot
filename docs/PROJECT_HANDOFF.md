@@ -11,6 +11,8 @@
 - The hosted agent receives an explicit analyst role, goal, tool contract, plan→execute→verify workflow, and no-fabrication rules.
 - Plans include structured intent fields, results receive a conservative verification pass, and recent session context supports follow-up questions.
 - Chat sessions, result tables, charts, generated code, citations, and tool traces are supported in the Streamlit UI.
+- Chat records are persisted in SQLite at the configurable `DATABASE_PATH` and reloaded by dataset source.
+- Unsupported analysis requests and unexpected failures use separate neutral user-facing messages without provider internals.
 - The latest source and documentation changes are pushed to the `master` branch.
 
 ## Repository layout
@@ -23,7 +25,7 @@ data/                  Default sales CSV and data dictionary
 evaluation/            Questions, results, and evaluation runner
 tests/                 Not tracked; historical validation tests remain outside the deployed repository
 scripts/               Dataset generation and model-list utilities
-README.md              Setup, architecture, deployment, and evaluation docs
+README.md              Setup, architecture, deployment, persistence, and evaluation docs
 docs/PROJECT_HANDOFF.md Current implementation handoff
 ```
 
@@ -40,6 +42,8 @@ For Streamlit Community Cloud:
 
 Never commit `.env` or API keys. `.env` is ignored by Git; `.env.example` contains placeholders only.
 
+The default SQLite database is `data/analyst.db`, which is ignored by Git. It provides persistence for a single-user or demonstration deployment. Streamlit Cloud filesystem persistence is not guaranteed across container replacement, and there is no authentication yet. Use authenticated Supabase/PostgreSQL storage before treating this as multi-user production software.
+
 ## Pricing
 
 `prices.json` contains the configured Gemini Flash estimates:
@@ -51,7 +55,7 @@ Unknown Groq models currently use zero configured cost until their prices are ad
 
 ## Validation
 
-The current repository does not include the historical 35-test suite. The active validation uses compilation, direct smoke tests, Streamlit startup checks, and the 11-question evaluation. The latest evaluation reached 11/11 correct with 100% first-try and final code success, averaging 0.05 seconds per question.
+The current repository does not include the historical 35-test suite. The active validation uses compilation, direct smoke tests, Streamlit startup checks, and the 11-question evaluation. The latest evaluation reached 11/11 correct with 100% first-try and final code success, averaging 0.06 seconds per question.
 
 Run the evaluation from the repository root:
 

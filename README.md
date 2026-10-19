@@ -1,6 +1,6 @@
 # Data Analyst Copilot
 
-Data Analyst Copilot is a Streamlit application that turns English questions about any uploaded CSV into validated pandas analysis plans, executes the plans safely, and displays tables, charts, citations, and tool traces. It profiles each uploaded dataframe so the hosted agent can work with new schemas and general analysis questions. It uses local deterministic handling for basic questions, Groq as the hosted planning provider, Gemini as a provider fallback, and restricted pandas tools for execution.
+Data Analyst Copilot is a Streamlit application that turns English questions about any uploaded CSV into validated pandas analysis plans, executes the plans safely, and displays tables, charts, citations, and tool traces. It profiles each uploaded dataframe so the hosted agent can work with new schemas and general analysis questions. It uses local deterministic handling for basic questions, Groq as the hosted planning provider, Gemini as a provider fallback, restricted pandas tools for execution, and SQLite persistence for chat sessions.
 
 ## Setup
 
@@ -37,6 +37,7 @@ Open `http://localhost:8501`, upload a CSV, and ask an English question about it
 4. Watch the status message while the agent profiles the uploaded data, creates a plan, and runs the pandas code.
 5. Review the goal, steps, generated code, result table, and chart.
 6. Expand **What the agent did** to inspect the tool trace and **Analysis details** to see token usage, cost estimate, and citations.
+7. Return to the app later with the same dataset source to reload saved chats from SQLite.
 
 Example questions:
 
@@ -92,6 +93,8 @@ flowchart LR
     Q -->|invalid| X[One repair attempt]
     L --> T
     T --> O[Result, trace, citations, session history]
+    O --> DB[(SQLite chat storage)]
+    DB --> UI
 ```
 
 ### Request flow
@@ -106,10 +109,17 @@ flowchart LR
 8. The verifier checks the result shape and requested comparisons, allowing one bounded repair attempt.
 9. `plot_chart` creates a chart when the plan requests one.
 10. The UI displays the answer, code, result, chart, citations, and tool trace without provider internals.
+11. Chat records are saved to SQLite and reloaded for the selected dataset source.
 
 The hosted planner is data-agnostic within the uploaded CSV: it can use new column names and new analysis questions because the current dataframe profile is included in the planning context. Its role, goal, tools, and plan→execute→verify workflow are defined in the system instructions. The optional RAG dictionary is not required for uploaded-data planning.
 
-The local layer is intentionally conservative. It handles basic schema questions and selected examples without an API, while hosted models provide general open-ended analysis. Unsupported questions produce an explicit limitation instead of a fabricated answer.
+The local layer is intentionally conservative. It handles basic schema questions and selected examples without an API, while hosted models provide general open-ended analysis. Unsupported questions produce an explicit limitation instead of a fabricated answer. A generic execution failure produces a separate neutral error message, and neither message exposes provider, model, quota, key, or raw exception details.
+
+### Session persistence
+
+Chat titles, user messages, assistant messages, generated plans, result tables, code, traces, and analysis history are stored in SQLite. The database path defaults to `data/analyst.db` and can be changed with `DATABASE_PATH`. The default path is ignored by Git.
+
+SQLite is suitable for this single-user or small demonstration deployment. Streamlit Cloud storage is not guaranteed to survive a container replacement, and the current app does not provide user authentication. For a multi-user production deployment, replace this storage adapter with authenticated Supabase/PostgreSQL storage and scope chats to a user ID.
 
 ## Branch architecture
 
@@ -130,6 +140,7 @@ The local layer is intentionally conservative. It handles basic schema questions
 - Execute generated code only through restricted pandas tools that block imports, file access, and other unsafe operations.
 - Keep the evaluation honest by recording quota and timeout failures instead of treating them as correct answers.
 - Use a small deterministic local layer for basic schema questions and selected examples; unsupported open-ended questions remain explicit failures without hosted providers.
+- Persist chat sessions through a small SQLite adapter, with a documented path to authenticated hosted storage for production multi-user use.
 
 ## Validation
 
@@ -146,7 +157,7 @@ The evaluation contains 11 English reference-answer questions. The latest clean 
 | Overall correctness | 100.0% |
 | First-try code success | 100.0% |
 | Code success after auto-fix | 100.0% |
-| Average time per question | 0.05 seconds |
+| Average time per question | 0.06 seconds |
 
 Run it from the repository root with:
 
