@@ -122,6 +122,7 @@ The fallback is intentionally conservative. It computes only recognized operatio
 
 - Use two Groq models with rule-based routing so simple questions use the cheaper tier and complex questions use the stronger tier, with Gemini as a provider fallback.
 - Use Pydantic validation for structured analysis plans before executing generated pandas code.
+- Profile every uploaded dataframe and provide its live schema, samples, and numeric statistics to the planner.
 - Use Chroma and Gemini embeddings for data-dictionary retrieval, with citations and a local dictionary fallback when embeddings are unavailable.
 - Execute generated code only through restricted pandas tools that block imports, file access, and other unsafe operations.
 - Keep the evaluation honest by recording quota and timeout failures instead of treating them as correct answers.
@@ -133,7 +134,7 @@ The fallback is intentionally conservative. It computes only recognized operatio
 .\.venv\Scripts\python -m pytest tests -v
 ```
 
-The test suite has 21 passing unit tests.
+The test suite has 25 passing unit tests, including coverage for uploaded-data profiling and dynamic planner context.
 
 ## Evaluation
 
