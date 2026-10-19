@@ -9,7 +9,7 @@ def main() -> None:
         if question in ("", "exit"):
             break
         try:
-            plan, record = make_plan(question)
+            plan, record = make_plan(question, list(df.columns))
         except ValueError as error:
             print(f"rejected: {error}")
             continue

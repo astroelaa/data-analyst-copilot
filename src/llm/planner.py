@@ -1,3 +1,5 @@
+from copy import deepcopy
+
 from pydantic import ValidationError
 
 from src.llm.router import ask
@@ -7,22 +9,31 @@ from src.rag.store import citation, known_columns, load_entries, retrieve
 from src.schemas import AnalysisPlan, CodeFix
 
 MAX_ATTEMPTS = 2
+PLAN_CACHE: dict[tuple[str, tuple[str, ...]], tuple[AnalysisPlan, dict]] = {}
 
 
-def make_plan(question: str) -> tuple[AnalysisPlan, dict]:
+def make_plan(question: str, available_columns: list[str] | None = None) -> tuple[AnalysisPlan, dict]:
+    valid = available_columns if available_columns is not None else known_columns()
+    key = (question.strip().lower(), tuple(valid))
+    if key in PLAN_CACHE:
+        plan, record = PLAN_CACHE[key]
+        return deepcopy(plan), deepcopy(record)
     try:
         chunks = retrieve(question)
     except Exception:
         chunks = load_entries()
     context = "\n".join(chunk["text"] for chunk in chunks)
     prompt = build_plan_prompt(question, context)
-    valid = known_columns()
     feedback = ""
     try:
-        return _make_remote_plan(question, prompt, valid, chunks)
+        result = _make_remote_plan(question, prompt, valid, chunks)
+        PLAN_CACHE[key] = result
+        return deepcopy(result[0]), deepcopy(result[1])
     except Exception as error:
         try:
-            return make_local_plan(question, valid)
+            result = make_local_plan(question, valid)
+            PLAN_CACHE[key] = result
+            return deepcopy(result[0]), deepcopy(result[1])
         except ValueError as fallback_error:
             raise ValueError(
                 "Gemini is temporarily unavailable because its API quota is exhausted. "

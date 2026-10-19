@@ -1,5 +1,14 @@
+AGENT_INSTRUCTIONS = """You are an English-language data analyst copilot.
+Your skills are describe_data, run_pandas, and plot_chart.
+Use only columns from the data dictionary. Never invent columns.
+Say plainly when the data cannot answer the question.
+State the answer in one plain sentence after the result."""
+
+
 def build_plan_prompt(question: str, context: str) -> str:
-    return f"""You are a data analyst planning a pandas analysis.
+    return f"""{AGENT_INSTRUCTIONS}
+
+You are planning a pandas analysis.
 The dataframe is named df and was loaded from sales.csv.
 Use only columns that appear in the data dictionary entries below. Never invent columns.
 pandas_code must use only pandas and df, must not import anything or read files, and must assign the final table to a variable named result.

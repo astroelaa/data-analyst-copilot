@@ -16,7 +16,7 @@ class Session:
 
 def answer(session: Session, question: str) -> dict:
     trace = [{"tool": "describe_data", "output": describe_data(session.df)}]
-    plan, record = make_plan(question)
+    plan, record = make_plan(question, list(session.df.columns))
     trace.append({"tool": "make_plan", "model": record["model"], "attempts": record["attempts"]})
     code = plan.pandas_code
     cost = record["cost"]

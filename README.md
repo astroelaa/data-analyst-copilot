@@ -16,6 +16,9 @@ Create `.env` in the repository root:
 GEMINI_API_KEY=your_api_key
 CHEAP_MODEL=gemini-3.7-flash
 STRONG_MODEL=gemini-3.8-flash
+GROQ_API_KEY=your_groq_api_key
+GROQ_CHEAP_MODEL=openai/gpt-oss-20b
+GROQ_STRONG_MODEL=openai/gpt-oss-120b
 ```
 
 ## Run
@@ -57,6 +60,9 @@ For Streamlit Community Cloud, add these values under App settings > Secrets:
 GEMINI_API_KEY = "your_api_key"
 CHEAP_MODEL = "gemini-3.7-flash"
 STRONG_MODEL = "gemini-3.8-flash"
+GROQ_API_KEY = "your_groq_api_key"
+GROQ_CHEAP_MODEL = "openai/gpt-oss-20b"
+GROQ_STRONG_MODEL = "openai/gpt-oss-120b"
 EMBED_MODEL = "gemini-embedding-001"
 ```
 
