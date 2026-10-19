@@ -157,7 +157,7 @@ The evaluation contains 11 English reference-answer questions. The latest clean 
 | Overall correctness | 100.0% |
 | First-try code success | 100.0% |
 | Code success after auto-fix | 100.0% |
-| Average time per question | 0.06 seconds |
+| Average time per question | 0.13 seconds |
 
 Run it from the repository root with:
 

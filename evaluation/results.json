@@ -4,7 +4,7 @@
     "correct_pct": 100.0,
     "code_success_first_try_pct": 100.0,
     "code_success_after_autofix_pct": 100.0,
-    "avg_seconds": 0.06
+    "avg_seconds": 0.13
   },
   "rows": [
     {
@@ -19,7 +19,7 @@
       "model": "local-fallback",
       "code": "result = df.groupby('product')['revenue'].sum().nlargest(5).reset_index()",
       "error": null,
-      "seconds": 0.22
+      "seconds": 0.21
     },
     {
       "id": "q02",
@@ -33,7 +33,7 @@
       "model": "local-fallback",
       "code": "result = pd.DataFrame({'total_revenue': [df['revenue'].sum()]})",
       "error": null,
-      "seconds": 0.02
+      "seconds": 0.11
     },
     {
       "id": "q03",
@@ -47,7 +47,7 @@
       "model": "local-fallback",
       "code": "result = pd.DataFrame({'order_count': [df[df['region'] == 'Cairo']['order_id'].nunique()]})",
       "error": null,
-      "seconds": 0.03
+      "seconds": 0.06
     },
     {
       "id": "q04",
@@ -61,7 +61,7 @@
       "model": "local-fallback",
       "code": "result = pd.DataFrame({'average_discount': [df['discount'].mean()]})",
       "error": null,
-      "seconds": 0.02
+      "seconds": 0.08
     },
     {
       "id": "q05",
@@ -75,7 +75,7 @@
       "model": "local-fallback",
       "code": "result = df.groupby('category')['quantity'].sum().reset_index()",
       "error": null,
-      "seconds": 0.09
+      "seconds": 0.37
     },
     {
       "id": "q06",
@@ -89,7 +89,7 @@
       "model": "local-fallback",
       "code": "result = df.groupby('product')['quantity'].sum().nlargest(1).reset_index()",
       "error": null,
-      "seconds": 0.1
+      "seconds": 0.13
     },
     {
       "id": "q07",
@@ -117,7 +117,7 @@
       "model": "local-fallback",
       "code": "result = pd.DataFrame({'highest_monthly_revenue': [df.groupby(df['order_date'].dt.month)['revenue'].sum().max()]})",
       "error": null,
-      "seconds": 0.03
+      "seconds": 0.04
     },
     {
       "id": "q09",
@@ -131,7 +131,7 @@
       "model": "local-fallback",
       "code": "result = pd.DataFrame({'average_revenue': [df[df['region'] == 'Alexandria']['revenue'].mean()]})",
       "error": null,
-      "seconds": 0.03
+      "seconds": 0.05
     },
     {
       "id": "q10",
@@ -145,7 +145,7 @@
       "model": "local-fallback",
       "code": "result = pd.DataFrame({'order_count': [int((df['discount'] == 0.2).sum())]})",
       "error": null,
-      "seconds": 0.02
+      "seconds": 0.03
     },
     {
       "id": "q11",
@@ -159,7 +159,7 @@
       "model": "local-fallback",
       "code": "result = df[df['category'].isin(['Electronics', 'Furniture'])].groupby('category')['revenue'].sum().reset_index()",
       "error": null,
-      "seconds": 0.11
+      "seconds": 0.27
     }
   ]
 }

@@ -55,7 +55,7 @@ Unknown Groq models currently use zero configured cost until their prices are ad
 
 ## Validation
 
-The current repository does not include the historical 35-test suite. The active validation uses compilation, direct smoke tests, Streamlit startup checks, and the 11-question evaluation. The latest evaluation reached 11/11 correct with 100% first-try and final code success, averaging 0.06 seconds per question.
+The current repository does not include the historical 35-test suite. The active validation uses compilation, direct smoke tests, Streamlit startup checks, and the 11-question evaluation. The latest evaluation reached 11/11 correct with 100% first-try and final code success, averaging 0.13 seconds per question.
 
 Run the evaluation from the repository root:
 
