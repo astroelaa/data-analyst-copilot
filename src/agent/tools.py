@@ -19,6 +19,30 @@ def describe_data(df: pd.DataFrame) -> str:
     return f"{len(df)} rows\n{summary.to_string()}"
 
 
+def profile_data(df: pd.DataFrame) -> str:
+    lines = [f"Rows: {len(df)}", f"Columns: {len(df.columns)}", "Columns:"]
+    for column in df.columns:
+        series = df[column]
+        values = ", ".join(str(value) for value in series.dropna().unique()[:5])
+        details = [
+            f"dtype={series.dtype}",
+            f"non_null={series.notna().sum()}",
+            f"unique={series.nunique(dropna=True)}",
+        ]
+        if values:
+            details.append(f"sample_values={values}")
+        if pd.api.types.is_numeric_dtype(series):
+            details.extend(
+                [
+                    f"min={series.min()}",
+                    f"max={series.max()}",
+                    f"mean={series.mean():.4g}",
+                ]
+            )
+        lines.append(f"- {column}: " + ", ".join(details))
+    return "\n".join(lines)
+
+
 def run_pandas(code: str, df: pd.DataFrame) -> pd.DataFrame:
     lowered = code.lower()
     for token in BLOCKED:

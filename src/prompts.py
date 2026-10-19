@@ -27,7 +27,7 @@ Do not silently answer a different question because a broader calculation is eas
 Set chart_type to none if a chart does not help. x and y must be columns of result, or null when chart_type is none.
 Do not include explanatory prose outside the requested structured JSON.
 
-Data dictionary entries:
+Uploaded dataframe profile:
 {context}
 
 Question: {question}"""

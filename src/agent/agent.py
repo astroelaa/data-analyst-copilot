@@ -2,7 +2,7 @@ from dataclasses import dataclass, field
 
 import pandas as pd
 
-from src.agent.tools import describe_data, plot_chart, run_pandas
+from src.agent.tools import describe_data, plot_chart, profile_data, run_pandas
 from src.llm.planner import fix_code, make_plan
 
 MAX_RUN_ATTEMPTS = 2
@@ -16,7 +16,11 @@ class Session:
 
 def answer(session: Session, question: str) -> dict:
     trace = [{"tool": "describe_data", "output": describe_data(session.df)}]
-    plan, record = make_plan(question, list(session.df.columns))
+    plan, record = make_plan(
+        question,
+        list(session.df.columns),
+        profile_data(session.df),
+    )
     trace.append({"tool": "make_plan", "model": record["model"], "attempts": record["attempts"]})
     code = plan.pandas_code
     cost = record["cost"]

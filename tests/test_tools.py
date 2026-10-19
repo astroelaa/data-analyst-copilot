@@ -1,7 +1,7 @@
 import pandas as pd
 import pytest
 
-from src.agent.tools import plot_chart, run_pandas
+from src.agent.tools import plot_chart, profile_data, run_pandas
 
 DF = pd.DataFrame({"region": ["a", "b", "a"], "revenue": [1.0, 2.0, 3.0]})
 
@@ -28,3 +28,11 @@ def test_missing_result_rejected():
 
 def test_plot_skipped_for_none():
     assert plot_chart(DF, "none", "region", "revenue") is None
+
+
+def test_profile_data_describes_uploaded_dataframe():
+    profile = profile_data(DF)
+    assert "Rows: 3" in profile
+    assert "- region:" in profile
+    assert "sample_values=a, b" in profile
+    assert "min=1.0" in profile

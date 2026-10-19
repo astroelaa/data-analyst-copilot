@@ -9,17 +9,31 @@ from src.rag.store import citation, known_columns, load_entries, retrieve
 from src.schemas import AnalysisPlan, CodeFix
 
 MAX_ATTEMPTS = 2
-PLAN_CACHE: dict[tuple[str, tuple[str, ...]], tuple[AnalysisPlan, dict]] = {}
+PLAN_CACHE: dict[tuple[str, tuple[str, ...], str], tuple[AnalysisPlan, dict]] = {}
 
 
-def make_plan(question: str, available_columns: list[str] | None = None) -> tuple[AnalysisPlan, dict]:
+def make_plan(
+    question: str,
+    available_columns: list[str] | None = None,
+    data_context: str | None = None,
+) -> tuple[AnalysisPlan, dict]:
     valid = available_columns if available_columns is not None else known_columns()
-    key = (question.strip().lower(), tuple(valid))
+    key = (question.strip().lower(), tuple(valid), data_context or "")
     if key in PLAN_CACHE:
         plan, record = PLAN_CACHE[key]
         return deepcopy(plan), deepcopy(record)
     try:
-        chunks = retrieve(question)
+        if data_context is None:
+            chunks = retrieve(question)
+        else:
+            chunks = [
+                {
+                    "column": "uploaded_dataframe",
+                    "text": data_context,
+                    "line": 0,
+                    "source": "uploaded dataframe",
+                }
+            ]
     except Exception:
         chunks = load_entries()
     context = "\n".join(chunk["text"] for chunk in chunks)

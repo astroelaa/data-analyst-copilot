@@ -1,6 +1,6 @@
 # Data Analyst Copilot
 
-Data Analyst Copilot is a Streamlit application that turns English questions about a sales CSV into validated pandas analysis plans, executes the plans safely, and displays tables, charts, citations, and tool traces. It uses Groq as the hosted planning provider, Gemini as a provider fallback, and a deterministic local fallback for common sales questions.
+Data Analyst Copilot is a Streamlit application that turns English questions about any uploaded CSV into validated pandas analysis plans, executes the plans safely, and displays tables, charts, citations, and tool traces. It profiles each uploaded dataframe so the hosted agent can work with new schemas. It uses Groq as the hosted planning provider, Gemini as a provider fallback, and a deterministic local fallback for common sales questions.
 
 ## Setup
 
@@ -27,14 +27,14 @@ GROQ_STRONG_MODEL=openai/gpt-oss-120b
 .\.venv\Scripts\streamlit run app.py
 ```
 
-Open `http://localhost:8501`, upload a compatible CSV if needed, and ask an English question.
+Open `http://localhost:8501`, upload a CSV, and ask an English question about its contents.
 
 ## How to use
 
 1. Start the Streamlit app with the command above.
 2. Keep the included `data/sales.csv`, or upload another CSV from the sidebar.
 3. Type a normal English question in the chat box.
-4. Watch the status message while the agent describes the data, creates a plan, and runs the pandas code.
+4. Watch the status message while the agent profiles the uploaded data, creates a plan, and runs the pandas code.
 5. Review the goal, steps, generated code, result table, and chart.
 6. Expand **What the agent did** to inspect the tool trace and **Analysis details** to see the model, tier, token usage, cost estimate, and citations.
 
@@ -52,7 +52,7 @@ How many orders per category?
 Which product sold the most units?
 ```
 
-The local fallback handles the common sales patterns listed above without using a hosted API. New or more complex questions are sent to Groq first, then Gemini if Groq fails. If both providers are unavailable and the fallback cannot recognize the question, the app displays a clear limitation instead of inventing an answer.
+The agent profiles every uploaded CSV and sends its actual columns, types, sample values, cardinalities, and numeric ranges to the planner. New or complex questions are sent to Groq first, then Gemini if Groq fails. The local fallback handles the common sales patterns listed above without using a hosted API. If both providers are unavailable and the fallback cannot recognize the question, the app displays a clear limitation instead of inventing an answer.
 
 For Streamlit Community Cloud, add these values under App settings > Secrets:
 
@@ -70,9 +70,9 @@ EMBED_MODEL = "gemini-embedding-001"
 
 ```mermaid
 flowchart LR
-    U[User question and CSV] --> UI[Streamlit UI]
+    U[User question and any CSV] --> UI[Streamlit UI]
     UI --> A[Agent]
-    A --> D[Describe data]
+    A --> D[Profile uploaded dataframe]
     A --> P[Planner]
     P --> R[Rule-based router]
     R --> C[Cheap Groq model]
@@ -81,9 +81,8 @@ flowchart LR
     S --> V
     C -. provider failure .-> G[Gemini fallback models]
     S -. provider failure .-> G
-    P --> D1[RAG data dictionary]
-    D1 --> E[Gemini embeddings]
-    D1 --> Ch[Chroma vector store]
+    P --> D1[Uploaded schema context]
+    D1 --> E[Columns, types, samples, stats]
     P --> F{Hosted models available?}
     F -->|No or quota exhausted| L[Local deterministic fallback]
     F -->|Yes| V
@@ -99,15 +98,16 @@ flowchart LR
 ### Request flow
 
 1. Streamlit creates a session for the uploaded dataset.
-2. The agent profiles the data with `describe_data`.
-3. RAG retrieves relevant data-dictionary entries and citations when semantic search is available.
-4. The router sends the question to the cheap or strong Groq model based on complexity.
-5. The planner returns a structured `AnalysisPlan`, validated by Pydantic.
-6. If Groq fails, the router retries the request with the corresponding Gemini model.
-7. If both hosted providers fail, the local fallback creates a plan for supported sales patterns.
-8. `run_pandas` executes only validated code against a copy of the dataframe.
-9. `plot_chart` creates a chart when the plan requests one.
-10. The UI displays the answer, code, result, chart, citations, and tool trace.
+2. The agent profiles the data with `describe_data` and builds uploaded-schema context.
+3. The router sends the question to the cheap or strong Groq model based on complexity.
+4. The planner returns a structured `AnalysisPlan`, validated by Pydantic.
+5. If Groq fails, the router retries the request with the corresponding Gemini model.
+6. If both hosted providers fail, the local fallback creates a plan for supported sales patterns.
+7. `run_pandas` executes only validated code against a copy of the dataframe.
+8. `plot_chart` creates a chart when the plan requests one.
+9. The UI displays the answer, code, result, chart, citations, and tool trace.
+
+The hosted planner is data-agnostic within the uploaded CSV: it can use new column names and new analysis questions because the current dataframe profile is included in the planning context. The fixed RAG dictionary remains available for the default sales dataset and citations.
 
 The fallback is intentionally conservative. It computes only recognized operations and does not pretend to answer unsupported questions.
 
