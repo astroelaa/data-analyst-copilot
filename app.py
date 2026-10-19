@@ -1,5 +1,7 @@
+import hashlib
 from uuid import uuid4
 
+import pandas as pd
 import streamlit as st
 
 from src.agent.agent import Session, answer
@@ -9,6 +11,13 @@ from src.storage import load_chats, save_chat
 DEFAULT_CSV = "data/sales.csv"
 USER_ERROR = "I couldn't complete that analysis. Please check the question and uploaded data, then try again."
 LIMITATION_ERROR = "I couldn't answer that from the available data and analysis tools. Try asking about the columns, values, totals, groups, rankings, or trends in your CSV."
+
+
+def source_key(source: str, df) -> str:
+    columns = ",".join(str(column) for column in df.columns)
+    values = pd.util.hash_pandas_object(df, index=True).values.tobytes()
+    digest = hashlib.sha256(values).hexdigest()[:16]
+    return f"{source}:{len(df)}:{columns}:{digest}"
 
 
 def restore_history(session: Session, messages: list[dict]) -> None:
@@ -44,9 +53,10 @@ with st.sidebar:
 
 upload = st.sidebar.file_uploader("CSV file", type="csv")
 source = upload.name if upload else DEFAULT_CSV
-if st.session_state.get("source") != source:
-    df = load_csv(upload or DEFAULT_CSV)
-    saved = load_chats(source)
+df = load_csv(upload or DEFAULT_CSV)
+dataset_key = source_key(source, df)
+if st.session_state.get("dataset_key") != dataset_key:
+    saved = load_chats(dataset_key)
     st.session_state.sessions = {
         chat_id: {**chat, "session": Session(df=df)}
         for chat_id, chat in saved.items()
@@ -57,18 +67,7 @@ if st.session_state.get("source") != source:
         }
     st.session_state.active_session_id = next(iter(st.session_state.sessions))
     st.session_state.source = source
-if "sessions" not in st.session_state:
-    df = load_csv(upload or DEFAULT_CSV)
-    saved = load_chats(source)
-    st.session_state.sessions = {
-        chat_id: {**chat, "session": Session(df=df)}
-        for chat_id, chat in saved.items()
-    }
-    if not st.session_state.sessions:
-        st.session_state.sessions = {
-            f"chat-{uuid4().hex}": {"title": "New chat", "messages": [], "session": Session(df=df)}
-        }
-    st.session_state.active_session_id = next(iter(st.session_state.sessions))
+    st.session_state.dataset_key = dataset_key
 
 active_session = st.session_state.sessions[st.session_state.active_session_id]
 session = active_session["session"]
@@ -81,7 +80,7 @@ def create_chat() -> None:
         "messages": [],
         "session": Session(df=session.df.copy()),
     }
-    save_chat(chat_id, source, "New chat", [])
+    save_chat(chat_id, st.session_state.dataset_key, "New chat", [])
     st.session_state.active_session_id = chat_id
 
 
@@ -143,13 +142,13 @@ if question:
             status.update(label="Analysis could not be completed", state="error", expanded=False)
             message = LIMITATION_ERROR
             active_session["messages"].append({"role": "assistant", "content": message})
-            save_chat(st.session_state.active_session_id, source, active_session["title"], active_session["messages"])
+            save_chat(st.session_state.active_session_id, st.session_state.dataset_key, active_session["title"], active_session["messages"])
             st.warning(message)
         except Exception:
             status.update(label="Analysis could not be completed", state="error", expanded=False)
             message = USER_ERROR
             active_session["messages"].append({"role": "assistant", "content": message})
-            save_chat(st.session_state.active_session_id, source, active_session["title"], active_session["messages"])
+            save_chat(st.session_state.active_session_id, st.session_state.dataset_key, active_session["title"], active_session["messages"])
             st.error(message)
         else:
             record = output["record"]
@@ -162,7 +161,7 @@ if question:
             active_session["messages"].append({"role": "assistant", "type": "analysis", "output": output})
             if active_session["title"] == "New chat":
                 active_session["title"] = question[:32]
-            save_chat(st.session_state.active_session_id, source, active_session["title"], active_session["messages"])
+            save_chat(st.session_state.active_session_id, st.session_state.dataset_key, active_session["title"], active_session["messages"])
 
 st.sidebar.subheader("Current session history")
 for item in session.history:

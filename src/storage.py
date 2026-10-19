@@ -1,5 +1,6 @@
 import json
 import sqlite3
+from contextlib import contextmanager
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -9,12 +10,17 @@ from src import config
 from src.schemas import AnalysisPlan
 
 
-def _connect() -> sqlite3.Connection:
+@contextmanager
+def _connect():
     path = Path(config.DATABASE_PATH or "data/analyst.db")
     path.parent.mkdir(parents=True, exist_ok=True)
     connection = sqlite3.connect(path)
     connection.row_factory = sqlite3.Row
-    return connection
+    try:
+        yield connection
+        connection.commit()
+    finally:
+        connection.close()
 
 
 def initialize_storage() -> None:

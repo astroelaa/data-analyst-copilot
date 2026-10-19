@@ -17,7 +17,8 @@ def _plan(goal: str, columns: list[str], steps: list[str], code: str, chart_type
 
 def make_local_plan(question: str, available_columns: list[str]) -> tuple[AnalysisPlan, dict]:
     text = re.sub(r"\s+", " ", question.casefold().strip())
-    text = re.sub(r"[?.!]+$", "", text).strip()
+    text = re.sub(r"[?.!,;:]+$", "", text).strip()
+    text = re.sub(r"^please[\s,]+", "", text)
     required = set(available_columns)
 
     def has(*columns: str) -> bool:
@@ -30,7 +31,14 @@ def make_local_plan(question: str, available_columns: list[str]) -> tuple[Analys
             ["Explain that the assistant analyzes the uploaded CSV.", "Invite the user to ask an English data question."],
             "result = pd.DataFrame({'message': ['Hello! I am Data Analyst Copilot, your data analyst. I can inspect your CSV, answer questions with safe pandas analysis, calculate results, and create charts. Ask me anything about the data in your file.']})",
         )
-    elif text in {"what do you do", "what can you do", "how can you help"}:
+    elif text in {
+        "what do you do",
+        "what you do",
+        "what can you do",
+        "what are your capabilities",
+        "what are your capabilities as an assistant",
+        "how can you help",
+    }:
         plan = _plan(
             "Explain the Data Analyst Copilot's role and capabilities.",
             [],

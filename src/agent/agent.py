@@ -22,6 +22,17 @@ def _conversation_context(session: Session) -> str:
     )
 
 
+def _repair(
+    question: str,
+    code: str,
+    error: str,
+    columns: list[str],
+    cost: float,
+) -> tuple[str, float, bool]:
+    repaired_code, repair_record = fix_code(question, code, error, columns)
+    return repaired_code, cost + repair_record["cost"], True
+
+
 def answer(session: Session, question: str) -> dict:
     trace = [
         {"tool": "describe_data", "output": describe_data(session.df)},
@@ -51,14 +62,26 @@ def answer(session: Session, question: str) -> dict:
             trace.append({"tool": "verify_result", "status": "error", "error": verification_error})
             if attempt == MAX_RUN_ATTEMPTS:
                 result = None
+            else:
+                code, cost, fixed = _repair(
+                    question,
+                    code,
+                    verification_error,
+                    list(session.df.columns),
+                    cost,
+                )
         except Exception as exc:
             error = str(exc)
             trace.append({"tool": "run_pandas", "attempt": attempt, "status": "error", "error": error})
             if attempt == MAX_RUN_ATTEMPTS:
                 break
-            code, fix_record = fix_code(question, code, error, list(session.df.columns))
-            cost += fix_record["cost"]
-            fixed = True
+            code, cost, fixed = _repair(
+                question,
+                code,
+                error,
+                list(session.df.columns),
+                cost,
+            )
     figure = None
     if result is not None:
         figure = plot_chart(result, plan.chart_type, plan.x, plan.y)

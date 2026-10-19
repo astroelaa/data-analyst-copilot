@@ -106,7 +106,7 @@ flowchart LR
 5. If Groq fails, the router retries with the corresponding Gemini model.
 6. The planner returns a structured `AnalysisPlan` with explicit intent fields, validated by Pydantic.
 7. `run_pandas` executes only validated code against a copy of the dataframe.
-8. The verifier checks the result shape and requested comparisons, allowing one bounded repair attempt.
+8. The verifier checks the result shape and requested comparisons; execution or verification failures get one bounded repair attempt.
 9. `plot_chart` creates a chart when the plan requests one.
 10. The UI displays the answer, code, result, chart, citations, and tool trace without provider internals.
 11. Chat records are saved to SQLite and reloaded for the selected dataset source.
@@ -157,7 +157,7 @@ The evaluation contains 11 English reference-answer questions. The latest clean 
 | Overall correctness | 100.0% |
 | First-try code success | 100.0% |
 | Code success after auto-fix | 100.0% |
-| Average time per question | 0.13 seconds |
+| Average time per question | 0.07 seconds |
 
 Run it from the repository root with:
 

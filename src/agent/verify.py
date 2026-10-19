@@ -7,8 +7,6 @@ from src.schemas import AnalysisPlan
 
 def verify_result(question: str, plan: AnalysisPlan, result: pd.DataFrame) -> tuple[bool, str]:
     text = question.casefold()
-    if result.empty and not any(word in text for word in ("none", "empty", "missing")):
-        return False, "The analysis returned no rows for a question that expects a result."
     for column in plan.intent.group_by:
         if column not in result.columns:
             return False, f"The requested grouping column '{column}' is missing from the result."
