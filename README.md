@@ -74,9 +74,11 @@ EMBED_MODEL = "gemini-embedding-001"
 flowchart LR
     U[User question and any CSV] --> UI[Streamlit UI]
     UI --> A[Agent]
-    A --> D[Profile uploaded dataframe]
-    A --> P[Planner]
-    P --> L[Local generic basics]
+    A --> N[Normalize natural language]
+    N --> I{Request type}
+    I -->|Greeting or capability| C1[Conversational response]
+    I -->|Data question or follow-up| P[Planner]
+    P --> L[Local grounded plans]
     P --> R[Rule-based router]
     R --> C[Cheap Groq model]
     R --> S[Strong Groq model]
@@ -84,16 +86,19 @@ flowchart LR
     S --> V
     C -. provider failure .-> G[Gemini fallback models]
     S -. provider failure .-> G
-    P --> D1[Uploaded schema context]
+    P --> D1[Uploaded schema and recent context]
     D1 --> E[Columns, types, samples, stats]
-    A --> T[Agent tools]
+    V --> T[Restricted agent tools]
+    L --> T
     T --> DP[describe_data]
     T --> RP[run_pandas]
     T --> PC[plot_chart]
-    T --> Q[Result verification]
-    Q -->|invalid| X[One repair attempt]
-    L --> T
-    T --> O[Result, trace, citations, session history]
+    T --> Q[Verify result]
+    Q -->|valid| F[Format answer]
+    Q -->|invalid or runtime error| X[One bounded repair]
+    X --> V
+    C1 --> F
+    F --> O[Response, result, trace, citations, history]
     O --> DB[(SQLite chat storage)]
     DB --> UI
 ```
@@ -102,19 +107,22 @@ flowchart LR
 
 1. Streamlit creates a session for the uploaded dataset.
 2. The agent profiles the data with `describe_data` and builds uploaded-schema context.
-3. The planner checks local generic handlers first for basic schema questions.
-4. Unsupported questions go to the router, which selects the cheap or strong Groq model.
-5. If Groq fails, the router retries with the corresponding Gemini model.
-6. The planner returns a structured `AnalysisPlan` with explicit intent fields, validated by Pydantic.
-7. `run_pandas` executes only validated code against a copy of the dataframe.
-8. The verifier checks the result shape and requested comparisons; execution or verification failures get one bounded repair attempt.
-9. `plot_chart` creates a chart when the plan requests one.
-10. The UI displays the answer, code, result, chart, citations, and tool trace without provider internals.
-11. Chat records are saved to SQLite and reloaded for the selected dataset source.
+3. The request is normalized so harmless wording, punctuation, and common polite phrasing do not change its meaning.
+4. Greetings and capability questions return conversational responses without pretending that analysis was performed.
+5. Data questions and follow-ups use recent context plus the live schema profile.
+6. The planner checks local grounded handlers first for supported operations.
+7. Remaining questions go to the router, which selects the cheap or strong Groq model.
+8. If Groq fails, the router retries with the corresponding Gemini model.
+9. The planner returns a structured `AnalysisPlan` with explicit intent fields, validated by Pydantic.
+10. `run_pandas` executes only validated code against a copy of the dataframe.
+11. The verifier checks the result shape and requested comparisons; execution or verification failures get one bounded repair attempt.
+12. `plot_chart` creates a chart when the plan requests one.
+13. The UI displays the answer, code, result, chart, citations, and tool trace without provider internals.
+14. Chat records are saved to SQLite and reloaded for the selected dataset source.
 
 The hosted planner is data-agnostic within the uploaded CSV: it can use new column names and new analysis questions because the current dataframe profile is included in the planning context. Its role, goal, tools, and plan→execute→verify workflow are defined in the system instructions. The optional RAG dictionary is not required for uploaded-data planning.
 
-The local layer is intentionally conservative. It normalizes common conversational variations and handles basic schema questions and selected examples without an API, while hosted models provide general open-ended analysis. A ranking request such as "top 5 products" defaults to revenue when a revenue column exists; specify another metric such as quantity when needed. Unsupported questions produce an explicit limitation instead of a fabricated answer. A generic execution failure produces a separate neutral error message, and neither message exposes provider, model, quota, key, or raw exception details.
+The local layer is intentionally conservative. It normalizes common conversational variations and handles basic schema questions and selected grounded examples without an API, while hosted models provide general open-ended analysis. A ranking request such as "top 5 products" defaults to revenue when a revenue column exists; specify another metric such as quantity when needed. Unsupported questions produce an explicit limitation instead of a fabricated answer. A generic execution failure produces a separate neutral error message, and neither message exposes provider, model, quota, key, or raw exception details.
 
 ### Session persistence
 
@@ -141,6 +149,7 @@ SQLite is suitable for this single-user or small demonstration deployment. Strea
 - Execute generated code only through restricted pandas tools that block imports, file access, and other unsafe operations.
 - Keep the evaluation honest by recording quota and timeout failures instead of treating them as correct answers.
 - Use a small deterministic local layer for basic schema questions and selected examples; unsupported open-ended questions remain explicit failures without hosted providers.
+- Normalize natural-language variants before planning, while keeping conversational responses separate from dataframe results.
 - Persist chat sessions through a small SQLite adapter, with a documented path to authenticated hosted storage for production multi-user use.
 
 ## Validation

@@ -13,6 +13,8 @@
 - Chat sessions, result tables, charts, generated code, citations, and tool traces are supported in the Streamlit UI.
 - Chat records are persisted in SQLite at the configurable `DATABASE_PATH` and reloaded by dataset source.
 - Unsupported analysis requests and unexpected failures use separate neutral user-facing messages without provider internals.
+- Natural-language normalization handles common polite phrasing, singular/plural variants, ranking wording, and capability-question variants before planning.
+- The agent uses a bounded plan → execute → verify → repair loop, with repair limited to one additional attempt.
 - The latest source and documentation changes are pushed to the `master` branch.
 
 ## Repository layout
@@ -69,5 +71,6 @@ The benchmark contains 11 English questions. The latest recorded run reached 11/
 
 - Arbitrary questions on new datasets require a working Groq or Gemini API key.
 - The offline deterministic layer is intentionally limited; general open-ended analysis requires a hosted provider.
+- Offline normalization improves common analyst phrasing but is not a general-purpose language model.
 - The sales data is synthetic.
 - Evaluation results should be regenerated after provider, prompt, planner, or fallback changes.
