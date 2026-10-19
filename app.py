@@ -8,7 +8,7 @@ DEFAULT_CSV = "data/sales.csv"
 
 st.set_page_config(page_title="Data Analyst Copilot", layout="wide")
 st.title("Data Analyst Copilot")
-st.caption("Ask questions in English. The data dictionary in data/data_dictionary.md describes sales.csv.")
+st.caption("Your English-language data analyst for sales.csv. I create plans, run pandas analysis, and explain the results.")
 
 
 @st.cache_resource
@@ -16,7 +16,10 @@ def init_index() -> int:
     return build_index()
 
 
-init_index()
+try:
+    init_index()
+except Exception as exc:
+    st.warning(f"Semantic search is unavailable: {exc}. Using the local data dictionary instead.")
 
 upload = st.sidebar.file_uploader("CSV file", type="csv")
 source = upload.name if upload else DEFAULT_CSV
@@ -24,33 +27,46 @@ if st.session_state.get("source") != source:
     st.session_state.session = Session(df=load_csv(upload or DEFAULT_CSV))
     st.session_state.source = source
 session = st.session_state.session
+if "messages" not in st.session_state:
+    st.session_state.messages = []
+
+for message in st.session_state.messages:
+    with st.chat_message(message["role"]):
+        st.markdown(message["content"])
 
 question = st.chat_input("Ask a question about the data")
 if question:
+    st.session_state.messages.append({"role": "user", "content": question})
+    with st.chat_message("user"):
+        st.markdown(question)
     try:
         output = answer(session, question)
-    except ValueError as exc:
-        st.error(str(exc))
+    except Exception as exc:
+        message = f"I could not complete that analysis: {exc}"
+        st.session_state.messages.append({"role": "assistant", "content": message})
+        with st.chat_message("assistant"):
+            st.error(message)
     else:
-        st.subheader("Plan")
-        st.write(output["plan"].goal)
-        st.markdown("\n".join(f"{i}. {step}" for i, step in enumerate(output["plan"].steps, start=1)))
-        st.subheader("Code")
-        st.code(output["code"], language="python")
-        if output["result"] is not None:
-            st.subheader("Result")
-            st.dataframe(output["result"])
-            if output["figure"] is not None:
-                st.pyplot(output["figure"])
-        else:
-            st.error(output["error"])
-        with st.expander("Tool trace"):
-            st.json(output["trace"])
-        record = output["record"]
-        st.caption(
-            f"model {record['model']} | tier {record['tier']} | tokens {record['input_tokens']}/{record['output_tokens']} | cost {output['cost']:.6f} | auto-fixed {output['fixed']}"
+        with st.chat_message("assistant"):
+            st.write(output["plan"].goal)
+            st.markdown("\n".join(f"{i}. {step}" for i, step in enumerate(output["plan"].steps, start=1)))
+            st.code(output["code"], language="python")
+            if output["result"] is not None:
+                st.dataframe(output["result"])
+                if output["figure"] is not None:
+                    st.pyplot(output["figure"])
+            else:
+                st.error(output["error"])
+            with st.expander("Analysis details"):
+                st.json(output["trace"])
+                record = output["record"]
+                st.caption(
+                    f"model {record['model']} | tier {record['tier']} | tokens {record['input_tokens']}/{record['output_tokens']} | cost {output['cost']:.6f} | auto-fixed {output['fixed']}"
+                )
+                st.caption("Sources: " + ", ".join(record["citations"]))
+        st.session_state.messages.append(
+            {"role": "assistant", "content": output["plan"].goal}
         )
-        st.caption("Sources: " + ", ".join(record["citations"]))
 
 st.sidebar.subheader("Session history")
 for item in session.history:
