@@ -1,9 +1,9 @@
 from pydantic import ValidationError
 
 from src.llm.router import ask
-from src.prompts import build_plan_prompt
+from src.prompts import build_fix_prompt, build_plan_prompt
 from src.rag.store import citation, known_columns, retrieve
-from src.schemas import AnalysisPlan
+from src.schemas import AnalysisPlan, CodeFix
 
 MAX_ATTEMPTS = 2
 
@@ -29,3 +29,8 @@ def make_plan(question: str) -> tuple[AnalysisPlan, dict]:
         record["citations"] = [citation(chunk) for chunk in chunks]
         return plan, record
     raise ValueError("plan failed validation after retries")
+
+
+def fix_code(question: str, code: str, error: str, columns: list[str]) -> tuple[str, dict]:
+    text, record = ask(question, build_fix_prompt(question, code, error, columns), CodeFix)
+    return CodeFix.model_validate_json(text).pandas_code, record

@@ -11,3 +11,7 @@ class AnalysisPlan(BaseModel):
     chart_type: Literal["bar", "line", "pie", "none"]
     x: str | None = None
     y: str | None = None
+
+
+class CodeFix(BaseModel):
+    pandas_code: str
