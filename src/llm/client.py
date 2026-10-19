@@ -5,7 +5,12 @@ from google.genai import errors, types
 
 from src.config import GEMINI_API_KEY
 
-client = genai.Client(api_key=GEMINI_API_KEY)
+client = genai.Client(
+    api_key=GEMINI_API_KEY,
+    http_options=types.HttpOptions(
+        retry_options=types.HttpRetryOptions(attempts=1),
+    ),
+)
 RETRYABLE = (429, 503)
 
 
