@@ -13,8 +13,8 @@ from src.agent.tools import load_csv
 QUESTIONS = Path("evaluation/questions.json")
 RESULTS = Path("evaluation/results.json")
 CSV = Path("data/sales.csv")
-PAUSE_SECONDS = 5
-MAX_LLM_ATTEMPTS = 5
+PAUSE_SECONDS = 3
+MAX_LLM_ATTEMPTS = 1
 
 
 def flatten(value) -> tuple[list[float], list[str]]:
