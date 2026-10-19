@@ -19,7 +19,7 @@
       "model": "local-fallback",
       "code": "result = df.groupby('product')['revenue'].sum().nlargest(5).reset_index()",
       "error": null,
-      "seconds": 0.15
+      "seconds": 0.16
     },
     {
       "id": "q02",
@@ -33,7 +33,7 @@
       "model": "local-fallback",
       "code": "result = pd.DataFrame({'total_revenue': [df['revenue'].sum()]})",
       "error": null,
-      "seconds": 0.11
+      "seconds": 0.02
     },
     {
       "id": "q03",
@@ -47,7 +47,7 @@
       "model": "local-fallback",
       "code": "result = pd.DataFrame({'order_count': [df[df['region'] == 'Cairo']['order_id'].nunique()]})",
       "error": null,
-      "seconds": 0.02
+      "seconds": 0.03
     },
     {
       "id": "q04",
@@ -89,7 +89,7 @@
       "model": "local-fallback",
       "code": "result = df.groupby('product')['quantity'].sum().nlargest(1).reset_index()",
       "error": null,
-      "seconds": 0.11
+      "seconds": 0.26
     },
     {
       "id": "q07",
@@ -103,7 +103,7 @@
       "model": "local-fallback",
       "code": "result = pd.DataFrame({'total_revenue': [df[df['order_date'].dt.month <= 3]['revenue'].sum()]})",
       "error": null,
-      "seconds": 0.04
+      "seconds": 0.03
     },
     {
       "id": "q08",

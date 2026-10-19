@@ -18,12 +18,21 @@ def _plan(goal: str, columns: list[str], steps: list[str], code: str, chart_type
 def make_local_plan(question: str, available_columns: list[str]) -> tuple[AnalysisPlan, dict]:
     text = re.sub(r"\s+", " ", question.casefold().strip())
     text = re.sub(r"[?.!,;:]+$", "", text).strip()
-    text = re.sub(r"^please[\s,]+", "", text)
+    text = re.sub(r"^(please|could you|can you|would you|would you please)[\s,]+", "", text)
+    text = re.sub(r"^(show me|give me|tell me|find me|find)[\s,]+", "", text)
     text = re.sub(r"\bwhat do y do\b", "what do you do", text)
+    text = text.replace("performed best", "top").replace("best performing", "top")
+    text = text.replace("best-selling", "most quantity").replace("best selling", "most quantity")
     required = set(available_columns)
 
     def has(*columns: str) -> bool:
         return set(columns).issubset(required)
+
+    def mentioned_column() -> str | None:
+        for column in available_columns:
+            if re.search(rf"\b{re.escape(column.casefold())}\b", text):
+                return column
+        return None
 
     if text in {"hello", "hi", "hey", "good morning", "good afternoon", "good evening"}:
         plan = _plan(
@@ -67,13 +76,30 @@ def make_local_plan(question: str, available_columns: list[str]) -> tuple[Analys
             ["Count the dataframe rows.", "Return the row count."],
             "result = pd.DataFrame({'row_count': [len(df)]})",
         )
-    elif has("product", "revenue") and re.search(r"top\s+(\d+)", text) and re.search(r"\bproducts?\b", text):
-        count = int(re.search(r"top\s+(\d+)", text).group(1))
+    elif has("product", "revenue") and (
+        (re.search(r"top\s+(\d+)", text) and re.search(r"\bproducts?\b", text))
+        or ("top" in text and "product" in text)
+        or ("which products" in text and any(word in text for word in ("most", "best", "top")))
+    ):
+        match = re.search(r"top\s+(\d+)", text)
+        count = int(match.group(1)) if match else 1
         plan = _plan(
             f"Find the top {count} products by total revenue.",
             ["product", "revenue"],
             ["Group rows by product.", "Sum revenue for each product.", f"Sort by revenue and keep the top {count} products."],
             f"result = df.groupby('product')['revenue'].sum().nlargest({count}).reset_index()",
+            "bar",
+            "product",
+            "revenue",
+        )
+    elif has("product", "revenue") and "product" in text and any(
+        phrase in text for phrase in ("performed best", "best product", "most revenue", "highest revenue")
+    ):
+        plan = _plan(
+            "Find the product with the highest total revenue.",
+            ["product", "revenue"],
+            ["Group rows by product.", "Sum revenue for each product.", "Return the highest-revenue product."],
+            "result = df.groupby('product')['revenue'].sum().nlargest(1).reset_index()",
             "bar",
             "product",
             "revenue",
@@ -153,6 +179,30 @@ def make_local_plan(question: str, available_columns: list[str]) -> tuple[Analys
             ["revenue"],
             ["Sum the revenue column.", "Store the total in result."],
             "result = pd.DataFrame({'total_revenue': [df['revenue'].sum()]})",
+        )
+    elif (
+        (column := mentioned_column())
+        and any(word in text for word in ("total", "sum", "average", "mean", "minimum", "maximum", "min", "max"))
+        and not any(word in text for word in (" by ", " per ", " each ", "group"))
+    ):
+        column_literal = repr(column)
+        if any(word in text for word in ("average", "mean")):
+            aggregation = "mean"
+            label = f"average_{column}"
+        elif any(word in text for word in ("minimum", "min")):
+            aggregation = "min"
+            label = f"minimum_{column}"
+        elif any(word in text for word in ("maximum", "max")):
+            aggregation = "max"
+            label = f"maximum_{column}"
+        else:
+            aggregation = "sum"
+            label = f"total_{column}"
+        plan = _plan(
+            f"Calculate the {aggregation} of {column}.",
+            [column],
+            [f"Select the {column} column.", f"Calculate its {aggregation}."],
+            f"result = pd.DataFrame({{{label!r}: [df[{column_literal}].{aggregation}()]}})",
         )
     elif has("region", "order_id") and ("orders" in text or "order") and any(region in text for region in ("cairo", "alexandria", "giza")):
         region = next(region.title() for region in ("cairo", "alexandria", "giza") if region in text)
