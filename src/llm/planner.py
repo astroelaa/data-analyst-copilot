@@ -23,8 +23,11 @@ def make_plan(question: str) -> tuple[AnalysisPlan, dict]:
     except Exception as error:
         try:
             return make_local_plan(question, valid)
-        except ValueError:
-            raise error
+        except ValueError as fallback_error:
+            raise ValueError(
+                "Gemini is temporarily unavailable because its API quota is exhausted. "
+                f"The local fallback could not answer this question: {fallback_error}"
+            ) from error
 
 
 def _make_remote_plan(question: str, prompt: str, valid: list[str], chunks: list[dict]) -> tuple[AnalysisPlan, dict]:
