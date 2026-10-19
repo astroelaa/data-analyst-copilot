@@ -1,0 +1,2001 @@
+order_id,order_date,product,category,region,quantity,unit_price,discount,revenue
+1363,2025-01-01,Headphones,Electronics,Aswan,1,80,0.1,72.0
+1754,2025-01-01,Desk,Furniture,Cairo,2,250,0.05,475.0
+1006,2025-01-01,Backpack,Accessories,Giza,2,45,0.2,72.0
+906,2025-01-01,Notebook,Stationery,Giza,5,5,0.1,22.5
+984,2025-01-01,Notebook,Stationery,Aswan,5,5,0.05,23.75
+741,2025-01-01,Pen Set,Stationery,Cairo,1,12,0.05,11.4
+302,2025-01-01,Pen Set,Stationery,Cairo,1,12,0.1,10.8
+414,2025-01-02,Phone,Electronics,Cairo,4,600,0.1,2160.0
+57,2025-01-02,Chair,Furniture,Giza,4,150,0.2,480.0
+1067,2025-01-02,Backpack,Accessories,Aswan,5,45,0.1,202.5
+1212,2025-01-02,Pen Set,Stationery,Alexandria,2,12,0.0,24.0
+76,2025-01-02,Desk,Furniture,Aswan,3,250,0.0,750.0
+1205,2025-01-02,Notebook,Stationery,Giza,2,5,0.1,9.0
+521,2025-01-02,Headphones,Electronics,Giza,3,80,0.2,192.0
+229,2025-01-02,Chair,Furniture,Alexandria,2,150,0.05,285.0
+1735,2025-01-02,Pen Set,Stationery,Alexandria,2,12,0.1,21.6
+358,2025-01-02,Backpack,Accessories,Giza,2,45,0.05,85.5
+155,2025-01-03,Desk,Furniture,Alexandria,4,250,0.0,1000.0
+1727,2025-01-03,Backpack,Accessories,Aswan,1,45,0.1,40.5
+926,2025-01-03,Backpack,Accessories,Alexandria,1,45,0.0,45.0
+1989,2025-01-03,Phone,Electronics,Giza,3,600,0.2,1440.0
+878,2025-01-03,Notebook,Stationery,Alexandria,5,5,0.05,23.75
+1969,2025-01-04,Pen Set,Stationery,Cairo,3,12,0.0,36.0
+754,2025-01-04,Backpack,Accessories,Giza,4,45,0.2,144.0
+1585,2025-01-04,Notebook,Stationery,Aswan,4,5,0.05,19.0
+591,2025-01-04,Pen Set,Stationery,Alexandria,1,12,0.1,10.8
+1517,2025-01-05,Desk,Furniture,Alexandria,1,250,0.1,225.0
+747,2025-01-05,Chair,Furniture,Cairo,2,150,0.2,240.0
+436,2025-01-05,Laptop,Electronics,Cairo,3,900,0.2,2160.0
+151,2025-01-05,Pen Set,Stationery,Aswan,2,12,0.05,22.8
+1581,2025-01-05,Headphones,Electronics,Alexandria,5,80,0.1,360.0
+642,2025-01-05,Backpack,Accessories,Aswan,3,45,0.0,135.0
+142,2025-01-06,Phone,Electronics,Alexandria,5,600,0.2,2400.0
+1489,2025-01-06,Laptop,Electronics,Giza,3,900,0.2,2160.0
+281,2025-01-06,Headphones,Electronics,Giza,4,80,0.05,304.0
+1992,2025-01-06,Desk,Furniture,Cairo,4,250,0.05,950.0
+1135,2025-01-06,Chair,Furniture,Cairo,4,150,0.1,540.0
+1721,2025-01-06,Laptop,Electronics,Aswan,4,900,0.2,2880.0
+1602,2025-01-06,Notebook,Stationery,Alexandria,4,5,0.2,16.0
+1599,2025-01-06,Pen Set,Stationery,Giza,2,12,0.2,19.2
+1227,2025-01-06,Laptop,Electronics,Giza,3,900,0.05,2565.0
+527,2025-01-06,Backpack,Accessories,Giza,3,45,0.0,135.0
+471,2025-01-06,Notebook,Stationery,Giza,5,5,0.05,23.75
+1064,2025-01-07,Notebook,Stationery,Alexandria,1,5,0.1,4.5
+918,2025-01-08,Pen Set,Stationery,Cairo,5,12,0.05,57.0
+1610,2025-01-08,Phone,Electronics,Aswan,4,600,0.0,2400.0
+1758,2025-01-08,Chair,Furniture,Alexandria,3,150,0.1,405.0
+893,2025-01-08,Chair,Furniture,Giza,2,150,0.0,300.0
+1586,2025-01-09,Headphones,Electronics,Alexandria,2,80,0.1,144.0
+707,2025-01-09,Laptop,Electronics,Giza,4,900,0.05,3420.0
+219,2025-01-09,Desk,Furniture,Alexandria,2,250,0.1,450.0
+1485,2025-01-10,Desk,Furniture,Alexandria,3,250,0.1,675.0
+616,2025-01-10,Notebook,Stationery,Alexandria,4,5,0.05,19.0
+107,2025-01-10,Pen Set,Stationery,Alexandria,4,12,0.0,48.0
+1065,2025-01-10,Pen Set,Stationery,Giza,4,12,0.1,43.2
+384,2025-01-10,Phone,Electronics,Giza,2,600,0.1,1080.0
+600,2025-01-10,Notebook,Stationery,Giza,2,5,0.1,9.0
+369,2025-01-10,Laptop,Electronics,Alexandria,1,900,0.2,720.0
+1398,2025-01-10,Notebook,Stationery,Giza,5,5,0.05,23.75
+666,2025-01-10,Notebook,Stationery,Cairo,3,5,0.2,12.0
+1011,2025-01-11,Headphones,Electronics,Alexandria,2,80,0.2,128.0
+1724,2025-01-11,Notebook,Stationery,Aswan,5,5,0.1,22.5
+788,2025-01-11,Notebook,Stationery,Giza,1,5,0.0,5.0
+1823,2025-01-11,Headphones,Electronics,Cairo,3,80,0.2,192.0
+907,2025-01-11,Desk,Furniture,Aswan,4,250,0.05,950.0
+702,2025-01-12,Chair,Furniture,Cairo,4,150,0.0,600.0
+1284,2025-01-12,Pen Set,Stationery,Cairo,1,12,0.2,9.6
+573,2025-01-12,Headphones,Electronics,Aswan,4,80,0.05,304.0
+1648,2025-01-12,Notebook,Stationery,Giza,4,5,0.2,16.0
+917,2025-01-12,Chair,Furniture,Alexandria,4,150,0.0,600.0
+445,2025-01-13,Chair,Furniture,Giza,3,150,0.1,405.0
+761,2025-01-13,Phone,Electronics,Aswan,1,600,0.2,480.0
+293,2025-01-13,Backpack,Accessories,Cairo,2,45,0.05,85.5
+908,2025-01-13,Phone,Electronics,Giza,5,600,0.2,2400.0
+564,2025-01-13,Phone,Electronics,Alexandria,3,600,0.0,1800.0
+565,2025-01-13,Backpack,Accessories,Cairo,3,45,0.2,108.0
+901,2025-01-14,Laptop,Electronics,Cairo,3,900,0.05,2565.0
+359,2025-01-14,Laptop,Electronics,Giza,4,900,0.1,3240.0
+1868,2025-01-14,Pen Set,Stationery,Alexandria,5,12,0.2,48.0
+510,2025-01-14,Phone,Electronics,Aswan,1,600,0.2,480.0
+744,2025-01-14,Headphones,Electronics,Cairo,5,80,0.05,380.0
+1347,2025-01-14,Pen Set,Stationery,Aswan,4,12,0.05,45.6
+577,2025-01-14,Backpack,Accessories,Giza,2,45,0.0,90.0
+1795,2025-01-14,Desk,Furniture,Aswan,5,250,0.05,1187.5
+1772,2025-01-15,Desk,Furniture,Aswan,2,250,0.0,500.0
+1399,2025-01-15,Laptop,Electronics,Aswan,1,900,0.2,720.0
+1111,2025-01-15,Notebook,Stationery,Cairo,3,5,0.1,13.5
+706,2025-01-15,Chair,Furniture,Giza,2,150,0.0,300.0
+886,2025-01-15,Notebook,Stationery,Aswan,1,5,0.0,5.0
+1382,2025-01-15,Headphones,Electronics,Alexandria,4,80,0.2,256.0
+352,2025-01-15,Laptop,Electronics,Giza,4,900,0.1,3240.0
+1676,2025-01-15,Backpack,Accessories,Cairo,3,45,0.05,128.25
+279,2025-01-15,Laptop,Electronics,Cairo,2,900,0.1,1620.0
+520,2025-01-16,Chair,Furniture,Alexandria,5,150,0.05,712.5
+1689,2025-01-16,Backpack,Accessories,Alexandria,5,45,0.2,180.0
+268,2025-01-16,Headphones,Electronics,Giza,4,80,0.2,256.0
+313,2025-01-17,Laptop,Electronics,Alexandria,3,900,0.05,2565.0
+1161,2025-01-17,Chair,Furniture,Giza,1,150,0.05,142.5
+1911,2025-01-17,Laptop,Electronics,Aswan,2,900,0.0,1800.0
+1190,2025-01-17,Laptop,Electronics,Cairo,5,900,0.05,4275.0
+1396,2025-01-18,Chair,Furniture,Alexandria,4,150,0.0,600.0
+192,2025-01-18,Notebook,Stationery,Alexandria,3,5,0.05,14.25
+612,2025-01-18,Desk,Furniture,Cairo,5,250,0.05,1187.5
+1062,2025-01-18,Notebook,Stationery,Aswan,2,5,0.1,9.0
+885,2025-01-18,Pen Set,Stationery,Cairo,2,12,0.0,24.0
+1611,2025-01-19,Pen Set,Stationery,Aswan,3,12,0.05,34.2
+809,2025-01-19,Desk,Furniture,Aswan,4,250,0.05,950.0
+1290,2025-01-19,Chair,Furniture,Alexandria,1,150,0.05,142.5
+1360,2025-01-20,Headphones,Electronics,Aswan,3,80,0.05,228.0
+1954,2025-01-20,Desk,Furniture,Alexandria,3,250,0.1,675.0
+205,2025-01-20,Desk,Furniture,Alexandria,3,250,0.05,712.5
+327,2025-01-20,Phone,Electronics,Alexandria,2,600,0.2,960.0
+828,2025-01-20,Backpack,Accessories,Cairo,5,45,0.1,202.5
+1965,2025-01-20,Pen Set,Stationery,Giza,1,12,0.1,10.8
+276,2025-01-21,Desk,Furniture,Aswan,3,250,0.2,600.0
+838,2025-01-21,Phone,Electronics,Cairo,5,600,0.0,3000.0
+316,2025-01-21,Notebook,Stationery,Cairo,1,5,0.05,4.75
+1320,2025-01-21,Desk,Furniture,Cairo,1,250,0.0,250.0
+211,2025-01-22,Headphones,Electronics,Giza,4,80,0.0,320.0
+1919,2025-01-22,Desk,Furniture,Giza,1,250,0.1,225.0
+370,2025-01-22,Pen Set,Stationery,Aswan,1,12,0.1,10.8
+1530,2025-01-22,Backpack,Accessories,Alexandria,1,45,0.0,45.0
+249,2025-01-23,Pen Set,Stationery,Alexandria,1,12,0.2,9.6
+1272,2025-01-23,Laptop,Electronics,Cairo,3,900,0.05,2565.0
+416,2025-01-23,Notebook,Stationery,Cairo,3,5,0.05,14.25
+1628,2025-01-23,Chair,Furniture,Aswan,2,150,0.0,300.0
+1410,2025-01-23,Headphones,Electronics,Cairo,3,80,0.1,216.0
+1183,2025-01-23,Notebook,Stationery,Aswan,4,5,0.1,18.0
+614,2025-01-23,Desk,Furniture,Giza,3,250,0.1,675.0
+1361,2025-01-23,Laptop,Electronics,Giza,5,900,0.1,4050.0
+64,2025-01-24,Backpack,Accessories,Alexandria,4,45,0.1,162.0
+1849,2025-01-24,Chair,Furniture,Giza,4,150,0.1,540.0
+835,2025-01-24,Pen Set,Stationery,Aswan,2,12,0.2,19.2
+288,2025-01-24,Chair,Furniture,Alexandria,5,150,0.2,600.0
+139,2025-01-24,Headphones,Electronics,Aswan,3,80,0.2,192.0
+331,2025-01-24,Chair,Furniture,Cairo,1,150,0.0,150.0
+1977,2025-01-24,Backpack,Accessories,Cairo,4,45,0.2,144.0
+531,2025-01-24,Chair,Furniture,Giza,5,150,0.0,750.0
+632,2025-01-24,Headphones,Electronics,Giza,4,80,0.05,304.0
+839,2025-01-24,Laptop,Electronics,Giza,2,900,0.2,1440.0
+295,2025-01-25,Chair,Furniture,Cairo,4,150,0.2,480.0
+335,2025-01-25,Desk,Furniture,Aswan,3,250,0.2,600.0
+661,2025-01-25,Phone,Electronics,Aswan,3,600,0.2,1440.0
+1939,2025-01-26,Backpack,Accessories,Giza,4,45,0.2,144.0
+1910,2025-01-26,Backpack,Accessories,Cairo,5,45,0.1,202.5
+9,2025-01-26,Phone,Electronics,Alexandria,4,600,0.0,2400.0
+314,2025-01-26,Headphones,Electronics,Aswan,1,80,0.0,80.0
+1037,2025-01-26,Backpack,Accessories,Giza,5,45,0.2,180.0
+1871,2025-01-26,Laptop,Electronics,Giza,1,900,0.2,720.0
+131,2025-01-26,Chair,Furniture,Cairo,4,150,0.0,600.0
+933,2025-01-26,Headphones,Electronics,Giza,1,80,0.2,64.0
+145,2025-01-26,Backpack,Accessories,Giza,2,45,0.0,90.0
+1687,2025-01-26,Desk,Furniture,Giza,1,250,0.2,200.0
+802,2025-01-26,Headphones,Electronics,Aswan,3,80,0.1,216.0
+287,2025-01-26,Phone,Electronics,Cairo,5,600,0.1,2700.0
+620,2025-01-27,Phone,Electronics,Giza,5,600,0.2,2400.0
+277,2025-01-27,Desk,Furniture,Aswan,2,250,0.0,500.0
+1882,2025-01-27,Headphones,Electronics,Aswan,2,80,0.2,128.0
+1275,2025-01-27,Pen Set,Stationery,Cairo,2,12,0.1,21.6
+1699,2025-01-27,Headphones,Electronics,Giza,2,80,0.1,144.0
+1972,2025-01-27,Backpack,Accessories,Alexandria,5,45,0.0,225.0
+526,2025-01-27,Headphones,Electronics,Alexandria,2,80,0.05,152.0
+1160,2025-01-27,Headphones,Electronics,Cairo,5,80,0.2,320.0
+870,2025-01-28,Laptop,Electronics,Giza,2,900,0.1,1620.0
+439,2025-01-28,Laptop,Electronics,Alexandria,5,900,0.05,4275.0
+338,2025-01-28,Headphones,Electronics,Giza,5,80,0.05,380.0
+797,2025-01-28,Backpack,Accessories,Alexandria,5,45,0.1,202.5
+1950,2025-01-28,Headphones,Electronics,Giza,1,80,0.1,72.0
+1125,2025-01-28,Pen Set,Stationery,Cairo,3,12,0.0,36.0
+794,2025-01-28,Pen Set,Stationery,Cairo,3,12,0.05,34.2
+329,2025-01-29,Phone,Electronics,Cairo,1,600,0.0,600.0
+1605,2025-01-29,Laptop,Electronics,Alexandria,5,900,0.1,4050.0
+919,2025-01-29,Headphones,Electronics,Giza,5,80,0.2,320.0
+1556,2025-01-29,Phone,Electronics,Cairo,3,600,0.1,1620.0
+1635,2025-01-29,Desk,Furniture,Giza,5,250,0.2,1000.0
+522,2025-01-29,Phone,Electronics,Aswan,1,600,0.1,540.0
+1671,2025-01-29,Pen Set,Stationery,Giza,1,12,0.05,11.4
+1720,2025-01-30,Chair,Furniture,Alexandria,2,150,0.05,285.0
+965,2025-01-30,Backpack,Accessories,Aswan,4,45,0.2,144.0
+667,2025-01-30,Chair,Furniture,Aswan,2,150,0.05,285.0
+1411,2025-01-30,Laptop,Electronics,Aswan,1,900,0.0,900.0
+372,2025-01-30,Notebook,Stationery,Aswan,5,5,0.0,25.0
+1986,2025-01-30,Pen Set,Stationery,Giza,2,12,0.05,22.8
+18,2025-01-30,Phone,Electronics,Cairo,4,600,0.0,2400.0
+1502,2025-01-31,Headphones,Electronics,Cairo,4,80,0.0,320.0
+1312,2025-01-31,Headphones,Electronics,Aswan,3,80,0.2,192.0
+194,2025-01-31,Headphones,Electronics,Giza,2,80,0.0,160.0
+10,2025-01-31,Laptop,Electronics,Giza,4,900,0.0,3600.0
+609,2025-01-31,Backpack,Accessories,Giza,3,45,0.2,108.0
+1562,2025-02-01,Headphones,Electronics,Alexandria,1,80,0.0,80.0
+638,2025-02-01,Headphones,Electronics,Aswan,4,80,0.05,304.0
+413,2025-02-01,Headphones,Electronics,Cairo,5,80,0.05,380.0
+157,2025-02-01,Phone,Electronics,Cairo,3,600,0.1,1620.0
+1403,2025-02-01,Headphones,Electronics,Aswan,1,80,0.1,72.0
+854,2025-02-01,Phone,Electronics,Cairo,1,600,0.0,600.0
+1775,2025-02-01,Pen Set,Stationery,Cairo,3,12,0.05,34.2
+1962,2025-02-01,Backpack,Accessories,Aswan,5,45,0.1,202.5
+1188,2025-02-01,Chair,Furniture,Cairo,3,150,0.0,450.0
+1526,2025-02-02,Laptop,Electronics,Aswan,2,900,0.0,1800.0
+1490,2025-02-02,Chair,Furniture,Cairo,4,150,0.05,570.0
+578,2025-02-02,Chair,Furniture,Aswan,3,150,0.0,450.0
+513,2025-02-02,Pen Set,Stationery,Aswan,5,12,0.0,60.0
+1932,2025-02-02,Desk,Furniture,Cairo,1,250,0.1,225.0
+1369,2025-02-03,Backpack,Accessories,Aswan,3,45,0.1,121.5
+1386,2025-02-03,Phone,Electronics,Giza,2,600,0.2,960.0
+36,2025-02-03,Laptop,Electronics,Alexandria,5,900,0.0,4500.0
+931,2025-02-03,Chair,Furniture,Aswan,1,150,0.0,150.0
+655,2025-02-03,Chair,Furniture,Cairo,5,150,0.0,750.0
+1896,2025-02-03,Pen Set,Stationery,Aswan,5,12,0.2,48.0
+1994,2025-02-04,Notebook,Stationery,Cairo,2,5,0.1,9.0
+1880,2025-02-04,Laptop,Electronics,Cairo,1,900,0.0,900.0
+1372,2025-02-04,Headphones,Electronics,Alexandria,2,80,0.1,144.0
+396,2025-02-04,Pen Set,Stationery,Aswan,4,12,0.1,43.2
+568,2025-02-04,Phone,Electronics,Cairo,4,600,0.1,2160.0
+420,2025-02-04,Chair,Furniture,Cairo,3,150,0.0,450.0
+1859,2025-02-04,Chair,Furniture,Alexandria,2,150,0.05,285.0
+1813,2025-02-05,Notebook,Stationery,Alexandria,4,5,0.05,19.0
+149,2025-02-05,Pen Set,Stationery,Cairo,5,12,0.2,48.0
+266,2025-02-05,Chair,Furniture,Alexandria,1,150,0.2,120.0
+637,2025-02-05,Phone,Electronics,Cairo,2,600,0.2,960.0
+334,2025-02-05,Pen Set,Stationery,Cairo,5,12,0.2,48.0
+104,2025-02-05,Laptop,Electronics,Giza,1,900,0.0,900.0
+468,2025-02-06,Chair,Furniture,Aswan,4,150,0.2,480.0
+1857,2025-02-06,Headphones,Electronics,Alexandria,2,80,0.05,152.0
+1459,2025-02-06,Headphones,Electronics,Aswan,5,80,0.1,360.0
+1589,2025-02-06,Pen Set,Stationery,Giza,4,12,0.2,38.4
+820,2025-02-06,Backpack,Accessories,Cairo,4,45,0.2,144.0
+636,2025-02-07,Notebook,Stationery,Aswan,1,5,0.2,4.0
+688,2025-02-07,Chair,Furniture,Cairo,3,150,0.05,427.5
+567,2025-02-07,Phone,Electronics,Aswan,5,600,0.1,2700.0
+514,2025-02-07,Pen Set,Stationery,Cairo,4,12,0.2,38.4
+889,2025-02-07,Laptop,Electronics,Giza,1,900,0.05,855.0
+1262,2025-02-08,Backpack,Accessories,Alexandria,3,45,0.0,135.0
+1809,2025-02-08,Laptop,Electronics,Cairo,3,900,0.05,2565.0
+1918,2025-02-08,Desk,Furniture,Alexandria,5,250,0.0,1250.0
+560,2025-02-08,Pen Set,Stationery,Giza,3,12,0.1,32.4
+1559,2025-02-08,Backpack,Accessories,Aswan,1,45,0.1,40.5
+418,2025-02-09,Laptop,Electronics,Alexandria,2,900,0.0,1800.0
+1054,2025-02-09,Backpack,Accessories,Giza,2,45,0.2,72.0
+1339,2025-02-09,Pen Set,Stationery,Giza,5,12,0.05,57.0
+1645,2025-02-09,Phone,Electronics,Alexandria,5,600,0.1,2700.0
+16,2025-02-10,Pen Set,Stationery,Cairo,2,12,0.0,24.0
+1909,2025-02-10,Laptop,Electronics,Giza,1,900,0.2,720.0
+1491,2025-02-10,Headphones,Electronics,Cairo,1,80,0.05,76.0
+464,2025-02-10,Desk,Furniture,Cairo,3,250,0.1,675.0
+1746,2025-02-10,Backpack,Accessories,Giza,5,45,0.0,225.0
+1046,2025-02-10,Phone,Electronics,Aswan,5,600,0.05,2850.0
+847,2025-02-10,Phone,Electronics,Cairo,5,600,0.2,2400.0
+796,2025-02-10,Headphones,Electronics,Aswan,5,80,0.0,400.0
+1098,2025-02-11,Pen Set,Stationery,Giza,2,12,0.05,22.8
+490,2025-02-11,Chair,Furniture,Giza,2,150,0.05,285.0
+47,2025-02-11,Desk,Furniture,Alexandria,3,250,0.05,712.5
+1175,2025-02-11,Laptop,Electronics,Alexandria,5,900,0.0,4500.0
+1901,2025-02-11,Chair,Furniture,Giza,3,150,0.2,360.0
+164,2025-02-11,Desk,Furniture,Alexandria,5,250,0.0,1250.0
+1285,2025-02-11,Desk,Furniture,Cairo,3,250,0.2,600.0
+621,2025-02-12,Desk,Furniture,Cairo,5,250,0.1,1125.0
+704,2025-02-12,Phone,Electronics,Cairo,5,600,0.2,2400.0
+323,2025-02-13,Chair,Furniture,Giza,2,150,0.05,285.0
+1591,2025-02-13,Notebook,Stationery,Cairo,1,5,0.0,5.0
+1748,2025-02-13,Desk,Furniture,Giza,5,250,0.0,1250.0
+501,2025-02-14,Laptop,Electronics,Alexandria,4,900,0.1,3240.0
+308,2025-02-15,Chair,Furniture,Alexandria,1,150,0.2,120.0
+729,2025-02-15,Desk,Furniture,Aswan,3,250,0.0,750.0
+261,2025-02-15,Pen Set,Stationery,Giza,1,12,0.0,12.0
+1025,2025-02-15,Pen Set,Stationery,Aswan,2,12,0.2,19.2
+1336,2025-02-16,Backpack,Accessories,Alexandria,2,45,0.0,90.0
+1576,2025-02-16,Headphones,Electronics,Giza,4,80,0.1,288.0
+353,2025-02-16,Headphones,Electronics,Alexandria,4,80,0.1,288.0
+1601,2025-02-17,Headphones,Electronics,Giza,3,80,0.05,228.0
+71,2025-02-17,Pen Set,Stationery,Cairo,1,12,0.0,12.0
+1655,2025-02-17,Phone,Electronics,Aswan,4,600,0.0,2400.0
+1204,2025-02-17,Pen Set,Stationery,Aswan,1,12,0.1,10.8
+990,2025-02-17,Pen Set,Stationery,Alexandria,3,12,0.2,28.8
+1924,2025-02-17,Desk,Furniture,Cairo,3,250,0.2,600.0
+189,2025-02-17,Phone,Electronics,Cairo,3,600,0.0,1800.0
+256,2025-02-17,Phone,Electronics,Alexandria,4,600,0.05,2280.0
+1925,2025-02-17,Headphones,Electronics,Cairo,4,80,0.2,256.0
+1975,2025-02-18,Chair,Furniture,Giza,1,150,0.2,120.0
+579,2025-02-18,Backpack,Accessories,Aswan,5,45,0.05,213.75
+472,2025-02-18,Pen Set,Stationery,Cairo,1,12,0.2,9.6
+599,2025-02-18,Notebook,Stationery,Alexandria,5,5,0.2,20.0
+1798,2025-02-18,Phone,Electronics,Aswan,1,600,0.1,540.0
+489,2025-02-18,Pen Set,Stationery,Giza,3,12,0.1,32.4
+465,2025-02-18,Laptop,Electronics,Alexandria,3,900,0.05,2565.0
+1915,2025-02-18,Headphones,Electronics,Giza,4,80,0.1,288.0
+824,2025-02-18,Notebook,Stationery,Cairo,5,5,0.2,20.0
+1999,2025-02-18,Headphones,Electronics,Giza,4,80,0.2,256.0
+1089,2025-02-19,Notebook,Stationery,Cairo,2,5,0.0,10.0
+575,2025-02-19,Laptop,Electronics,Aswan,4,900,0.1,3240.0
+601,2025-02-19,Chair,Furniture,Aswan,5,150,0.2,600.0
+738,2025-02-19,Headphones,Electronics,Cairo,1,80,0.05,76.0
+782,2025-02-20,Notebook,Stationery,Cairo,5,5,0.1,22.5
+695,2025-02-20,Laptop,Electronics,Alexandria,5,900,0.1,4050.0
+763,2025-02-20,Backpack,Accessories,Aswan,2,45,0.0,90.0
+125,2025-02-20,Pen Set,Stationery,Aswan,4,12,0.2,38.4
+1956,2025-02-20,Desk,Furniture,Cairo,5,250,0.1,1125.0
+1624,2025-02-20,Laptop,Electronics,Giza,3,900,0.2,2160.0
+450,2025-02-20,Headphones,Electronics,Cairo,1,80,0.2,64.0
+1858,2025-02-20,Chair,Furniture,Giza,1,150,0.05,142.5
+52,2025-02-21,Phone,Electronics,Aswan,2,600,0.05,1140.0
+1782,2025-02-21,Headphones,Electronics,Cairo,2,80,0.0,160.0
+1153,2025-02-21,Desk,Furniture,Alexandria,1,250,0.05,237.5
+540,2025-02-21,Laptop,Electronics,Aswan,3,900,0.2,2160.0
+647,2025-02-21,Desk,Furniture,Giza,3,250,0.1,675.0
+1144,2025-02-21,Pen Set,Stationery,Aswan,3,12,0.1,32.4
+557,2025-02-21,Notebook,Stationery,Aswan,4,5,0.0,20.0
+1741,2025-02-21,Desk,Furniture,Alexandria,2,250,0.2,400.0
+1940,2025-02-22,Phone,Electronics,Giza,3,600,0.0,1800.0
+1757,2025-02-22,Headphones,Electronics,Alexandria,4,80,0.05,304.0
+779,2025-02-22,Headphones,Electronics,Cairo,2,80,0.0,160.0
+137,2025-02-22,Chair,Furniture,Aswan,3,150,0.2,360.0
+1944,2025-02-22,Laptop,Electronics,Cairo,5,900,0.1,4050.0
+1802,2025-02-22,Desk,Furniture,Alexandria,3,250,0.05,712.5
+326,2025-02-22,Phone,Electronics,Aswan,5,600,0.05,2850.0
+377,2025-02-22,Notebook,Stationery,Cairo,5,5,0.05,23.75
+378,2025-02-22,Notebook,Stationery,Cairo,1,5,0.05,4.75
+1259,2025-02-22,Chair,Furniture,Cairo,3,150,0.1,405.0
+1715,2025-02-22,Notebook,Stationery,Giza,4,5,0.2,16.0
+1214,2025-02-22,Pen Set,Stationery,Aswan,5,12,0.1,54.0
+1107,2025-02-23,Phone,Electronics,Alexandria,5,600,0.2,2400.0
+1247,2025-02-23,Pen Set,Stationery,Aswan,4,12,0.1,43.2
+297,2025-02-23,Pen Set,Stationery,Aswan,1,12,0.05,11.4
+1637,2025-02-23,Phone,Electronics,Aswan,3,600,0.05,1710.0
+430,2025-02-23,Notebook,Stationery,Giza,2,5,0.2,8.0
+375,2025-02-23,Backpack,Accessories,Aswan,4,45,0.05,171.0
+69,2025-02-24,Laptop,Electronics,Aswan,2,900,0.1,1620.0
+891,2025-02-24,Laptop,Electronics,Aswan,1,900,0.2,720.0
+1447,2025-02-24,Backpack,Accessories,Aswan,2,45,0.1,81.0
+1521,2025-02-25,Pen Set,Stationery,Alexandria,5,12,0.05,57.0
+1412,2025-02-25,Chair,Furniture,Alexandria,5,150,0.05,712.5
+116,2025-02-25,Chair,Furniture,Aswan,2,150,0.05,285.0
+871,2025-02-25,Desk,Furniture,Cairo,2,250,0.0,500.0
+233,2025-02-25,Laptop,Electronics,Aswan,5,900,0.1,4050.0
+1755,2025-02-26,Notebook,Stationery,Giza,1,5,0.0,5.0
+1078,2025-02-26,Phone,Electronics,Cairo,5,600,0.0,3000.0
+1056,2025-02-26,Backpack,Accessories,Giza,3,45,0.2,108.0
+398,2025-02-26,Phone,Electronics,Cairo,2,600,0.05,1140.0
+850,2025-02-26,Chair,Furniture,Giza,2,150,0.2,240.0
+1588,2025-02-26,Laptop,Electronics,Aswan,4,900,0.2,2880.0
+1159,2025-02-26,Desk,Furniture,Giza,4,250,0.0,1000.0
+1821,2025-02-27,Headphones,Electronics,Aswan,1,80,0.1,72.0
+686,2025-02-27,Pen Set,Stationery,Giza,3,12,0.1,32.4
+1507,2025-02-27,Backpack,Accessories,Cairo,5,45,0.0,225.0
+1612,2025-02-27,Phone,Electronics,Giza,4,600,0.0,2400.0
+1936,2025-02-27,Phone,Electronics,Alexandria,5,600,0.05,2850.0
+523,2025-02-27,Phone,Electronics,Giza,2,600,0.1,1080.0
+199,2025-02-27,Headphones,Electronics,Giza,3,80,0.2,192.0
+1314,2025-02-27,Pen Set,Stationery,Aswan,2,12,0.05,22.8
+569,2025-02-28,Notebook,Stationery,Cairo,2,5,0.05,9.5
+1097,2025-02-28,Pen Set,Stationery,Cairo,1,12,0.1,10.8
+909,2025-02-28,Headphones,Electronics,Alexandria,1,80,0.2,64.0
+1236,2025-02-28,Headphones,Electronics,Giza,3,80,0.2,192.0
+234,2025-02-28,Pen Set,Stationery,Giza,1,12,0.05,11.4
+748,2025-03-01,Headphones,Electronics,Cairo,5,80,0.05,380.0
+470,2025-03-01,Backpack,Accessories,Cairo,2,45,0.1,81.0
+1745,2025-03-01,Phone,Electronics,Giza,2,600,0.0,1200.0
+1068,2025-03-01,Notebook,Stationery,Alexandria,4,5,0.0,20.0
+242,2025-03-01,Chair,Furniture,Aswan,4,150,0.05,570.0
+127,2025-03-02,Laptop,Electronics,Alexandria,2,900,0.0,1800.0
+1520,2025-03-02,Desk,Furniture,Aswan,5,250,0.1,1125.0
+303,2025-03-02,Laptop,Electronics,Alexandria,3,900,0.0,2700.0
+1737,2025-03-02,Chair,Furniture,Cairo,2,150,0.05,285.0
+1441,2025-03-02,Pen Set,Stationery,Alexandria,5,12,0.1,54.0
+183,2025-03-03,Desk,Furniture,Giza,4,250,0.0,1000.0
+461,2025-03-03,Notebook,Stationery,Giza,2,5,0.0,10.0
+1470,2025-03-03,Laptop,Electronics,Aswan,5,900,0.05,4275.0
+1364,2025-03-04,Phone,Electronics,Cairo,5,600,0.2,2400.0
+1036,2025-03-04,Notebook,Stationery,Alexandria,5,5,0.0,25.0
+200,2025-03-04,Backpack,Accessories,Aswan,1,45,0.0,45.0
+719,2025-03-05,Phone,Electronics,Giza,3,600,0.05,1710.0
+423,2025-03-05,Pen Set,Stationery,Cairo,1,12,0.2,9.6
+284,2025-03-05,Desk,Furniture,Giza,4,250,0.05,950.0
+957,2025-03-05,Desk,Furniture,Giza,1,250,0.0,250.0
+545,2025-03-05,Pen Set,Stationery,Cairo,5,12,0.05,57.0
+345,2025-03-05,Backpack,Accessories,Alexandria,3,45,0.05,128.25
+49,2025-03-05,Notebook,Stationery,Giza,4,5,0.05,19.0
+368,2025-03-05,Headphones,Electronics,Alexandria,1,80,0.0,80.0
+1845,2025-03-05,Notebook,Stationery,Giza,5,5,0.2,20.0
+1831,2025-03-06,Headphones,Electronics,Cairo,5,80,0.05,380.0
+1288,2025-03-06,Phone,Electronics,Cairo,2,600,0.2,960.0
+1890,2025-03-06,Desk,Furniture,Giza,5,250,0.05,1187.5
+185,2025-03-06,Desk,Furniture,Giza,4,250,0.0,1000.0
+93,2025-03-06,Pen Set,Stationery,Giza,5,12,0.05,57.0
+1608,2025-03-07,Chair,Furniture,Alexandria,4,150,0.1,540.0
+723,2025-03-07,Pen Set,Stationery,Aswan,1,12,0.2,9.6
+553,2025-03-07,Pen Set,Stationery,Giza,2,12,0.0,24.0
+2000,2025-03-07,Headphones,Electronics,Giza,3,80,0.0,240.0
+1141,2025-03-07,Backpack,Accessories,Giza,3,45,0.05,128.25
+863,2025-03-07,Laptop,Electronics,Aswan,5,900,0.2,3600.0
+136,2025-03-08,Headphones,Electronics,Giza,4,80,0.2,256.0
+78,2025-03-09,Phone,Electronics,Alexandria,3,600,0.1,1620.0
+1128,2025-03-09,Notebook,Stationery,Aswan,5,5,0.1,22.5
+1370,2025-03-09,Notebook,Stationery,Aswan,1,5,0.05,4.75
+300,2025-03-09,Laptop,Electronics,Alexandria,5,900,0.0,4500.0
+1884,2025-03-09,Pen Set,Stationery,Cairo,3,12,0.0,36.0
+310,2025-03-09,Laptop,Electronics,Giza,3,900,0.1,2430.0
+1423,2025-03-09,Chair,Furniture,Alexandria,4,150,0.0,600.0
+218,2025-03-10,Laptop,Electronics,Aswan,5,900,0.05,4275.0
+336,2025-03-10,Pen Set,Stationery,Alexandria,3,12,0.05,34.2
+681,2025-03-10,Notebook,Stationery,Aswan,1,5,0.05,4.75
+671,2025-03-10,Backpack,Accessories,Giza,4,45,0.0,180.0
+1937,2025-03-10,Headphones,Electronics,Giza,3,80,0.0,240.0
+884,2025-03-10,Phone,Electronics,Alexandria,1,600,0.0,600.0
+449,2025-03-10,Chair,Furniture,Aswan,4,150,0.1,540.0
+534,2025-03-10,Headphones,Electronics,Alexandria,1,80,0.2,64.0
+1484,2025-03-10,Laptop,Electronics,Cairo,2,900,0.2,1440.0
+570,2025-03-11,Chair,Furniture,Aswan,5,150,0.0,750.0
+1260,2025-03-11,Pen Set,Stationery,Alexandria,3,12,0.0,36.0
+1886,2025-03-11,Phone,Electronics,Giza,3,600,0.2,1440.0
+250,2025-03-11,Laptop,Electronics,Aswan,3,900,0.05,2565.0
+687,2025-03-12,Desk,Furniture,Cairo,2,250,0.2,400.0
+252,2025-03-12,Desk,Furniture,Cairo,3,250,0.05,712.5
+633,2025-03-12,Desk,Furniture,Alexandria,5,250,0.05,1187.5
+1800,2025-03-12,Chair,Furniture,Aswan,1,150,0.05,142.5
+1573,2025-03-13,Notebook,Stationery,Cairo,4,5,0.0,20.0
+519,2025-03-13,Desk,Furniture,Aswan,1,250,0.1,225.0
+204,2025-03-13,Notebook,Stationery,Giza,2,5,0.0,10.0
+456,2025-03-13,Chair,Furniture,Cairo,3,150,0.0,450.0
+382,2025-03-13,Backpack,Accessories,Cairo,3,45,0.0,135.0
+1948,2025-03-13,Backpack,Accessories,Aswan,2,45,0.2,72.0
+971,2025-03-14,Headphones,Electronics,Giza,4,80,0.2,256.0
+115,2025-03-14,Chair,Furniture,Alexandria,4,150,0.05,570.0
+915,2025-03-14,Chair,Furniture,Giza,3,150,0.2,360.0
+1218,2025-03-14,Notebook,Stationery,Cairo,3,5,0.1,13.5
+1913,2025-03-15,Laptop,Electronics,Alexandria,1,900,0.1,810.0
+770,2025-03-15,Desk,Furniture,Aswan,5,250,0.0,1250.0
+1500,2025-03-15,Pen Set,Stationery,Cairo,3,12,0.0,36.0
+1952,2025-03-15,Chair,Furniture,Alexandria,2,150,0.2,240.0
+709,2025-03-15,Desk,Furniture,Alexandria,4,250,0.2,800.0
+651,2025-03-15,Desk,Furniture,Aswan,5,250,0.05,1187.5
+174,2025-03-16,Notebook,Stationery,Giza,4,5,0.05,19.0
+1308,2025-03-16,Phone,Electronics,Cairo,1,600,0.1,540.0
+1261,2025-03-16,Headphones,Electronics,Alexandria,3,80,0.2,192.0
+1493,2025-03-16,Laptop,Electronics,Giza,2,900,0.0,1800.0
+1744,2025-03-16,Laptop,Electronics,Cairo,3,900,0.05,2565.0
+1604,2025-03-17,Headphones,Electronics,Cairo,4,80,0.05,304.0
+1753,2025-03-17,Notebook,Stationery,Aswan,5,5,0.0,25.0
+101,2025-03-17,Pen Set,Stationery,Alexandria,5,12,0.0,60.0
+1255,2025-03-17,Notebook,Stationery,Aswan,2,5,0.05,9.5
+615,2025-03-17,Notebook,Stationery,Cairo,1,5,0.1,4.5
+1850,2025-03-17,Phone,Electronics,Alexandria,2,600,0.0,1200.0
+978,2025-03-18,Chair,Furniture,Alexandria,5,150,0.0,750.0
+1894,2025-03-18,Notebook,Stationery,Giza,2,5,0.05,9.5
+91,2025-03-18,Desk,Furniture,Giza,5,250,0.1,1125.0
+1967,2025-03-18,Headphones,Electronics,Aswan,4,80,0.1,288.0
+1304,2025-03-18,Backpack,Accessories,Aswan,2,45,0.05,85.5
+417,2025-03-19,Backpack,Accessories,Giza,4,45,0.05,171.0
+1482,2025-03-19,Laptop,Electronics,Cairo,2,900,0.0,1800.0
+1891,2025-03-19,Phone,Electronics,Giza,3,600,0.1,1620.0
+1334,2025-03-19,Pen Set,Stationery,Aswan,5,12,0.2,48.0
+1322,2025-03-19,Headphones,Electronics,Giza,1,80,0.2,64.0
+1463,2025-03-19,Laptop,Electronics,Alexandria,5,900,0.1,4050.0
+118,2025-03-20,Phone,Electronics,Alexandria,3,600,0.0,1800.0
+389,2025-03-20,Backpack,Accessories,Aswan,5,45,0.05,213.75
+1842,2025-03-21,Laptop,Electronics,Alexandria,3,900,0.2,2160.0
+973,2025-03-21,Desk,Furniture,Alexandria,3,250,0.2,600.0
+1276,2025-03-21,Notebook,Stationery,Giza,5,5,0.0,25.0
+1971,2025-03-21,Pen Set,Stationery,Cairo,3,12,0.1,32.4
+1582,2025-03-22,Phone,Electronics,Alexandria,4,600,0.2,1920.0
+1729,2025-03-22,Desk,Furniture,Aswan,2,250,0.05,475.0
+1712,2025-03-22,Desk,Furniture,Aswan,5,250,0.2,1000.0
+1473,2025-03-22,Desk,Furniture,Aswan,4,250,0.2,800.0
+1627,2025-03-22,Chair,Furniture,Alexandria,4,150,0.05,570.0
+1208,2025-03-22,Notebook,Stationery,Giza,5,5,0.2,20.0
+203,2025-03-22,Desk,Furniture,Giza,1,250,0.05,237.5
+1321,2025-03-22,Laptop,Electronics,Alexandria,1,900,0.05,855.0
+1974,2025-03-22,Headphones,Electronics,Giza,2,80,0.0,160.0
+1537,2025-03-23,Phone,Electronics,Giza,1,600,0.0,600.0
+660,2025-03-23,Headphones,Electronics,Aswan,1,80,0.05,76.0
+162,2025-03-23,Notebook,Stationery,Alexandria,2,5,0.05,9.5
+1535,2025-03-23,Pen Set,Stationery,Cairo,1,12,0.0,12.0
+1139,2025-03-23,Notebook,Stationery,Aswan,3,5,0.0,15.0
+163,2025-03-24,Desk,Furniture,Alexandria,3,250,0.1,675.0
+1771,2025-03-24,Headphones,Electronics,Cairo,3,80,0.05,228.0
+1220,2025-03-24,Desk,Furniture,Aswan,3,250,0.05,712.5
+1088,2025-03-24,Backpack,Accessories,Alexandria,1,45,0.0,45.0
+1568,2025-03-24,Chair,Furniture,Giza,1,150,0.05,142.5
+1185,2025-03-25,Desk,Furniture,Aswan,4,250,0.2,800.0
+532,2025-03-25,Phone,Electronics,Giza,5,600,0.0,3000.0
+68,2025-03-25,Headphones,Electronics,Giza,5,80,0.05,380.0
+1074,2025-03-25,Chair,Furniture,Giza,4,150,0.2,480.0
+1079,2025-03-26,Desk,Furniture,Cairo,2,250,0.2,400.0
+121,2025-03-26,Desk,Furniture,Alexandria,4,250,0.1,900.0
+333,2025-03-26,Headphones,Electronics,Giza,2,80,0.2,128.0
+993,2025-03-26,Phone,Electronics,Aswan,1,600,0.2,480.0
+832,2025-03-26,Phone,Electronics,Aswan,4,600,0.0,2400.0
+1145,2025-03-27,Headphones,Electronics,Aswan,4,80,0.1,288.0
+263,2025-03-27,Headphones,Electronics,Aswan,1,80,0.05,76.0
+1865,2025-03-27,Pen Set,Stationery,Giza,4,12,0.2,38.4
+1968,2025-03-27,Desk,Furniture,Cairo,2,250,0.1,450.0
+1807,2025-03-27,Laptop,Electronics,Aswan,1,900,0.05,855.0
+415,2025-03-27,Laptop,Electronics,Giza,2,900,0.05,1710.0
+40,2025-03-27,Notebook,Stationery,Giza,3,5,0.05,14.25
+1698,2025-03-28,Phone,Electronics,Cairo,3,600,0.2,1440.0
+83,2025-03-28,Phone,Electronics,Giza,2,600,0.2,960.0
+1519,2025-03-28,Desk,Furniture,Aswan,4,250,0.1,900.0
+1383,2025-03-28,Headphones,Electronics,Giza,5,80,0.05,380.0
+589,2025-03-28,Pen Set,Stationery,Giza,5,12,0.1,54.0
+1990,2025-03-28,Backpack,Accessories,Giza,3,45,0.1,121.5
+1295,2025-03-28,Backpack,Accessories,Cairo,1,45,0.2,36.0
+1389,2025-03-28,Backpack,Accessories,Alexandria,2,45,0.05,85.5
+463,2025-03-28,Notebook,Stationery,Giza,3,5,0.1,13.5
+785,2025-03-29,Desk,Furniture,Alexandria,5,250,0.2,1000.0
+1415,2025-03-29,Chair,Furniture,Giza,3,150,0.05,427.5
+161,2025-03-29,Backpack,Accessories,Cairo,5,45,0.05,213.75
+1330,2025-03-29,Headphones,Electronics,Giza,5,80,0.05,380.0
+1199,2025-03-29,Pen Set,Stationery,Cairo,5,12,0.1,54.0
+668,2025-03-30,Pen Set,Stationery,Alexandria,5,12,0.0,60.0
+475,2025-03-30,Notebook,Stationery,Aswan,1,5,0.2,4.0
+1991,2025-03-30,Chair,Furniture,Alexandria,4,150,0.0,600.0
+477,2025-03-30,Pen Set,Stationery,Alexandria,3,12,0.2,28.8
+385,2025-03-31,Laptop,Electronics,Aswan,1,900,0.05,855.0
+6,2025-03-31,Pen Set,Stationery,Aswan,1,12,0.2,9.6
+1404,2025-03-31,Headphones,Electronics,Alexandria,5,80,0.1,360.0
+1027,2025-03-31,Laptop,Electronics,Aswan,1,900,0.05,855.0
+1216,2025-03-31,Laptop,Electronics,Cairo,2,900,0.0,1800.0
+126,2025-03-31,Chair,Furniture,Cairo,2,150,0.1,270.0
+1243,2025-03-31,Backpack,Accessories,Giza,5,45,0.2,180.0
+1327,2025-03-31,Notebook,Stationery,Cairo,1,5,0.1,4.5
+1099,2025-03-31,Laptop,Electronics,Alexandria,1,900,0.2,720.0
+1853,2025-04-01,Desk,Furniture,Aswan,1,250,0.05,237.5
+868,2025-04-01,Pen Set,Stationery,Alexandria,1,12,0.05,11.4
+100,2025-04-01,Phone,Electronics,Giza,2,600,0.05,1140.0
+1528,2025-04-01,Phone,Electronics,Giza,1,600,0.05,570.0
+1298,2025-04-01,Notebook,Stationery,Alexandria,5,5,0.1,22.5
+1215,2025-04-01,Laptop,Electronics,Aswan,3,900,0.2,2160.0
+789,2025-04-01,Chair,Furniture,Cairo,1,150,0.05,142.5
+35,2025-04-01,Backpack,Accessories,Aswan,5,45,0.05,213.75
+1456,2025-04-01,Laptop,Electronics,Alexandria,5,900,0.0,4500.0
+816,2025-04-02,Pen Set,Stationery,Alexandria,1,12,0.05,11.4
+1331,2025-04-02,Desk,Furniture,Cairo,4,250,0.1,900.0
+1219,2025-04-02,Pen Set,Stationery,Cairo,5,12,0.0,60.0
+165,2025-04-02,Desk,Furniture,Alexandria,5,250,0.1,1125.0
+1494,2025-04-02,Headphones,Electronics,Alexandria,4,80,0.0,320.0
+66,2025-04-03,Headphones,Electronics,Giza,3,80,0.05,228.0
+255,2025-04-03,Notebook,Stationery,Aswan,2,5,0.05,9.5
+433,2025-04-03,Pen Set,Stationery,Cairo,1,12,0.2,9.6
+1780,2025-04-03,Notebook,Stationery,Aswan,3,5,0.0,15.0
+1474,2025-04-04,Phone,Electronics,Giza,5,600,0.0,3000.0
+364,2025-04-04,Backpack,Accessories,Cairo,1,45,0.2,36.0
+1736,2025-04-04,Pen Set,Stationery,Cairo,2,12,0.1,21.6
+1619,2025-04-04,Laptop,Electronics,Alexandria,3,900,0.2,2160.0
+606,2025-04-04,Chair,Furniture,Aswan,4,150,0.05,570.0
+224,2025-04-04,Phone,Electronics,Aswan,3,600,0.1,1620.0
+1156,2025-04-04,Chair,Furniture,Cairo,5,150,0.2,600.0
+393,2025-04-04,Headphones,Electronics,Aswan,4,80,0.0,320.0
+921,2025-04-04,Pen Set,Stationery,Giza,2,12,0.2,19.2
+21,2025-04-05,Chair,Furniture,Alexandria,2,150,0.0,300.0
+198,2025-04-05,Laptop,Electronics,Giza,5,900,0.0,4500.0
+1514,2025-04-06,Headphones,Electronics,Alexandria,1,80,0.2,64.0
+1277,2025-04-06,Notebook,Stationery,Cairo,1,5,0.0,5.0
+1189,2025-04-06,Chair,Furniture,Alexandria,1,150,0.2,120.0
+1872,2025-04-07,Phone,Electronics,Cairo,1,600,0.05,570.0
+897,2025-04-07,Chair,Furniture,Alexandria,4,150,0.2,480.0
+193,2025-04-07,Chair,Furniture,Cairo,2,150,0.1,270.0
+1711,2025-04-07,Headphones,Electronics,Cairo,2,80,0.05,152.0
+1203,2025-04-07,Backpack,Accessories,Alexandria,4,45,0.2,144.0
+882,2025-04-07,Pen Set,Stationery,Cairo,2,12,0.2,19.2
+160,2025-04-08,Pen Set,Stationery,Alexandria,2,12,0.0,24.0
+54,2025-04-08,Desk,Furniture,Giza,5,250,0.2,1000.0
+780,2025-04-09,Pen Set,Stationery,Giza,1,12,0.0,12.0
+506,2025-04-09,Desk,Furniture,Cairo,1,250,0.05,237.5
+120,2025-04-09,Laptop,Electronics,Aswan,4,900,0.0,3600.0
+1654,2025-04-09,Chair,Furniture,Cairo,3,150,0.05,427.5
+238,2025-04-09,Desk,Furniture,Alexandria,2,250,0.0,500.0
+1603,2025-04-10,Pen Set,Stationery,Cairo,1,12,0.0,12.0
+1297,2025-04-10,Headphones,Electronics,Aswan,2,80,0.0,160.0
+845,2025-04-10,Laptop,Electronics,Giza,3,900,0.2,2160.0
+289,2025-04-10,Chair,Furniture,Giza,5,150,0.2,600.0
+1600,2025-04-10,Notebook,Stationery,Aswan,4,5,0.2,16.0
+1609,2025-04-10,Phone,Electronics,Alexandria,4,600,0.1,2160.0
+240,2025-04-10,Notebook,Stationery,Alexandria,5,5,0.0,25.0
+1928,2025-04-10,Phone,Electronics,Cairo,1,600,0.1,540.0
+517,2025-04-10,Backpack,Accessories,Giza,4,45,0.05,171.0
+1847,2025-04-10,Desk,Furniture,Giza,4,250,0.0,1000.0
+1282,2025-04-11,Notebook,Stationery,Cairo,4,5,0.1,18.0
+511,2025-04-11,Backpack,Accessories,Giza,1,45,0.05,42.75
+269,2025-04-11,Chair,Furniture,Cairo,1,150,0.0,150.0
+253,2025-04-11,Phone,Electronics,Cairo,2,600,0.2,960.0
+664,2025-04-11,Phone,Electronics,Aswan,3,600,0.05,1710.0
+442,2025-04-11,Headphones,Electronics,Cairo,1,80,0.05,76.0
+725,2025-04-11,Pen Set,Stationery,Aswan,4,12,0.05,45.6
+566,2025-04-11,Phone,Electronics,Giza,3,600,0.05,1710.0
+1293,2025-04-12,Desk,Furniture,Giza,2,250,0.05,475.0
+30,2025-04-12,Desk,Furniture,Giza,2,250,0.05,475.0
+1358,2025-04-12,Phone,Electronics,Cairo,5,600,0.1,2700.0
+1704,2025-04-12,Phone,Electronics,Giza,5,600,0.05,2850.0
+1020,2025-04-12,Laptop,Electronics,Alexandria,4,900,0.1,3240.0
+1516,2025-04-12,Backpack,Accessories,Aswan,5,45,0.1,202.5
+1244,2025-04-12,Desk,Furniture,Aswan,3,250,0.2,600.0
+1733,2025-04-12,Notebook,Stationery,Giza,3,5,0.2,12.0
+1105,2025-04-13,Headphones,Electronics,Cairo,4,80,0.0,320.0
+1565,2025-04-13,Chair,Furniture,Aswan,4,150,0.0,600.0
+221,2025-04-13,Phone,Electronics,Alexandria,5,600,0.0,3000.0
+7,2025-04-13,Laptop,Electronics,Alexandria,3,900,0.05,2565.0
+438,2025-04-13,Backpack,Accessories,Aswan,4,45,0.2,144.0
+1636,2025-04-13,Chair,Furniture,Giza,3,150,0.1,405.0
+495,2025-04-13,Headphones,Electronics,Alexandria,3,80,0.05,228.0
+1149,2025-04-13,Notebook,Stationery,Alexandria,5,5,0.05,23.75
+1109,2025-04-13,Backpack,Accessories,Alexandria,5,45,0.05,213.75
+476,2025-04-14,Pen Set,Stationery,Aswan,3,12,0.05,34.2
+1393,2025-04-14,Backpack,Accessories,Alexandria,4,45,0.2,144.0
+1239,2025-04-14,Headphones,Electronics,Giza,5,80,0.2,320.0
+961,2025-04-14,Phone,Electronics,Alexandria,5,600,0.05,2850.0
+1515,2025-04-14,Phone,Electronics,Giza,2,600,0.1,1080.0
+1827,2025-04-14,Laptop,Electronics,Aswan,2,900,0.0,1800.0
+1700,2025-04-14,Backpack,Accessories,Aswan,4,45,0.05,171.0
+841,2025-04-14,Headphones,Electronics,Alexandria,3,80,0.2,192.0
+1680,2025-04-14,Chair,Furniture,Cairo,4,150,0.0,600.0
+1769,2025-04-14,Laptop,Electronics,Giza,5,900,0.05,4275.0
+762,2025-04-15,Chair,Furniture,Giza,3,150,0.2,360.0
+1202,2025-04-15,Desk,Furniture,Giza,5,250,0.05,1187.5
+1653,2025-04-15,Laptop,Electronics,Aswan,3,900,0.0,2700.0
+1669,2025-04-15,Chair,Furniture,Cairo,3,150,0.2,360.0
+928,2025-04-16,Headphones,Electronics,Aswan,2,80,0.1,144.0
+1670,2025-04-16,Notebook,Stationery,Alexandria,2,5,0.1,9.0
+380,2025-04-16,Headphones,Electronics,Alexandria,4,80,0.2,256.0
+447,2025-04-16,Headphones,Electronics,Alexandria,4,80,0.05,304.0
+1875,2025-04-16,Desk,Furniture,Aswan,4,250,0.1,900.0
+209,2025-04-17,Headphones,Electronics,Alexandria,2,80,0.0,160.0
+1180,2025-04-17,Laptop,Electronics,Aswan,1,900,0.05,855.0
+1110,2025-04-17,Laptop,Electronics,Alexandria,2,900,0.05,1710.0
+630,2025-04-17,Headphones,Electronics,Cairo,1,80,0.05,76.0
+678,2025-04-17,Laptop,Electronics,Giza,5,900,0.1,4050.0
+22,2025-04-17,Headphones,Electronics,Alexandria,4,80,0.0,320.0
+381,2025-04-17,Laptop,Electronics,Cairo,1,900,0.2,720.0
+1539,2025-04-17,Notebook,Stationery,Giza,3,5,0.2,12.0
+959,2025-04-18,Backpack,Accessories,Alexandria,3,45,0.2,108.0
+913,2025-04-18,Desk,Furniture,Giza,3,250,0.0,750.0
+1129,2025-04-18,Chair,Furniture,Cairo,3,150,0.1,405.0
+1900,2025-04-18,Headphones,Electronics,Giza,5,80,0.2,320.0
+457,2025-04-18,Phone,Electronics,Aswan,5,600,0.1,2700.0
+981,2025-04-18,Chair,Furniture,Aswan,4,150,0.2,480.0
+341,2025-04-19,Notebook,Stationery,Aswan,3,5,0.0,15.0
+1302,2025-04-19,Desk,Furniture,Aswan,2,250,0.2,400.0
+1071,2025-04-19,Notebook,Stationery,Cairo,3,5,0.2,12.0
+299,2025-04-19,Headphones,Electronics,Cairo,2,80,0.0,160.0
+1346,2025-04-19,Backpack,Accessories,Cairo,4,45,0.05,171.0
+525,2025-04-19,Headphones,Electronics,Alexandria,1,80,0.2,64.0
+1357,2025-04-19,Headphones,Electronics,Giza,1,80,0.1,72.0
+759,2025-04-19,Phone,Electronics,Cairo,2,600,0.05,1140.0
+493,2025-04-19,Pen Set,Stationery,Alexandria,5,12,0.1,54.0
+711,2025-04-20,Notebook,Stationery,Cairo,1,5,0.05,4.75
+488,2025-04-20,Chair,Furniture,Giza,1,150,0.05,142.5
+936,2025-04-20,Backpack,Accessories,Giza,2,45,0.1,81.0
+1394,2025-04-20,Notebook,Stationery,Alexandria,1,5,0.2,4.0
+305,2025-04-20,Chair,Furniture,Alexandria,5,150,0.1,675.0
+830,2025-04-20,Laptop,Electronics,Alexandria,1,900,0.05,855.0
+282,2025-04-21,Desk,Furniture,Alexandria,2,250,0.2,400.0
+167,2025-04-21,Headphones,Electronics,Cairo,2,80,0.05,152.0
+499,2025-04-21,Backpack,Accessories,Giza,1,45,0.0,45.0
+1080,2025-04-21,Pen Set,Stationery,Alexandria,3,12,0.1,32.4
+77,2025-04-21,Headphones,Electronics,Giza,3,80,0.2,192.0
+222,2025-04-21,Desk,Furniture,Alexandria,1,250,0.1,225.0
+1140,2025-04-22,Chair,Furniture,Giza,3,150,0.2,360.0
+975,2025-04-22,Phone,Electronics,Cairo,1,600,0.2,480.0
+1832,2025-04-22,Backpack,Accessories,Aswan,2,45,0.0,90.0
+1271,2025-04-22,Headphones,Electronics,Aswan,1,80,0.0,80.0
+1306,2025-04-23,Notebook,Stationery,Cairo,2,5,0.2,8.0
+1498,2025-04-23,Pen Set,Stationery,Aswan,3,12,0.05,34.2
+1146,2025-04-23,Desk,Furniture,Cairo,3,250,0.2,600.0
+516,2025-04-23,Laptop,Electronics,Alexandria,5,900,0.2,3600.0
+1794,2025-04-24,Headphones,Electronics,Cairo,4,80,0.2,256.0
+403,2025-04-24,Headphones,Electronics,Cairo,4,80,0.05,304.0
+1197,2025-04-24,Notebook,Stationery,Aswan,2,5,0.2,8.0
+640,2025-04-24,Backpack,Accessories,Alexandria,5,45,0.2,180.0
+1631,2025-04-24,Chair,Furniture,Cairo,3,150,0.05,427.5
+320,2025-04-24,Pen Set,Stationery,Cairo,4,12,0.0,48.0
+938,2025-04-24,Phone,Electronics,Aswan,4,600,0.1,2160.0
+730,2025-04-25,Notebook,Stationery,Giza,3,5,0.1,13.5
+1851,2025-04-25,Laptop,Electronics,Cairo,4,900,0.0,3600.0
+95,2025-04-25,Backpack,Accessories,Alexandria,1,45,0.2,36.0
+1606,2025-04-25,Backpack,Accessories,Cairo,1,45,0.0,45.0
+50,2025-04-25,Pen Set,Stationery,Aswan,4,12,0.05,45.6
+1527,2025-04-25,Headphones,Electronics,Aswan,1,80,0.1,72.0
+543,2025-04-25,Phone,Electronics,Alexandria,5,600,0.2,2400.0
+1922,2025-04-26,Chair,Furniture,Cairo,4,150,0.2,480.0
+172,2025-04-26,Laptop,Electronics,Aswan,4,900,0.05,3420.0
+141,2025-04-26,Backpack,Accessories,Aswan,4,45,0.1,162.0
+1310,2025-04-26,Pen Set,Stationery,Alexandria,5,12,0.05,57.0
+23,2025-04-26,Phone,Electronics,Aswan,4,600,0.1,2160.0
+881,2025-04-26,Laptop,Electronics,Alexandria,1,900,0.05,855.0
+722,2025-04-27,Backpack,Accessories,Cairo,4,45,0.2,144.0
+129,2025-04-27,Chair,Furniture,Cairo,1,150,0.1,135.0
+604,2025-04-27,Phone,Electronics,Giza,3,600,0.2,1440.0
+1238,2025-04-28,Laptop,Electronics,Alexandria,5,900,0.2,3600.0
+1354,2025-04-28,Backpack,Accessories,Cairo,4,45,0.05,171.0
+876,2025-04-28,Chair,Furniture,Cairo,3,150,0.1,405.0
+1150,2025-04-28,Pen Set,Stationery,Aswan,1,12,0.1,10.8
+1131,2025-04-28,Desk,Furniture,Giza,2,250,0.05,475.0
+480,2025-04-28,Laptop,Electronics,Giza,1,900,0.1,810.0
+195,2025-04-28,Backpack,Accessories,Cairo,4,45,0.1,162.0
+619,2025-04-28,Laptop,Electronics,Cairo,4,900,0.1,3240.0
+1893,2025-04-28,Backpack,Accessories,Cairo,3,45,0.0,135.0
+1584,2025-04-29,Desk,Furniture,Cairo,2,250,0.0,500.0
+539,2025-04-29,Chair,Furniture,Cairo,3,150,0.2,360.0
+1732,2025-04-29,Backpack,Accessories,Cairo,5,45,0.0,225.0
+1887,2025-04-29,Notebook,Stationery,Giza,1,5,0.2,4.0
+558,2025-04-29,Backpack,Accessories,Alexandria,5,45,0.2,180.0
+1988,2025-04-29,Phone,Electronics,Alexandria,1,600,0.1,540.0
+641,2025-04-30,Notebook,Stationery,Giza,2,5,0.2,8.0
+1224,2025-04-30,Notebook,Stationery,Alexandria,4,5,0.2,16.0
+898,2025-04-30,Laptop,Electronics,Giza,4,900,0.1,3240.0
+1524,2025-04-30,Phone,Electronics,Giza,1,600,0.2,480.0
+38,2025-04-30,Pen Set,Stationery,Cairo,1,12,0.1,10.8
+1184,2025-04-30,Desk,Furniture,Alexandria,1,250,0.2,200.0
+1656,2025-04-30,Phone,Electronics,Alexandria,3,600,0.0,1800.0
+214,2025-05-01,Desk,Furniture,Giza,1,250,0.1,225.0
+246,2025-05-01,Laptop,Electronics,Aswan,5,900,0.05,4275.0
+440,2025-05-01,Desk,Furniture,Giza,1,250,0.05,237.5
+735,2025-05-01,Phone,Electronics,Aswan,3,600,0.2,1440.0
+1414,2025-05-01,Pen Set,Stationery,Cairo,1,12,0.2,9.6
+732,2025-05-01,Desk,Furniture,Cairo,3,250,0.1,675.0
+874,2025-05-01,Laptop,Electronics,Aswan,2,900,0.1,1620.0
+1090,2025-05-01,Phone,Electronics,Alexandria,3,600,0.1,1620.0
+708,2025-05-01,Chair,Furniture,Cairo,2,150,0.1,270.0
+699,2025-05-01,Laptop,Electronics,Alexandria,1,900,0.05,855.0
+312,2025-05-02,Notebook,Stationery,Cairo,1,5,0.2,4.0
+244,2025-05-02,Notebook,Stationery,Aswan,1,5,0.0,5.0
+673,2025-05-02,Notebook,Stationery,Alexandria,5,5,0.0,25.0
+1335,2025-05-02,Chair,Furniture,Aswan,1,150,0.1,135.0
+17,2025-05-02,Chair,Furniture,Alexandria,3,150,0.05,427.5
+611,2025-05-03,Pen Set,Stationery,Cairo,5,12,0.0,60.0
+1903,2025-05-03,Notebook,Stationery,Alexandria,3,5,0.0,15.0
+301,2025-05-03,Headphones,Electronics,Aswan,2,80,0.05,152.0
+892,2025-05-03,Notebook,Stationery,Alexandria,3,5,0.1,13.5
+1931,2025-05-03,Laptop,Electronics,Alexandria,4,900,0.2,2880.0
+1536,2025-05-04,Laptop,Electronics,Giza,1,900,0.1,810.0
+1921,2025-05-04,Desk,Furniture,Cairo,5,250,0.0,1250.0
+530,2025-05-04,Backpack,Accessories,Giza,3,45,0.1,121.5
+154,2025-05-04,Headphones,Electronics,Giza,3,80,0.2,192.0
+1998,2025-05-04,Backpack,Accessories,Alexandria,5,45,0.2,180.0
+1333,2025-05-04,Desk,Furniture,Giza,2,250,0.05,475.0
+963,2025-05-05,Pen Set,Stationery,Aswan,5,12,0.2,48.0
+1251,2025-05-05,Phone,Electronics,Giza,2,600,0.0,1200.0
+351,2025-05-05,Chair,Furniture,Cairo,3,150,0.1,405.0
+682,2025-05-05,Phone,Electronics,Cairo,1,600,0.0,600.0
+844,2025-05-05,Laptop,Electronics,Cairo,3,900,0.0,2700.0
+1081,2025-05-05,Backpack,Accessories,Aswan,3,45,0.05,128.25
+997,2025-05-05,Chair,Furniture,Cairo,2,150,0.1,270.0
+1930,2025-05-06,Backpack,Accessories,Cairo,4,45,0.05,171.0
+1874,2025-05-06,Backpack,Accessories,Alexandria,3,45,0.05,128.25
+537,2025-05-06,Desk,Furniture,Giza,2,250,0.0,500.0
+1106,2025-05-06,Phone,Electronics,Cairo,2,600,0.1,1080.0
+1512,2025-05-06,Phone,Electronics,Giza,3,600,0.2,1440.0
+1728,2025-05-06,Chair,Furniture,Aswan,3,150,0.0,450.0
+1846,2025-05-07,Chair,Furniture,Alexandria,3,150,0.0,450.0
+494,2025-05-07,Chair,Furniture,Aswan,4,150,0.05,570.0
+849,2025-05-07,Pen Set,Stationery,Alexandria,2,12,0.0,24.0
+1348,2025-05-07,Notebook,Stationery,Alexandria,1,5,0.05,4.75
+724,2025-05-07,Laptop,Electronics,Giza,2,900,0.0,1800.0
+459,2025-05-07,Pen Set,Stationery,Alexandria,3,12,0.0,36.0
+1374,2025-05-08,Desk,Furniture,Alexandria,3,250,0.0,750.0
+1379,2025-05-08,Chair,Furniture,Aswan,5,150,0.05,712.5
+1294,2025-05-08,Laptop,Electronics,Aswan,2,900,0.1,1620.0
+1578,2025-05-08,Pen Set,Stationery,Cairo,5,12,0.2,48.0
+925,2025-05-08,Phone,Electronics,Alexandria,3,600,0.05,1710.0
+43,2025-05-08,Notebook,Stationery,Aswan,4,5,0.2,16.0
+851,2025-05-09,Backpack,Accessories,Alexandria,1,45,0.2,36.0
+1235,2025-05-09,Notebook,Stationery,Alexandria,3,5,0.05,14.25
+422,2025-05-09,Notebook,Stationery,Giza,4,5,0.2,16.0
+582,2025-05-09,Pen Set,Stationery,Cairo,3,12,0.2,28.8
+672,2025-05-09,Chair,Furniture,Cairo,5,150,0.1,675.0
+1551,2025-05-10,Headphones,Electronics,Aswan,3,80,0.1,216.0
+478,2025-05-10,Laptop,Electronics,Giza,1,900,0.05,855.0
+306,2025-05-10,Phone,Electronics,Alexandria,1,600,0.2,480.0
+434,2025-05-10,Phone,Electronics,Giza,2,600,0.0,1200.0
+1221,2025-05-11,Notebook,Stationery,Cairo,4,5,0.05,19.0
+1761,2025-05-11,Desk,Furniture,Giza,1,250,0.0,250.0
+1569,2025-05-11,Backpack,Accessories,Alexandria,4,45,0.05,171.0
+712,2025-05-11,Chair,Furniture,Giza,1,150,0.2,120.0
+1681,2025-05-11,Backpack,Accessories,Cairo,4,45,0.0,180.0
+1881,2025-05-12,Desk,Furniture,Alexandria,5,250,0.0,1250.0
+1342,2025-05-12,Phone,Electronics,Cairo,2,600,0.1,1080.0
+749,2025-05-13,Headphones,Electronics,Aswan,3,80,0.2,192.0
+888,2025-05-13,Phone,Electronics,Aswan,1,600,0.1,540.0
+1234,2025-05-14,Notebook,Stationery,Cairo,1,5,0.0,5.0
+467,2025-05-14,Phone,Electronics,Alexandria,2,600,0.2,960.0
+670,2025-05-14,Phone,Electronics,Aswan,5,600,0.05,2850.0
+356,2025-05-14,Backpack,Accessories,Aswan,2,45,0.2,72.0
+1706,2025-05-14,Pen Set,Stationery,Aswan,3,12,0.2,28.8
+1651,2025-05-15,Phone,Electronics,Alexandria,1,600,0.2,480.0
+815,2025-05-15,Pen Set,Stationery,Alexandria,1,12,0.1,10.8
+989,2025-05-15,Phone,Electronics,Cairo,5,600,0.2,2400.0
+593,2025-05-16,Phone,Electronics,Cairo,3,600,0.0,1800.0
+1961,2025-05-16,Pen Set,Stationery,Cairo,5,12,0.0,60.0
+739,2025-05-16,Notebook,Stationery,Giza,3,5,0.05,14.25
+65,2025-05-16,Desk,Furniture,Aswan,3,250,0.2,600.0
+1742,2025-05-16,Notebook,Stationery,Alexandria,2,5,0.1,9.0
+1543,2025-05-16,Laptop,Electronics,Alexandria,1,900,0.05,855.0
+1375,2025-05-16,Backpack,Accessories,Alexandria,4,45,0.1,162.0
+1970,2025-05-16,Phone,Electronics,Alexandria,4,600,0.0,2400.0
+1511,2025-05-17,Headphones,Electronics,Cairo,5,80,0.05,380.0
+1693,2025-05-17,Notebook,Stationery,Giza,1,5,0.2,4.0
+685,2025-05-17,Phone,Electronics,Giza,3,600,0.1,1620.0
+1810,2025-05-17,Backpack,Accessories,Giza,4,45,0.05,171.0
+949,2025-05-17,Backpack,Accessories,Aswan,3,45,0.05,128.25
+1353,2025-05-17,Desk,Furniture,Cairo,1,250,0.0,250.0
+130,2025-05-17,Notebook,Stationery,Cairo,2,5,0.05,9.5
+63,2025-05-18,Headphones,Electronics,Cairo,1,80,0.1,72.0
+225,2025-05-18,Notebook,Stationery,Aswan,3,5,0.2,12.0
+280,2025-05-18,Laptop,Electronics,Aswan,4,900,0.2,2880.0
+60,2025-05-18,Notebook,Stationery,Aswan,3,5,0.1,13.5
+82,2025-05-19,Desk,Furniture,Alexandria,1,250,0.05,237.5
+1338,2025-05-19,Headphones,Electronics,Aswan,1,80,0.1,72.0
+1713,2025-05-19,Backpack,Accessories,Giza,5,45,0.05,213.75
+1057,2025-05-19,Desk,Furniture,Aswan,5,250,0.2,1000.0
+1433,2025-05-20,Phone,Electronics,Aswan,2,600,0.05,1140.0
+1380,2025-05-20,Chair,Furniture,Giza,2,150,0.1,270.0
+67,2025-05-20,Backpack,Accessories,Cairo,4,45,0.2,144.0
+1048,2025-05-20,Chair,Furniture,Aswan,4,150,0.1,540.0
+1005,2025-05-21,Phone,Electronics,Aswan,4,600,0.2,1920.0
+1179,2025-05-22,Headphones,Electronics,Cairo,2,80,0.0,160.0
+1828,2025-05-22,Backpack,Accessories,Aswan,3,45,0.1,121.5
+1152,2025-05-22,Chair,Furniture,Cairo,2,150,0.1,270.0
+1837,2025-05-22,Backpack,Accessories,Giza,1,45,0.2,36.0
+392,2025-05-22,Phone,Electronics,Giza,1,600,0.2,480.0
+927,2025-05-22,Chair,Furniture,Cairo,4,150,0.05,570.0
+53,2025-05-23,Headphones,Electronics,Alexandria,2,80,0.2,128.0
+1296,2025-05-23,Chair,Furniture,Cairo,4,150,0.2,480.0
+1708,2025-05-23,Backpack,Accessories,Cairo,4,45,0.05,171.0
+1174,2025-05-23,Phone,Electronics,Giza,2,600,0.05,1140.0
+935,2025-05-23,Desk,Furniture,Alexandria,5,250,0.05,1187.5
+89,2025-05-23,Pen Set,Stationery,Aswan,2,12,0.2,19.2
+187,2025-05-23,Phone,Electronics,Alexandria,2,600,0.05,1140.0
+196,2025-05-23,Laptop,Electronics,Giza,5,900,0.05,4275.0
+1632,2025-05-23,Backpack,Accessories,Cairo,3,45,0.1,121.5
+181,2025-05-23,Backpack,Accessories,Alexandria,4,45,0.1,162.0
+700,2025-05-24,Laptop,Electronics,Aswan,1,900,0.0,900.0
+1329,2025-05-24,Notebook,Stationery,Alexandria,2,5,0.0,10.0
+998,2025-05-24,Headphones,Electronics,Aswan,2,80,0.2,128.0
+42,2025-05-24,Pen Set,Stationery,Cairo,5,12,0.1,54.0
+309,2025-05-25,Headphones,Electronics,Giza,2,80,0.2,128.0
+1830,2025-05-25,Backpack,Accessories,Alexandria,1,45,0.05,42.75
+783,2025-05-25,Laptop,Electronics,Cairo,4,900,0.05,3420.0
+11,2025-05-25,Chair,Furniture,Giza,3,150,0.05,427.5
+1920,2025-05-25,Chair,Furniture,Giza,4,150,0.2,480.0
+737,2025-05-26,Notebook,Stationery,Alexandria,3,5,0.0,15.0
+1169,2025-05-26,Backpack,Accessories,Giza,5,45,0.05,213.75
+1223,2025-05-26,Backpack,Accessories,Alexandria,4,45,0.2,144.0
+41,2025-05-26,Phone,Electronics,Aswan,2,600,0.05,1140.0
+1545,2025-05-27,Phone,Electronics,Giza,1,600,0.0,600.0
+1796,2025-05-27,Phone,Electronics,Giza,2,600,0.0,1200.0
+848,2025-05-27,Laptop,Electronics,Cairo,2,900,0.0,1800.0
+1166,2025-05-27,Laptop,Electronics,Aswan,3,900,0.0,2700.0
+1525,2025-05-28,Chair,Furniture,Alexandria,2,150,0.1,270.0
+1249,2025-05-28,Headphones,Electronics,Giza,1,80,0.2,64.0
+1833,2025-05-28,Chair,Furniture,Alexandria,5,150,0.2,600.0
+1877,2025-05-28,Phone,Electronics,Aswan,4,600,0.2,1920.0
+291,2025-05-29,Pen Set,Stationery,Alexandria,2,12,0.0,24.0
+654,2025-05-29,Pen Set,Stationery,Cairo,2,12,0.0,24.0
+134,2025-05-30,Chair,Furniture,Alexandria,2,150,0.1,270.0
+948,2025-05-30,Phone,Electronics,Cairo,3,600,0.1,1620.0
+1435,2025-05-30,Headphones,Electronics,Alexandria,2,80,0.1,144.0
+813,2025-05-31,Notebook,Stationery,Giza,1,5,0.1,4.5
+505,2025-05-31,Headphones,Electronics,Cairo,1,80,0.0,80.0
+1752,2025-05-31,Backpack,Accessories,Giza,4,45,0.0,180.0
+999,2025-06-01,Backpack,Accessories,Cairo,3,45,0.1,121.5
+1002,2025-06-01,Notebook,Stationery,Cairo,4,5,0.0,20.0
+51,2025-06-01,Pen Set,Stationery,Alexandria,1,12,0.05,11.4
+1666,2025-06-01,Desk,Furniture,Giza,3,250,0.05,712.5
+1268,2025-06-01,Headphones,Electronics,Alexandria,4,80,0.1,288.0
+1598,2025-06-01,Notebook,Stationery,Aswan,3,5,0.1,13.5
+555,2025-06-01,Backpack,Accessories,Aswan,5,45,0.1,202.5
+1316,2025-06-02,Headphones,Electronics,Cairo,5,80,0.1,360.0
+1760,2025-06-02,Chair,Furniture,Alexandria,3,150,0.0,450.0
+1643,2025-06-02,Desk,Furniture,Alexandria,5,250,0.1,1125.0
+1567,2025-06-02,Backpack,Accessories,Cairo,3,45,0.0,135.0
+412,2025-06-02,Phone,Electronics,Aswan,1,600,0.1,540.0
+576,2025-06-03,Headphones,Electronics,Cairo,2,80,0.2,128.0
+1405,2025-06-03,Phone,Electronics,Aswan,2,600,0.0,1200.0
+1093,2025-06-03,Pen Set,Stationery,Giza,4,12,0.0,48.0
+1332,2025-06-03,Notebook,Stationery,Alexandria,5,5,0.2,20.0
+1779,2025-06-03,Headphones,Electronics,Giza,5,80,0.1,360.0
+1392,2025-06-04,Chair,Furniture,Giza,3,150,0.0,450.0
+752,2025-06-04,Phone,Electronics,Cairo,1,600,0.0,600.0
+1663,2025-06-04,Phone,Electronics,Cairo,5,600,0.2,2400.0
+1702,2025-06-04,Phone,Electronics,Cairo,2,600,0.05,1140.0
+1984,2025-06-04,Pen Set,Stationery,Aswan,4,12,0.2,38.4
+1155,2025-06-04,Headphones,Electronics,Aswan,1,80,0.2,64.0
+1933,2025-06-04,Pen Set,Stationery,Cairo,4,12,0.05,45.6
+1531,2025-06-05,Laptop,Electronics,Giza,2,900,0.1,1620.0
+1902,2025-06-05,Chair,Furniture,Cairo,5,150,0.0,750.0
+1366,2025-06-05,Laptop,Electronics,Aswan,4,900,0.0,3600.0
+262,2025-06-05,Phone,Electronics,Giza,5,600,0.0,3000.0
+1801,2025-06-06,Laptop,Electronics,Giza,5,900,0.0,4500.0
+1119,2025-06-06,Notebook,Stationery,Alexandria,1,5,0.2,4.0
+1015,2025-06-06,Chair,Furniture,Aswan,3,150,0.1,405.0
+1400,2025-06-06,Headphones,Electronics,Aswan,4,80,0.2,256.0
+1634,2025-06-06,Backpack,Accessories,Cairo,4,45,0.05,171.0
+955,2025-06-06,Pen Set,Stationery,Aswan,2,12,0.05,22.8
+859,2025-06-06,Notebook,Stationery,Alexandria,4,5,0.05,19.0
+1840,2025-06-07,Chair,Furniture,Alexandria,5,150,0.1,675.0
+952,2025-06-07,Headphones,Electronics,Giza,3,80,0.0,240.0
+1938,2025-06-07,Chair,Furniture,Cairo,3,150,0.1,405.0
+1448,2025-06-07,Backpack,Accessories,Giza,3,45,0.05,128.25
+1052,2025-06-07,Headphones,Electronics,Giza,1,80,0.0,80.0
+1299,2025-06-07,Chair,Furniture,Aswan,3,150,0.0,450.0
+1630,2025-06-07,Phone,Electronics,Alexandria,5,600,0.0,3000.0
+580,2025-06-08,Laptop,Electronics,Giza,3,900,0.05,2565.0
+833,2025-06-08,Desk,Furniture,Aswan,2,250,0.05,475.0
+1973,2025-06-08,Notebook,Stationery,Giza,1,5,0.05,4.75
+644,2025-06-08,Desk,Furniture,Giza,3,250,0.0,750.0
+1719,2025-06-08,Desk,Furniture,Giza,4,250,0.0,1000.0
+1200,2025-06-09,Chair,Furniture,Alexandria,2,150,0.2,240.0
+1716,2025-06-09,Backpack,Accessories,Giza,2,45,0.05,85.5
+1679,2025-06-09,Backpack,Accessories,Aswan,3,45,0.1,121.5
+39,2025-06-09,Headphones,Electronics,Alexandria,5,80,0.05,380.0
+629,2025-06-09,Chair,Furniture,Alexandria,4,150,0.2,480.0
+217,2025-06-10,Laptop,Electronics,Giza,3,900,0.05,2565.0
+1964,2025-06-10,Pen Set,Stationery,Cairo,2,12,0.05,22.8
+1209,2025-06-10,Headphones,Electronics,Alexandria,3,80,0.05,228.0
+1418,2025-06-10,Desk,Furniture,Cairo,5,250,0.0,1250.0
+942,2025-06-10,Desk,Furniture,Aswan,5,250,0.05,1187.5
+1233,2025-06-10,Backpack,Accessories,Giza,4,45,0.05,171.0
+1289,2025-06-10,Laptop,Electronics,Alexandria,1,900,0.05,855.0
+778,2025-06-10,Laptop,Electronics,Giza,5,900,0.1,4050.0
+1672,2025-06-10,Chair,Furniture,Aswan,1,150,0.1,135.0
+805,2025-06-10,Notebook,Stationery,Giza,1,5,0.1,4.5
+740,2025-06-10,Backpack,Accessories,Alexandria,2,45,0.1,81.0
+462,2025-06-10,Phone,Electronics,Aswan,2,600,0.05,1140.0
+877,2025-06-10,Chair,Furniture,Alexandria,4,150,0.05,570.0
+962,2025-06-11,Desk,Furniture,Alexandria,3,250,0.1,675.0
+1480,2025-06-11,Desk,Furniture,Giza,4,250,0.1,900.0
+124,2025-06-11,Desk,Furniture,Giza,4,250,0.05,950.0
+875,2025-06-11,Notebook,Stationery,Alexandria,2,5,0.0,10.0
+1709,2025-06-11,Phone,Electronics,Aswan,3,600,0.1,1620.0
+87,2025-06-12,Laptop,Electronics,Giza,4,900,0.05,3420.0
+1148,2025-06-12,Pen Set,Stationery,Alexandria,5,12,0.2,48.0
+605,2025-06-12,Pen Set,Stationery,Cairo,4,12,0.0,48.0
+1181,2025-06-12,Chair,Furniture,Aswan,2,150,0.2,240.0
+1029,2025-06-12,Chair,Furniture,Giza,2,150,0.1,270.0
+132,2025-06-12,Chair,Furniture,Aswan,5,150,0.2,600.0
+867,2025-06-13,Pen Set,Stationery,Cairo,2,12,0.05,22.8
+27,2025-06-13,Desk,Furniture,Giza,4,250,0.0,1000.0
+944,2025-06-13,Desk,Furniture,Alexandria,1,250,0.2,200.0
+1465,2025-06-13,Pen Set,Stationery,Cairo,2,12,0.0,24.0
+473,2025-06-13,Desk,Furniture,Alexandria,3,250,0.05,712.5
+88,2025-06-13,Headphones,Electronics,Aswan,4,80,0.2,256.0
+140,2025-06-13,Desk,Furniture,Cairo,3,250,0.1,675.0
+1087,2025-06-13,Pen Set,Stationery,Giza,1,12,0.2,9.6
+1873,2025-06-13,Chair,Furniture,Aswan,5,150,0.1,675.0
+1506,2025-06-14,Phone,Electronics,Alexandria,5,600,0.2,2400.0
+669,2025-06-14,Backpack,Accessories,Cairo,1,45,0.1,40.5
+230,2025-06-14,Phone,Electronics,Aswan,5,600,0.0,3000.0
+1246,2025-06-14,Backpack,Accessories,Giza,5,45,0.0,225.0
+922,2025-06-14,Chair,Furniture,Alexandria,4,150,0.2,480.0
+691,2025-06-14,Backpack,Accessories,Alexandria,4,45,0.0,180.0
+248,2025-06-15,Desk,Furniture,Alexandria,1,250,0.0,250.0
+1996,2025-06-15,Laptop,Electronics,Alexandria,2,900,0.0,1800.0
+1613,2025-06-15,Notebook,Stationery,Cairo,4,5,0.1,18.0
+176,2025-06-15,Desk,Furniture,Giza,4,250,0.05,950.0
+758,2025-06-16,Desk,Furniture,Aswan,4,250,0.0,1000.0
+1815,2025-06-17,Backpack,Accessories,Giza,2,45,0.1,81.0
+1101,2025-06-17,Desk,Furniture,Cairo,2,250,0.1,450.0
+113,2025-06-18,Chair,Furniture,Cairo,5,150,0.0,750.0
+94,2025-06-18,Desk,Furniture,Cairo,1,250,0.05,237.5
+190,2025-06-19,Headphones,Electronics,Cairo,3,80,0.2,192.0
+1019,2025-06-19,Laptop,Electronics,Cairo,3,900,0.2,2160.0
+1483,2025-06-19,Headphones,Electronics,Cairo,4,80,0.05,304.0
+1510,2025-06-19,Notebook,Stationery,Aswan,2,5,0.2,8.0
+175,2025-06-19,Notebook,Stationery,Cairo,2,5,0.05,9.5
+581,2025-06-19,Laptop,Electronics,Cairo,2,900,0.0,1800.0
+1768,2025-06-19,Desk,Furniture,Alexandria,4,250,0.05,950.0
+947,2025-06-20,Backpack,Accessories,Cairo,3,45,0.05,128.25
+319,2025-06-20,Backpack,Accessories,Cairo,5,45,0.2,180.0
+455,2025-06-20,Chair,Furniture,Aswan,5,150,0.1,675.0
+1976,2025-06-20,Laptop,Electronics,Cairo,4,900,0.1,3240.0
+1740,2025-06-20,Phone,Electronics,Giza,5,600,0.0,3000.0
+285,2025-06-20,Desk,Furniture,Aswan,4,250,0.0,1000.0
+1765,2025-06-20,Chair,Furniture,Aswan,3,150,0.05,427.5
+5,2025-06-20,Desk,Furniture,Aswan,4,250,0.2,800.0
+1722,2025-06-21,Notebook,Stationery,Giza,3,5,0.05,14.25
+1668,2025-06-21,Notebook,Stationery,Giza,1,5,0.2,4.0
+1979,2025-06-21,Laptop,Electronics,Alexandria,3,900,0.0,2700.0
+1549,2025-06-21,Desk,Furniture,Aswan,2,250,0.0,500.0
+1092,2025-06-21,Desk,Furniture,Alexandria,2,250,0.05,475.0
+61,2025-06-21,Backpack,Accessories,Alexandria,5,45,0.0,225.0
+1187,2025-06-21,Phone,Electronics,Cairo,4,600,0.2,1920.0
+1269,2025-06-22,Backpack,Accessories,Giza,1,45,0.1,40.5
+1066,2025-06-22,Desk,Furniture,Giza,3,250,0.1,675.0
+829,2025-06-22,Pen Set,Stationery,Giza,4,12,0.2,38.4
+923,2025-06-22,Desk,Furniture,Giza,1,250,0.1,225.0
+617,2025-06-22,Phone,Electronics,Aswan,5,600,0.05,2850.0
+500,2025-06-22,Desk,Furniture,Aswan,5,250,0.05,1187.5
+1191,2025-06-23,Desk,Furniture,Cairo,1,250,0.1,225.0
+1662,2025-06-23,Chair,Furniture,Giza,3,150,0.0,450.0
+1824,2025-06-23,Backpack,Accessories,Alexandria,1,45,0.0,45.0
+563,2025-06-23,Desk,Furniture,Aswan,4,250,0.0,1000.0
+1440,2025-06-23,Backpack,Accessories,Cairo,5,45,0.1,202.5
+46,2025-06-23,Backpack,Accessories,Alexandria,5,45,0.0,225.0
+231,2025-06-23,Desk,Furniture,Alexandria,4,250,0.0,1000.0
+603,2025-06-23,Notebook,Stationery,Alexandria,4,5,0.05,19.0
+1475,2025-06-23,Backpack,Accessories,Cairo,2,45,0.0,90.0
+1523,2025-06-24,Phone,Electronics,Aswan,5,600,0.2,2400.0
+799,2025-06-24,Headphones,Electronics,Aswan,4,80,0.05,304.0
+1325,2025-06-24,Pen Set,Stationery,Alexandria,3,12,0.2,28.8
+528,2025-06-24,Phone,Electronics,Aswan,5,600,0.0,3000.0
+598,2025-06-24,Pen Set,Stationery,Giza,4,12,0.0,48.0
+349,2025-06-24,Phone,Electronics,Giza,2,600,0.2,960.0
+1513,2025-06-25,Notebook,Stationery,Alexandria,1,5,0.2,4.0
+1094,2025-06-25,Desk,Furniture,Aswan,2,250,0.2,400.0
+716,2025-06-25,Pen Set,Stationery,Alexandria,3,12,0.1,32.4
+1136,2025-06-26,Laptop,Electronics,Cairo,1,900,0.0,900.0
+937,2025-06-26,Phone,Electronics,Aswan,4,600,0.2,1920.0
+1785,2025-06-26,Notebook,Stationery,Alexandria,5,5,0.1,22.5
+311,2025-06-26,Notebook,Stationery,Cairo,2,5,0.1,9.0
+1060,2025-06-26,Headphones,Electronics,Giza,2,80,0.1,144.0
+1061,2025-06-26,Pen Set,Stationery,Giza,2,12,0.1,21.6
+765,2025-06-26,Headphones,Electronics,Alexandria,2,80,0.05,152.0
+1176,2025-06-26,Headphones,Electronics,Aswan,3,80,0.0,240.0
+663,2025-06-26,Laptop,Electronics,Giza,1,900,0.0,900.0
+460,2025-06-26,Laptop,Electronics,Alexandria,1,900,0.1,810.0
+1397,2025-06-26,Chair,Furniture,Cairo,3,150,0.2,360.0
+554,2025-06-26,Headphones,Electronics,Alexandria,1,80,0.1,72.0
+387,2025-06-27,Laptop,Electronics,Giza,5,900,0.05,4275.0
+590,2025-06-27,Pen Set,Stationery,Aswan,2,12,0.05,22.8
+1368,2025-06-27,Desk,Furniture,Giza,2,250,0.1,450.0
+631,2025-06-27,Notebook,Stationery,Alexandria,5,5,0.0,25.0
+508,2025-06-28,Phone,Electronics,Giza,4,600,0.1,2160.0
+1841,2025-06-28,Desk,Furniture,Aswan,5,250,0.2,1000.0
+103,2025-06-28,Pen Set,Stationery,Cairo,1,12,0.0,12.0
+25,2025-06-28,Pen Set,Stationery,Cairo,1,12,0.05,11.4
+1552,2025-06-29,Pen Set,Stationery,Cairo,3,12,0.05,34.2
+366,2025-06-29,Chair,Furniture,Giza,1,150,0.2,120.0
+1563,2025-06-29,Phone,Electronics,Giza,3,600,0.2,1440.0
+588,2025-06-29,Laptop,Electronics,Giza,2,900,0.05,1710.0
+1595,2025-06-29,Notebook,Stationery,Alexandria,2,5,0.2,8.0
+112,2025-06-30,Pen Set,Stationery,Aswan,4,12,0.05,45.6
+1958,2025-06-30,Chair,Furniture,Aswan,4,150,0.1,540.0
+710,2025-06-30,Desk,Furniture,Aswan,5,250,0.05,1187.5
+596,2025-07-01,Pen Set,Stationery,Giza,1,12,0.0,12.0
+980,2025-07-01,Chair,Furniture,Giza,3,150,0.1,405.0
+807,2025-07-01,Chair,Furniture,Giza,2,150,0.05,285.0
+1870,2025-07-01,Pen Set,Stationery,Giza,4,12,0.1,43.2
+1934,2025-07-01,Backpack,Accessories,Alexandria,4,45,0.05,171.0
+1878,2025-07-01,Backpack,Accessories,Giza,2,45,0.0,90.0
+1114,2025-07-01,Headphones,Electronics,Aswan,5,80,0.0,400.0
+1014,2025-07-01,Headphones,Electronics,Alexandria,4,80,0.2,256.0
+1213,2025-07-02,Desk,Furniture,Aswan,2,250,0.05,475.0
+1206,2025-07-02,Backpack,Accessories,Aswan,4,45,0.05,171.0
+533,2025-07-02,Phone,Electronics,Alexandria,5,600,0.1,2700.0
+1553,2025-07-02,Chair,Furniture,Alexandria,5,150,0.1,675.0
+843,2025-07-02,Backpack,Accessories,Giza,4,45,0.0,180.0
+943,2025-07-03,Backpack,Accessories,Aswan,4,45,0.2,144.0
+1124,2025-07-03,Phone,Electronics,Cairo,4,600,0.1,2160.0
+690,2025-07-03,Pen Set,Stationery,Giza,5,12,0.1,54.0
+1313,2025-07-03,Pen Set,Stationery,Alexandria,5,12,0.0,60.0
+1703,2025-07-04,Notebook,Stationery,Alexandria,2,5,0.05,9.5
+271,2025-07-04,Headphones,Electronics,Alexandria,2,80,0.2,128.0
+1811,2025-07-04,Phone,Electronics,Aswan,2,600,0.1,1080.0
+119,2025-07-04,Phone,Electronics,Alexandria,3,600,0.0,1800.0
+1607,2025-07-04,Phone,Electronics,Alexandria,2,600,0.05,1140.0
+818,2025-07-04,Laptop,Electronics,Aswan,5,900,0.05,4275.0
+1279,2025-07-04,Laptop,Electronics,Aswan,5,900,0.05,4275.0
+1050,2025-07-04,Laptop,Electronics,Giza,4,900,0.2,2880.0
+1241,2025-07-04,Chair,Furniture,Alexandria,2,150,0.05,285.0
+658,2025-07-04,Notebook,Stationery,Aswan,2,5,0.1,9.0
+360,2025-07-05,Notebook,Stationery,Aswan,2,5,0.2,8.0
+1692,2025-07-05,Backpack,Accessories,Alexandria,4,45,0.1,162.0
+750,2025-07-05,Phone,Electronics,Giza,5,600,0.05,2850.0
+503,2025-07-06,Backpack,Accessories,Alexandria,4,45,0.2,144.0
+1504,2025-07-06,Headphones,Electronics,Giza,2,80,0.1,144.0
+1117,2025-07-06,Backpack,Accessories,Alexandria,4,45,0.05,171.0
+1781,2025-07-06,Laptop,Electronics,Alexandria,1,900,0.0,900.0
+1488,2025-07-06,Laptop,Electronics,Alexandria,5,900,0.2,3600.0
+1866,2025-07-06,Desk,Furniture,Aswan,4,250,0.1,900.0
+826,2025-07-06,Laptop,Electronics,Giza,5,900,0.05,4275.0
+1822,2025-07-06,Pen Set,Stationery,Cairo,1,12,0.1,10.8
+1685,2025-07-07,Headphones,Electronics,Giza,5,80,0.1,360.0
+1120,2025-07-07,Desk,Furniture,Giza,5,250,0.0,1250.0
+469,2025-07-07,Phone,Electronics,Giza,1,600,0.2,480.0
+1534,2025-07-07,Phone,Electronics,Giza,5,600,0.05,2850.0
+1444,2025-07-07,Desk,Furniture,Giza,2,250,0.2,400.0
+1697,2025-07-08,Desk,Furniture,Alexandria,2,250,0.0,500.0
+1265,2025-07-08,Phone,Electronics,Giza,3,600,0.2,1440.0
+1225,2025-07-08,Desk,Furniture,Cairo,4,250,0.1,900.0
+1786,2025-07-08,Phone,Electronics,Alexandria,3,600,0.1,1620.0
+814,2025-07-08,Headphones,Electronics,Aswan,5,80,0.1,360.0
+769,2025-07-08,Phone,Electronics,Cairo,3,600,0.0,1800.0
+1834,2025-07-09,Laptop,Electronics,Giza,4,900,0.0,3600.0
+1108,2025-07-09,Backpack,Accessories,Giza,2,45,0.2,72.0
+466,2025-07-09,Backpack,Accessories,Giza,1,45,0.0,45.0
+1021,2025-07-09,Laptop,Electronics,Aswan,2,900,0.2,1440.0
+1121,2025-07-10,Laptop,Electronics,Giza,4,900,0.2,2880.0
+777,2025-07-10,Desk,Furniture,Aswan,3,250,0.05,712.5
+1788,2025-07-10,Laptop,Electronics,Alexandria,1,900,0.1,810.0
+1763,2025-07-10,Laptop,Electronics,Aswan,3,900,0.0,2700.0
+680,2025-07-10,Backpack,Accessories,Aswan,2,45,0.0,90.0
+1946,2025-07-10,Laptop,Electronics,Alexandria,4,900,0.0,3600.0
+1042,2025-07-10,Pen Set,Stationery,Cairo,2,12,0.0,24.0
+703,2025-07-11,Phone,Electronics,Aswan,2,600,0.1,1080.0
+674,2025-07-11,Laptop,Electronics,Cairo,1,900,0.2,720.0
+806,2025-07-11,Pen Set,Stationery,Cairo,5,12,0.2,48.0
+1570,2025-07-11,Backpack,Accessories,Aswan,2,45,0.0,90.0
+409,2025-07-11,Backpack,Accessories,Cairo,3,45,0.05,128.25
+852,2025-07-12,Pen Set,Stationery,Alexandria,2,12,0.1,21.6
+757,2025-07-12,Notebook,Stationery,Giza,5,5,0.1,22.5
+1817,2025-07-12,Phone,Electronics,Cairo,3,600,0.05,1710.0
+1923,2025-07-12,Pen Set,Stationery,Giza,3,12,0.1,32.4
+1041,2025-07-12,Notebook,Stationery,Giza,2,5,0.05,9.5
+743,2025-07-12,Notebook,Stationery,Aswan,3,5,0.05,14.25
+1575,2025-07-12,Phone,Electronics,Giza,5,600,0.1,2700.0
+29,2025-07-12,Chair,Furniture,Alexandria,3,150,0.1,405.0
+803,2025-07-12,Chair,Furniture,Aswan,5,150,0.0,750.0
+1862,2025-07-13,Headphones,Electronics,Aswan,4,80,0.1,288.0
+625,2025-07-13,Chair,Furniture,Cairo,5,150,0.05,712.5
+1701,2025-07-13,Headphones,Electronics,Cairo,1,80,0.1,72.0
+987,2025-07-13,Chair,Furniture,Giza,4,150,0.2,480.0
+143,2025-07-13,Headphones,Electronics,Alexandria,5,80,0.0,400.0
+1808,2025-07-13,Desk,Furniture,Aswan,1,250,0.2,200.0
+15,2025-07-14,Notebook,Stationery,Aswan,4,5,0.05,19.0
+556,2025-07-14,Chair,Furniture,Aswan,1,150,0.0,150.0
+1115,2025-07-15,Phone,Electronics,Giza,2,600,0.0,1200.0
+1319,2025-07-15,Desk,Furniture,Alexandria,2,250,0.2,400.0
+1280,2025-07-15,Pen Set,Stationery,Cairo,4,12,0.0,48.0
+1854,2025-07-15,Phone,Electronics,Cairo,2,600,0.1,1080.0
+401,2025-07-16,Backpack,Accessories,Giza,1,45,0.05,42.75
+171,2025-07-16,Laptop,Electronics,Aswan,1,900,0.05,855.0
+147,2025-07-16,Laptop,Electronics,Aswan,1,900,0.05,855.0
+1646,2025-07-16,Headphones,Electronics,Giza,3,80,0.0,240.0
+443,2025-07-16,Phone,Electronics,Alexandria,1,600,0.1,540.0
+1409,2025-07-16,Laptop,Electronics,Alexandria,4,900,0.1,3240.0
+827,2025-07-16,Notebook,Stationery,Cairo,2,5,0.0,10.0
+1307,2025-07-17,Headphones,Electronics,Giza,2,80,0.05,152.0
+337,2025-07-17,Backpack,Accessories,Alexandria,3,45,0.2,108.0
+254,2025-07-17,Headphones,Electronics,Giza,3,80,0.05,228.0
+825,2025-07-17,Chair,Furniture,Giza,4,150,0.05,570.0
+1085,2025-07-17,Phone,Electronics,Alexandria,2,600,0.1,1080.0
+265,2025-07-17,Backpack,Accessories,Cairo,1,45,0.1,40.5
+1836,2025-07-18,Phone,Electronics,Giza,4,600,0.2,1920.0
+1593,2025-07-18,Desk,Furniture,Aswan,5,250,0.1,1125.0
+1084,2025-07-18,Chair,Furniture,Cairo,2,150,0.05,285.0
+1652,2025-07-18,Laptop,Electronics,Alexandria,1,900,0.1,810.0
+1038,2025-07-18,Laptop,Electronics,Aswan,1,900,0.1,810.0
+1983,2025-07-18,Laptop,Electronics,Alexandria,4,900,0.2,2880.0
+1461,2025-07-18,Pen Set,Stationery,Cairo,3,12,0.2,28.8
+1388,2025-07-18,Headphones,Electronics,Aswan,4,80,0.2,256.0
+969,2025-07-19,Backpack,Accessories,Alexandria,4,45,0.0,180.0
+626,2025-07-19,Phone,Electronics,Alexandria,3,600,0.05,1710.0
+178,2025-07-19,Phone,Electronics,Cairo,3,600,0.1,1620.0
+1799,2025-07-19,Desk,Furniture,Giza,1,250,0.1,225.0
+1818,2025-07-19,Headphones,Electronics,Giza,5,80,0.2,320.0
+587,2025-07-19,Notebook,Stationery,Aswan,2,5,0.0,10.0
+649,2025-07-20,Backpack,Accessories,Aswan,5,45,0.05,213.75
+1649,2025-07-20,Backpack,Accessories,Aswan,5,45,0.2,180.0
+774,2025-07-20,Notebook,Stationery,Alexandria,4,5,0.2,16.0
+504,2025-07-21,Pen Set,Stationery,Cairo,1,12,0.2,9.6
+1829,2025-07-21,Chair,Furniture,Aswan,4,150,0.0,600.0
+946,2025-07-21,Laptop,Electronics,Giza,1,900,0.1,810.0
+950,2025-07-21,Headphones,Electronics,Alexandria,3,80,0.05,228.0
+1104,2025-07-21,Phone,Electronics,Giza,3,600,0.05,1710.0
+386,2025-07-22,Laptop,Electronics,Giza,5,900,0.1,4050.0
+551,2025-07-22,Pen Set,Stationery,Aswan,4,12,0.0,48.0
+1731,2025-07-22,Pen Set,Stationery,Aswan,4,12,0.2,38.4
+394,2025-07-22,Chair,Furniture,Cairo,2,150,0.0,300.0
+492,2025-07-23,Pen Set,Stationery,Alexandria,2,12,0.0,24.0
+864,2025-07-23,Pen Set,Stationery,Aswan,4,12,0.1,43.2
+768,2025-07-23,Desk,Furniture,Alexandria,5,250,0.0,1250.0
+1647,2025-07-23,Headphones,Electronics,Alexandria,4,80,0.2,256.0
+1852,2025-07-24,Headphones,Electronics,Alexandria,1,80,0.1,72.0
+904,2025-07-24,Backpack,Accessories,Aswan,4,45,0.1,162.0
+1252,2025-07-24,Desk,Furniture,Giza,4,250,0.05,950.0
+714,2025-07-24,Pen Set,Stationery,Aswan,3,12,0.05,34.2
+347,2025-07-24,Backpack,Accessories,Alexandria,2,45,0.0,90.0
+862,2025-07-25,Backpack,Accessories,Alexandria,5,45,0.2,180.0
+968,2025-07-25,Headphones,Electronics,Cairo,2,80,0.05,152.0
+1457,2025-07-25,Backpack,Accessories,Cairo,4,45,0.0,180.0
+675,2025-07-25,Chair,Furniture,Aswan,5,150,0.2,600.0
+717,2025-07-25,Chair,Furniture,Giza,3,150,0.2,360.0
+960,2025-07-25,Desk,Furniture,Aswan,3,250,0.2,600.0
+872,2025-07-25,Phone,Electronics,Giza,5,600,0.2,2400.0
+275,2025-07-25,Desk,Furniture,Cairo,1,250,0.0,250.0
+771,2025-07-25,Notebook,Stationery,Giza,4,5,0.05,19.0
+1590,2025-07-25,Laptop,Electronics,Alexandria,5,900,0.2,3600.0
+484,2025-07-25,Pen Set,Stationery,Aswan,2,12,0.0,24.0
+1626,2025-07-25,Backpack,Accessories,Giza,4,45,0.1,162.0
+1734,2025-07-25,Pen Set,Stationery,Alexandria,5,12,0.05,57.0
+518,2025-07-26,Laptop,Electronics,Aswan,3,900,0.0,2700.0
+713,2025-07-26,Notebook,Stationery,Aswan,5,5,0.2,20.0
+1667,2025-07-26,Pen Set,Stationery,Giza,3,12,0.0,36.0
+1012,2025-07-26,Pen Set,Stationery,Alexandria,3,12,0.0,36.0
+1443,2025-07-26,Backpack,Accessories,Cairo,3,45,0.2,108.0
+397,2025-07-26,Laptop,Electronics,Giza,5,900,0.05,4275.0
+1137,2025-07-26,Notebook,Stationery,Giza,3,5,0.05,14.25
+399,2025-07-27,Headphones,Electronics,Aswan,2,80,0.0,160.0
+1273,2025-07-27,Backpack,Accessories,Aswan,4,45,0.0,180.0
+1622,2025-07-27,Laptop,Electronics,Giza,2,900,0.0,1800.0
+549,2025-07-27,Chair,Furniture,Cairo,3,150,0.1,405.0
+1193,2025-07-27,Phone,Electronics,Aswan,4,600,0.05,2280.0
+273,2025-07-28,Phone,Electronics,Cairo,2,600,0.2,960.0
+991,2025-07-28,Headphones,Electronics,Cairo,3,80,0.1,216.0
+48,2025-07-28,Backpack,Accessories,Aswan,3,45,0.0,135.0
+1004,2025-07-28,Backpack,Accessories,Alexandria,5,45,0.1,202.5
+1356,2025-07-28,Desk,Furniture,Cairo,3,250,0.2,600.0
+1231,2025-07-29,Pen Set,Stationery,Giza,5,12,0.0,60.0
+1943,2025-07-29,Pen Set,Stationery,Aswan,5,12,0.0,60.0
+1406,2025-07-29,Phone,Electronics,Alexandria,2,600,0.05,1140.0
+1466,2025-07-29,Laptop,Electronics,Alexandria,4,900,0.1,3240.0
+1340,2025-07-30,Desk,Furniture,Alexandria,5,250,0.05,1187.5
+379,2025-07-30,Desk,Furniture,Aswan,5,250,0.0,1250.0
+79,2025-07-30,Chair,Furniture,Cairo,2,150,0.0,300.0
+1427,2025-07-30,Notebook,Stationery,Alexandria,3,5,0.2,12.0
+1468,2025-07-31,Desk,Furniture,Cairo,2,250,0.05,475.0
+586,2025-07-31,Backpack,Accessories,Cairo,3,45,0.1,121.5
+659,2025-07-31,Laptop,Electronics,Cairo,4,900,0.05,3420.0
+395,2025-07-31,Notebook,Stationery,Cairo,3,5,0.1,13.5
+1499,2025-07-31,Desk,Furniture,Aswan,1,250,0.2,200.0
+213,2025-07-31,Pen Set,Stationery,Aswan,4,12,0.05,45.6
+1949,2025-07-31,Laptop,Electronics,Aswan,5,900,0.2,3600.0
+1773,2025-07-31,Headphones,Electronics,Aswan,3,80,0.05,228.0
+37,2025-08-01,Pen Set,Stationery,Aswan,3,12,0.1,32.4
+1966,2025-08-01,Notebook,Stationery,Alexandria,5,5,0.0,25.0
+1749,2025-08-01,Pen Set,Stationery,Giza,5,12,0.2,48.0
+1864,2025-08-02,Headphones,Electronics,Giza,4,80,0.0,320.0
+726,2025-08-02,Laptop,Electronics,Giza,4,900,0.05,3420.0
+982,2025-08-03,Notebook,Stationery,Giza,1,5,0.2,4.0
+733,2025-08-03,Backpack,Accessories,Alexandria,5,45,0.2,180.0
+1439,2025-08-03,Headphones,Electronics,Alexandria,5,80,0.05,380.0
+1270,2025-08-03,Laptop,Electronics,Giza,5,900,0.1,4050.0
+696,2025-08-04,Headphones,Electronics,Aswan,2,80,0.2,128.0
+14,2025-08-04,Pen Set,Stationery,Alexandria,5,12,0.05,57.0
+428,2025-08-04,Pen Set,Stationery,Cairo,2,12,0.05,22.8
+1167,2025-08-04,Laptop,Electronics,Giza,4,900,0.1,3240.0
+45,2025-08-05,Laptop,Electronics,Alexandria,2,900,0.05,1710.0
+1912,2025-08-05,Backpack,Accessories,Cairo,5,45,0.05,213.75
+1076,2025-08-05,Phone,Electronics,Aswan,4,600,0.05,2280.0
+1395,2025-08-05,Phone,Electronics,Cairo,2,600,0.1,1080.0
+4,2025-08-05,Desk,Furniture,Alexandria,3,250,0.05,712.5
+728,2025-08-06,Laptop,Electronics,Aswan,1,900,0.2,720.0
+283,2025-08-06,Notebook,Stationery,Cairo,2,5,0.0,10.0
+880,2025-08-06,Notebook,Stationery,Alexandria,5,5,0.2,20.0
+1963,2025-08-06,Phone,Electronics,Aswan,4,600,0.2,1920.0
+879,2025-08-06,Chair,Furniture,Alexandria,5,150,0.1,675.0
+1047,2025-08-06,Phone,Electronics,Aswan,4,600,0.2,1920.0
+227,2025-08-06,Pen Set,Stationery,Giza,5,12,0.05,57.0
+544,2025-08-06,Phone,Electronics,Alexandria,2,600,0.1,1080.0
+1373,2025-08-06,Desk,Furniture,Cairo,2,250,0.05,475.0
+618,2025-08-07,Headphones,Electronics,Aswan,1,80,0.1,72.0
+304,2025-08-07,Backpack,Accessories,Giza,5,45,0.0,225.0
+1266,2025-08-07,Laptop,Electronics,Alexandria,4,900,0.2,2880.0
+122,2025-08-07,Notebook,Stationery,Aswan,5,5,0.2,20.0
+1151,2025-08-07,Headphones,Electronics,Aswan,4,80,0.0,320.0
+330,2025-08-08,Chair,Furniture,Giza,1,150,0.2,120.0
+1384,2025-08-08,Backpack,Accessories,Cairo,5,45,0.05,213.75
+1230,2025-08-08,Headphones,Electronics,Alexandria,5,80,0.05,380.0
+1023,2025-08-08,Pen Set,Stationery,Aswan,2,12,0.1,21.6
+58,2025-08-08,Phone,Electronics,Alexandria,4,600,0.1,2160.0
+650,2025-08-09,Pen Set,Stationery,Cairo,2,12,0.05,22.8
+1710,2025-08-09,Phone,Electronics,Cairo,5,600,0.2,2400.0
+1123,2025-08-09,Headphones,Electronics,Aswan,3,80,0.1,216.0
+340,2025-08-09,Backpack,Accessories,Alexandria,1,45,0.1,40.5
+383,2025-08-10,Backpack,Accessories,Alexandria,5,45,0.05,213.75
+1688,2025-08-10,Desk,Furniture,Alexandria,5,250,0.0,1250.0
+1377,2025-08-10,Backpack,Accessories,Alexandria,3,45,0.0,135.0
+1073,2025-08-10,Pen Set,Stationery,Cairo,2,12,0.0,24.0
+1869,2025-08-10,Laptop,Electronics,Alexandria,2,900,0.2,1440.0
+109,2025-08-10,Desk,Furniture,Giza,2,250,0.1,450.0
+1455,2025-08-10,Chair,Furniture,Alexandria,5,150,0.05,712.5
+1043,2025-08-11,Desk,Furniture,Giza,2,250,0.05,475.0
+1034,2025-08-11,Headphones,Electronics,Alexandria,1,80,0.0,80.0
+158,2025-08-11,Chair,Furniture,Cairo,4,150,0.05,570.0
+156,2025-08-11,Notebook,Stationery,Giza,3,5,0.0,15.0
+1344,2025-08-11,Chair,Furniture,Alexandria,4,150,0.05,570.0
+1888,2025-08-11,Desk,Furniture,Aswan,1,250,0.0,250.0
+435,2025-08-11,Desk,Furniture,Alexandria,3,250,0.1,675.0
+988,2025-08-11,Headphones,Electronics,Cairo,4,80,0.2,256.0
+1217,2025-08-12,Chair,Furniture,Giza,1,150,0.2,120.0
+1007,2025-08-12,Pen Set,Stationery,Aswan,3,12,0.05,34.2
+497,2025-08-12,Laptop,Electronics,Aswan,5,900,0.05,4275.0
+753,2025-08-12,Laptop,Electronics,Alexandria,3,900,0.2,2160.0
+1017,2025-08-12,Desk,Furniture,Alexandria,3,250,0.0,750.0
+110,2025-08-13,Notebook,Stationery,Aswan,2,5,0.05,9.5
+1378,2025-08-13,Pen Set,Stationery,Aswan,3,12,0.05,34.2
+1226,2025-08-13,Backpack,Accessories,Giza,4,45,0.05,171.0
+1661,2025-08-13,Chair,Furniture,Cairo,3,150,0.0,450.0
+114,2025-08-14,Desk,Furniture,Alexandria,5,250,0.2,1000.0
+1617,2025-08-14,Pen Set,Stationery,Alexandria,1,12,0.2,9.6
+1555,2025-08-14,Desk,Furniture,Alexandria,3,250,0.1,675.0
+628,2025-08-14,Headphones,Electronics,Aswan,1,80,0.0,80.0
+979,2025-08-14,Headphones,Electronics,Aswan,2,80,0.2,128.0
+831,2025-08-14,Phone,Electronics,Aswan,5,600,0.05,2850.0
+74,2025-08-14,Phone,Electronics,Alexandria,2,600,0.2,960.0
+197,2025-08-14,Headphones,Electronics,Alexandria,2,80,0.1,144.0
+1579,2025-08-15,Laptop,Electronics,Cairo,5,900,0.05,4275.0
+1792,2025-08-15,Backpack,Accessories,Alexandria,1,45,0.0,45.0
+1664,2025-08-15,Chair,Furniture,Alexandria,5,150,0.05,712.5
+1738,2025-08-15,Laptop,Electronics,Alexandria,3,900,0.2,2160.0
+1,2025-08-15,Laptop,Electronics,Giza,5,900,0.05,4275.0
+583,2025-08-15,Laptop,Electronics,Alexandria,2,900,0.0,1800.0
+1242,2025-08-15,Pen Set,Stationery,Cairo,2,12,0.2,19.2
+834,2025-08-15,Phone,Electronics,Giza,3,600,0.0,1800.0
+934,2025-08-15,Notebook,Stationery,Cairo,3,5,0.2,12.0
+1660,2025-08-16,Headphones,Electronics,Aswan,3,80,0.1,216.0
+1118,2025-08-16,Chair,Furniture,Cairo,4,150,0.05,570.0
+1385,2025-08-16,Desk,Furniture,Alexandria,4,250,0.0,1000.0
+257,2025-08-16,Notebook,Stationery,Giza,4,5,0.05,19.0
+1951,2025-08-17,Backpack,Accessories,Alexandria,2,45,0.05,85.5
+1163,2025-08-17,Pen Set,Stationery,Giza,1,12,0.05,11.4
+1165,2025-08-17,Chair,Furniture,Aswan,1,150,0.05,142.5
+361,2025-08-17,Pen Set,Stationery,Cairo,4,12,0.0,48.0
+421,2025-08-17,Backpack,Accessories,Aswan,2,45,0.1,81.0
+1941,2025-08-18,Phone,Electronics,Giza,3,600,0.05,1710.0
+1616,2025-08-18,Phone,Electronics,Giza,3,600,0.1,1620.0
+1644,2025-08-18,Chair,Furniture,Alexandria,3,150,0.1,405.0
+1069,2025-08-18,Headphones,Electronics,Giza,1,80,0.0,80.0
+574,2025-08-18,Laptop,Electronics,Aswan,2,900,0.2,1440.0
+232,2025-08-19,Pen Set,Stationery,Alexandria,1,12,0.2,9.6
+1540,2025-08-19,Chair,Furniture,Giza,5,150,0.2,600.0
+1509,2025-08-19,Pen Set,Stationery,Aswan,1,12,0.1,10.8
+1905,2025-08-19,Headphones,Electronics,Giza,5,80,0.0,400.0
+561,2025-08-20,Chair,Furniture,Aswan,3,150,0.05,427.5
+80,2025-08-20,Notebook,Stationery,Aswan,1,5,0.2,4.0
+1641,2025-08-20,Notebook,Stationery,Alexandria,4,5,0.2,16.0
+911,2025-08-20,Pen Set,Stationery,Cairo,1,12,0.2,9.6
+1659,2025-08-21,Pen Set,Stationery,Aswan,2,12,0.1,21.6
+1442,2025-08-21,Chair,Furniture,Alexandria,1,150,0.1,135.0
+1695,2025-08-21,Phone,Electronics,Cairo,2,600,0.1,1080.0
+905,2025-08-22,Desk,Furniture,Giza,4,250,0.0,1000.0
+3,2025-08-22,Notebook,Stationery,Alexandria,2,5,0.0,10.0
+59,2025-08-22,Notebook,Stationery,Giza,2,5,0.0,10.0
+210,2025-08-22,Pen Set,Stationery,Aswan,1,12,0.1,10.8
+292,2025-08-22,Headphones,Electronics,Alexandria,2,80,0.2,128.0
+572,2025-08-22,Desk,Furniture,Cairo,5,250,0.0,1250.0
+1258,2025-08-23,Chair,Furniture,Cairo,1,150,0.05,142.5
+546,2025-08-23,Laptop,Electronics,Aswan,2,900,0.2,1440.0
+1751,2025-08-23,Backpack,Accessories,Alexandria,3,45,0.2,108.0
+1684,2025-08-23,Pen Set,Stationery,Alexandria,3,12,0.05,34.2
+96,2025-08-23,Headphones,Electronics,Alexandria,4,80,0.1,288.0
+1281,2025-08-24,Notebook,Stationery,Giza,1,5,0.1,4.5
+1481,2025-08-24,Phone,Electronics,Giza,4,600,0.2,1920.0
+216,2025-08-24,Headphones,Electronics,Giza,2,80,0.2,128.0
+1597,2025-08-24,Notebook,Stationery,Giza,2,5,0.1,9.0
+1008,2025-08-24,Chair,Furniture,Alexandria,3,150,0.2,360.0
+1876,2025-08-25,Laptop,Electronics,Giza,4,900,0.0,3600.0
+458,2025-08-25,Notebook,Stationery,Giza,5,5,0.0,25.0
+1594,2025-08-25,Laptop,Electronics,Cairo,3,900,0.1,2430.0
+1103,2025-08-25,Backpack,Accessories,Alexandria,1,45,0.0,45.0
+800,2025-08-25,Desk,Furniture,Aswan,2,250,0.1,450.0
+390,2025-08-25,Phone,Electronics,Alexandria,5,600,0.1,2700.0
+736,2025-08-25,Notebook,Stationery,Giza,1,5,0.05,4.75
+106,2025-08-25,Pen Set,Stationery,Giza,2,12,0.05,22.8
+135,2025-08-26,Pen Set,Stationery,Giza,3,12,0.2,28.8
+787,2025-08-26,Laptop,Electronics,Cairo,2,900,0.1,1620.0
+1960,2025-08-26,Phone,Electronics,Aswan,2,600,0.2,960.0
+241,2025-08-26,Phone,Electronics,Giza,2,600,0.05,1140.0
+408,2025-08-26,Phone,Electronics,Giza,4,600,0.0,2400.0
+1861,2025-08-27,Notebook,Stationery,Giza,3,5,0.1,13.5
+1686,2025-08-27,Chair,Furniture,Alexandria,1,150,0.05,142.5
+1592,2025-08-27,Headphones,Electronics,Cairo,2,80,0.1,144.0
+1091,2025-08-27,Chair,Furniture,Giza,2,150,0.2,240.0
+1955,2025-08-27,Backpack,Accessories,Giza,3,45,0.1,121.5
+13,2025-08-28,Notebook,Stationery,Cairo,1,5,0.1,4.5
+1222,2025-08-28,Chair,Furniture,Aswan,2,150,0.2,240.0
+228,2025-08-28,Chair,Furniture,Giza,5,150,0.1,675.0
+1541,2025-08-28,Desk,Furniture,Cairo,4,250,0.05,950.0
+846,2025-08-29,Laptop,Electronics,Giza,3,900,0.2,2160.0
+481,2025-08-29,Headphones,Electronics,Giza,4,80,0.05,304.0
+1287,2025-08-29,Backpack,Accessories,Alexandria,1,45,0.05,42.75
+822,2025-08-29,Notebook,Stationery,Alexandria,5,5,0.1,22.5
+153,2025-08-29,Backpack,Accessories,Alexandria,5,45,0.2,180.0
+1467,2025-08-29,Notebook,Stationery,Giza,3,5,0.0,15.0
+755,2025-08-29,Chair,Furniture,Giza,5,150,0.0,750.0
+343,2025-08-29,Chair,Furniture,Cairo,3,150,0.05,427.5
+166,2025-08-29,Pen Set,Stationery,Giza,5,12,0.1,54.0
+1561,2025-08-30,Headphones,Electronics,Giza,1,80,0.05,76.0
+1547,2025-08-30,Notebook,Stationery,Cairo,3,5,0.0,15.0
+1538,2025-08-30,Laptop,Electronics,Cairo,1,900,0.2,720.0
+1838,2025-08-30,Headphones,Electronics,Aswan,3,80,0.0,240.0
+1413,2025-08-30,Headphones,Electronics,Aswan,2,80,0.1,144.0
+562,2025-08-31,Laptop,Electronics,Cairo,2,900,0.05,1710.0
+767,2025-08-31,Chair,Furniture,Cairo,2,150,0.1,270.0
+1935,2025-08-31,Phone,Electronics,Cairo,1,600,0.2,480.0
+1784,2025-08-31,Backpack,Accessories,Alexandria,4,45,0.2,144.0
+720,2025-09-01,Chair,Furniture,Giza,1,150,0.0,150.0
+1917,2025-09-01,Headphones,Electronics,Cairo,1,80,0.05,76.0
+1614,2025-09-01,Notebook,Stationery,Alexandria,1,5,0.05,4.75
+1250,2025-09-01,Backpack,Accessories,Cairo,2,45,0.1,81.0
+1416,2025-09-02,Pen Set,Stationery,Alexandria,3,12,0.0,36.0
+1739,2025-09-02,Laptop,Electronics,Aswan,4,900,0.0,3600.0
+1812,2025-09-02,Notebook,Stationery,Giza,3,5,0.1,13.5
+1993,2025-09-02,Headphones,Electronics,Aswan,1,80,0.2,64.0
+692,2025-09-03,Pen Set,Stationery,Aswan,4,12,0.0,48.0
+236,2025-09-03,Notebook,Stationery,Aswan,4,5,0.0,20.0
+1291,2025-09-03,Phone,Electronics,Giza,3,600,0.2,1440.0
+85,2025-09-03,Notebook,Stationery,Giza,1,5,0.1,4.5
+429,2025-09-03,Laptop,Electronics,Giza,4,900,0.2,2880.0
+344,2025-09-03,Chair,Furniture,Giza,4,150,0.05,570.0
+1717,2025-09-03,Notebook,Stationery,Giza,2,5,0.0,10.0
+1256,2025-09-03,Laptop,Electronics,Alexandria,1,900,0.05,855.0
+509,2025-09-04,Headphones,Electronics,Cairo,3,80,0.05,228.0
+212,2025-09-04,Notebook,Stationery,Cairo,4,5,0.1,18.0
+1726,2025-09-04,Pen Set,Stationery,Alexandria,5,12,0.05,57.0
+1445,2025-09-04,Phone,Electronics,Giza,5,600,0.05,2850.0
+974,2025-09-04,Desk,Furniture,Aswan,5,250,0.2,1000.0
+1317,2025-09-04,Notebook,Stationery,Aswan,4,5,0.1,18.0
+350,2025-09-05,Phone,Electronics,Aswan,3,600,0.05,1710.0
+1328,2025-09-05,Laptop,Electronics,Cairo,2,900,0.0,1800.0
+454,2025-09-05,Laptop,Electronics,Giza,3,900,0.1,2430.0
+1053,2025-09-05,Chair,Furniture,Cairo,4,150,0.2,480.0
+894,2025-09-05,Backpack,Accessories,Alexandria,5,45,0.0,225.0
+718,2025-09-05,Desk,Furniture,Alexandria,4,250,0.2,800.0
+853,2025-09-05,Backpack,Accessories,Giza,1,45,0.0,45.0
+1018,2025-09-06,Desk,Furniture,Aswan,2,250,0.1,450.0
+1546,2025-09-06,Chair,Furniture,Cairo,4,150,0.2,480.0
+223,2025-09-06,Notebook,Stationery,Giza,1,5,0.2,4.0
+1201,2025-09-06,Backpack,Accessories,Alexandria,5,45,0.05,213.75
+97,2025-09-06,Phone,Electronics,Alexandria,5,600,0.1,2700.0
+1408,2025-09-07,Pen Set,Stationery,Alexandria,4,12,0.2,38.4
+1682,2025-09-07,Laptop,Electronics,Aswan,1,900,0.2,720.0
+251,2025-09-07,Phone,Electronics,Giza,3,600,0.05,1710.0
+1638,2025-09-08,Chair,Furniture,Giza,3,150,0.05,427.5
+1674,2025-09-08,Pen Set,Stationery,Cairo,1,12,0.1,10.8
+772,2025-09-08,Backpack,Accessories,Aswan,1,45,0.2,36.0
+1583,2025-09-08,Chair,Furniture,Aswan,2,150,0.1,270.0
+1381,2025-09-08,Backpack,Accessories,Cairo,5,45,0.0,225.0
+1957,2025-09-08,Chair,Furniture,Aswan,3,150,0.0,450.0
+731,2025-09-09,Notebook,Stationery,Giza,5,5,0.2,20.0
+258,2025-09-09,Laptop,Electronics,Aswan,4,900,0.0,3600.0
+547,2025-09-09,Desk,Furniture,Giza,4,250,0.1,900.0
+951,2025-09-09,Laptop,Electronics,Cairo,1,900,0.05,855.0
+1571,2025-09-09,Laptop,Electronics,Aswan,4,900,0.2,2880.0
+267,2025-09-10,Desk,Furniture,Cairo,4,250,0.05,950.0
+332,2025-09-10,Headphones,Electronics,Cairo,5,80,0.05,380.0
+798,2025-09-10,Desk,Furniture,Cairo,3,250,0.0,750.0
+857,2025-09-10,Phone,Electronics,Cairo,3,600,0.2,1440.0
+1819,2025-09-10,Phone,Electronics,Alexandria,4,600,0.05,2280.0
+902,2025-09-10,Laptop,Electronics,Aswan,5,900,0.1,4050.0
+1926,2025-09-11,Phone,Electronics,Alexandria,3,600,0.0,1800.0
+665,2025-09-11,Chair,Furniture,Alexandria,2,150,0.05,285.0
+448,2025-09-11,Backpack,Accessories,Cairo,4,45,0.0,180.0
+1232,2025-09-11,Notebook,Stationery,Alexandria,2,5,0.05,9.5
+734,2025-09-11,Pen Set,Stationery,Alexandria,2,12,0.05,22.8
+28,2025-09-12,Pen Set,Stationery,Cairo,5,12,0.05,57.0
+524,2025-09-12,Pen Set,Stationery,Aswan,3,12,0.2,28.8
+357,2025-09-12,Phone,Electronics,Aswan,3,600,0.2,1440.0
+1580,2025-09-12,Chair,Furniture,Giza,1,150,0.05,142.5
+424,2025-09-13,Chair,Furniture,Alexandria,5,150,0.05,712.5
+689,2025-09-13,Desk,Furniture,Giza,4,250,0.0,1000.0
+784,2025-09-13,Laptop,Electronics,Aswan,5,900,0.2,3600.0
+970,2025-09-13,Laptop,Electronics,Aswan,4,900,0.2,2880.0
+388,2025-09-13,Pen Set,Stationery,Aswan,5,12,0.0,60.0
+895,2025-09-13,Notebook,Stationery,Alexandria,2,5,0.05,9.5
+1867,2025-09-14,Laptop,Electronics,Alexandria,3,900,0.1,2430.0
+1554,2025-09-15,Chair,Furniture,Alexandria,4,150,0.1,540.0
+550,2025-09-15,Notebook,Stationery,Cairo,1,5,0.2,4.0
+1718,2025-09-15,Desk,Furniture,Cairo,2,250,0.1,450.0
+1070,2025-09-15,Laptop,Electronics,Giza,1,900,0.2,720.0
+1696,2025-09-15,Notebook,Stationery,Giza,4,5,0.0,20.0
+964,2025-09-15,Phone,Electronics,Giza,1,600,0.0,600.0
+1806,2025-09-15,Laptop,Electronics,Cairo,5,900,0.0,4500.0
+72,2025-09-15,Phone,Electronics,Alexandria,4,600,0.2,1920.0
+207,2025-09-15,Pen Set,Stationery,Alexandria,1,12,0.2,9.6
+32,2025-09-16,Phone,Electronics,Giza,1,600,0.1,540.0
+1024,2025-09-16,Pen Set,Stationery,Giza,1,12,0.05,11.4
+646,2025-09-16,Headphones,Electronics,Giza,1,80,0.05,76.0
+215,2025-09-17,Notebook,Stationery,Cairo,1,5,0.1,4.5
+548,2025-09-17,Chair,Furniture,Aswan,3,150,0.2,360.0
+226,2025-09-17,Headphones,Electronics,Aswan,4,80,0.0,320.0
+296,2025-09-17,Chair,Furniture,Giza,5,150,0.2,600.0
+346,2025-09-17,Headphones,Electronics,Aswan,2,80,0.1,144.0
+1122,2025-09-17,Laptop,Electronics,Aswan,5,900,0.1,4050.0
+1787,2025-09-17,Phone,Electronics,Giza,1,600,0.1,540.0
+1458,2025-09-17,Desk,Furniture,Giza,1,250,0.05,237.5
+1908,2025-09-18,Phone,Electronics,Aswan,5,600,0.2,2400.0
+328,2025-09-18,Laptop,Electronics,Alexandria,1,900,0.05,855.0
+1766,2025-09-18,Backpack,Accessories,Giza,3,45,0.1,121.5
+1283,2025-09-18,Desk,Furniture,Cairo,5,250,0.2,1000.0
+1075,2025-09-18,Desk,Furniture,Alexandria,3,250,0.0,750.0
+485,2025-09-18,Desk,Furniture,Cairo,2,250,0.05,475.0
+1673,2025-09-18,Headphones,Electronics,Aswan,3,80,0.2,192.0
+1421,2025-09-19,Backpack,Accessories,Alexandria,3,45,0.2,108.0
+479,2025-09-19,Notebook,Stationery,Giza,1,5,0.2,4.0
+73,2025-09-19,Desk,Furniture,Giza,3,250,0.2,600.0
+994,2025-09-19,Desk,Furniture,Alexandria,5,250,0.1,1125.0
+1762,2025-09-19,Desk,Furniture,Cairo,3,250,0.0,750.0
+837,2025-09-19,Pen Set,Stationery,Alexandria,5,12,0.0,60.0
+1947,2025-09-19,Phone,Electronics,Giza,1,600,0.05,570.0
+1492,2025-09-19,Desk,Furniture,Cairo,4,250,0.2,800.0
+1629,2025-09-20,Desk,Furniture,Giza,5,250,0.05,1187.5
+610,2025-09-20,Pen Set,Stationery,Cairo,5,12,0.05,57.0
+584,2025-09-20,Laptop,Electronics,Cairo,4,900,0.1,3240.0
+1985,2025-09-20,Notebook,Stationery,Alexandria,5,5,0.0,25.0
+1997,2025-09-20,Chair,Furniture,Aswan,1,150,0.2,120.0
+1010,2025-09-20,Chair,Furniture,Cairo,5,150,0.05,712.5
+1449,2025-09-21,Notebook,Stationery,Aswan,4,5,0.05,19.0
+270,2025-09-21,Chair,Furniture,Giza,5,150,0.1,675.0
+1168,2025-09-21,Desk,Furniture,Aswan,2,250,0.0,500.0
+1650,2025-09-21,Pen Set,Stationery,Alexandria,4,12,0.2,38.4
+1476,2025-09-22,Headphones,Electronics,Cairo,2,80,0.1,144.0
+751,2025-09-22,Backpack,Accessories,Cairo,2,45,0.0,90.0
+819,2025-09-22,Notebook,Stationery,Aswan,1,5,0.1,4.5
+148,2025-09-22,Phone,Electronics,Cairo,5,600,0.2,2400.0
+1367,2025-09-23,Headphones,Electronics,Alexandria,4,80,0.0,320.0
+585,2025-09-23,Desk,Furniture,Cairo,2,250,0.1,450.0
+1157,2025-09-23,Laptop,Electronics,Aswan,4,900,0.2,2880.0
+374,2025-09-23,Headphones,Electronics,Cairo,2,80,0.2,128.0
+1245,2025-09-23,Backpack,Accessories,Aswan,4,45,0.05,171.0
+861,2025-09-23,Backpack,Accessories,Aswan,1,45,0.0,45.0
+929,2025-09-24,Desk,Furniture,Giza,1,250,0.0,250.0
+1434,2025-09-24,Chair,Furniture,Alexandria,2,150,0.1,270.0
+795,2025-09-24,Desk,Furniture,Alexandria,1,250,0.05,237.5
+1471,2025-09-24,Backpack,Accessories,Alexandria,2,45,0.1,81.0
+1420,2025-09-25,Desk,Furniture,Alexandria,2,250,0.1,450.0
+259,2025-09-25,Phone,Electronics,Giza,1,600,0.1,540.0
+1083,2025-09-25,Backpack,Accessories,Cairo,2,45,0.0,90.0
+138,2025-09-25,Laptop,Electronics,Aswan,1,900,0.05,855.0
+1694,2025-09-25,Desk,Furniture,Cairo,2,250,0.0,500.0
+294,2025-09-26,Headphones,Electronics,Cairo,4,80,0.0,320.0
+1803,2025-09-26,Desk,Furniture,Giza,5,250,0.05,1187.5
+1345,2025-09-27,Phone,Electronics,Aswan,3,600,0.05,1710.0
+1362,2025-09-27,Laptop,Electronics,Aswan,4,900,0.2,2880.0
+355,2025-09-27,Backpack,Accessories,Giza,2,45,0.05,85.5
+634,2025-09-27,Desk,Furniture,Aswan,3,250,0.0,750.0
+407,2025-09-28,Desk,Furniture,Cairo,2,250,0.05,475.0
+790,2025-09-28,Laptop,Electronics,Alexandria,5,900,0.1,4050.0
+44,2025-09-28,Headphones,Electronics,Cairo,4,80,0.0,320.0
+683,2025-09-28,Backpack,Accessories,Cairo,2,45,0.1,81.0
+1503,2025-09-29,Phone,Electronics,Cairo,2,600,0.0,1200.0
+1895,2025-09-29,Phone,Electronics,Alexandria,4,600,0.1,2160.0
+1793,2025-09-29,Headphones,Electronics,Cairo,2,80,0.05,152.0
+1195,2025-09-29,Chair,Furniture,Cairo,4,150,0.05,570.0
+1013,2025-09-29,Phone,Electronics,Aswan,1,600,0.1,540.0
+1401,2025-09-30,Pen Set,Stationery,Alexandria,5,12,0.2,48.0
+177,2025-09-30,Notebook,Stationery,Cairo,1,5,0.05,4.75
+869,2025-09-30,Desk,Furniture,Giza,5,250,0.2,1000.0
+976,2025-09-30,Phone,Electronics,Cairo,3,600,0.2,1440.0
+432,2025-09-30,Notebook,Stationery,Cairo,3,5,0.0,15.0
+1855,2025-09-30,Laptop,Electronics,Giza,3,900,0.05,2565.0
+1177,2025-09-30,Headphones,Electronics,Cairo,4,80,0.0,320.0
+1158,2025-09-30,Pen Set,Stationery,Alexandria,5,12,0.0,60.0
+8,2025-09-30,Notebook,Stationery,Cairo,1,5,0.1,4.5
+972,2025-10-01,Desk,Furniture,Alexandria,1,250,0.05,237.5
+90,2025-10-01,Pen Set,Stationery,Alexandria,1,12,0.2,9.6
+995,2025-10-01,Chair,Furniture,Cairo,4,150,0.1,540.0
+930,2025-10-02,Chair,Furniture,Cairo,4,150,0.0,600.0
+1508,2025-10-02,Desk,Furniture,Alexandria,5,250,0.0,1250.0
+20,2025-10-02,Desk,Furniture,Giza,3,250,0.1,675.0
+1390,2025-10-02,Backpack,Accessories,Alexandria,4,45,0.2,144.0
+1907,2025-10-02,Headphones,Electronics,Aswan,4,80,0.05,304.0
+1032,2025-10-03,Phone,Electronics,Alexandria,2,600,0.2,960.0
+1292,2025-10-03,Pen Set,Stationery,Aswan,3,12,0.2,28.8
+1428,2025-10-03,Backpack,Accessories,Aswan,5,45,0.0,225.0
+1263,2025-10-03,Desk,Furniture,Cairo,4,250,0.1,900.0
+1460,2025-10-04,Chair,Furniture,Alexandria,2,150,0.2,240.0
+1805,2025-10-04,Phone,Electronics,Aswan,1,600,0.05,570.0
+1558,2025-10-04,Pen Set,Stationery,Alexandria,2,12,0.05,22.8
+19,2025-10-04,Pen Set,Stationery,Cairo,4,12,0.0,48.0
+1424,2025-10-04,Notebook,Stationery,Cairo,2,5,0.0,10.0
+594,2025-10-04,Backpack,Accessories,Alexandria,1,45,0.1,40.5
+896,2025-10-04,Chair,Furniture,Alexandria,3,150,0.05,427.5
+1505,2025-10-04,Chair,Furniture,Cairo,1,150,0.1,135.0
+996,2025-10-04,Notebook,Stationery,Alexandria,4,5,0.0,20.0
+1371,2025-10-05,Backpack,Accessories,Alexandria,5,45,0.2,180.0
+272,2025-10-05,Laptop,Electronics,Cairo,2,900,0.1,1620.0
+1677,2025-10-05,Phone,Electronics,Aswan,2,600,0.1,1080.0
+446,2025-10-05,Notebook,Stationery,Alexandria,5,5,0.05,23.75
+208,2025-10-05,Backpack,Accessories,Alexandria,5,45,0.2,180.0
+391,2025-10-05,Notebook,Stationery,Aswan,3,5,0.0,15.0
+402,2025-10-05,Pen Set,Stationery,Cairo,3,12,0.0,36.0
+883,2025-10-05,Desk,Furniture,Alexandria,3,250,0.05,712.5
+170,2025-10-05,Laptop,Electronics,Giza,5,900,0.1,4050.0
+363,2025-10-05,Phone,Electronics,Aswan,5,600,0.05,2850.0
+1497,2025-10-06,Chair,Furniture,Alexandria,1,150,0.2,120.0
+1309,2025-10-06,Desk,Furniture,Giza,1,250,0.0,250.0
+235,2025-10-06,Desk,Furniture,Alexandria,3,250,0.05,712.5
+1142,2025-10-06,Headphones,Electronics,Alexandria,3,80,0.0,240.0
+1301,2025-10-06,Pen Set,Stationery,Cairo,4,12,0.0,48.0
+26,2025-10-06,Notebook,Stationery,Aswan,3,5,0.0,15.0
+536,2025-10-06,Phone,Electronics,Aswan,5,600,0.1,2700.0
+1040,2025-10-07,Pen Set,Stationery,Cairo,1,12,0.0,12.0
+86,2025-10-07,Notebook,Stationery,Cairo,4,5,0.1,18.0
+1162,2025-10-07,Desk,Furniture,Giza,5,250,0.0,1250.0
+33,2025-10-08,Laptop,Electronics,Giza,1,900,0.05,855.0
+1642,2025-10-08,Laptop,Electronics,Giza,5,900,0.05,4275.0
+1211,2025-10-09,Chair,Furniture,Giza,5,150,0.0,750.0
+1839,2025-10-10,Phone,Electronics,Cairo,5,600,0.05,2850.0
+1267,2025-10-10,Laptop,Electronics,Giza,4,900,0.1,3240.0
+698,2025-10-10,Chair,Furniture,Giza,3,150,0.0,450.0
+12,2025-10-10,Backpack,Accessories,Cairo,2,45,0.2,72.0
+159,2025-10-10,Chair,Furniture,Aswan,5,150,0.0,750.0
+1253,2025-10-11,Laptop,Electronics,Alexandria,1,900,0.1,810.0
+321,2025-10-11,Headphones,Electronics,Giza,1,80,0.1,72.0
+278,2025-10-11,Pen Set,Stationery,Giza,1,12,0.2,9.6
+1451,2025-10-12,Headphones,Electronics,Aswan,3,80,0.05,228.0
+1178,2025-10-12,Phone,Electronics,Giza,2,600,0.05,1140.0
+1596,2025-10-12,Phone,Electronics,Alexandria,2,600,0.05,1140.0
+317,2025-10-13,Notebook,Stationery,Giza,1,5,0.2,4.0
+168,2025-10-13,Phone,Electronics,Alexandria,5,600,0.0,3000.0
+108,2025-10-13,Notebook,Stationery,Alexandria,1,5,0.2,4.0
+912,2025-10-13,Phone,Electronics,Alexandria,1,600,0.1,540.0
+1351,2025-10-14,Laptop,Electronics,Giza,1,900,0.0,900.0
+1133,2025-10-14,Pen Set,Stationery,Aswan,4,12,0.05,45.6
+1665,2025-10-14,Chair,Furniture,Cairo,3,150,0.1,405.0
+627,2025-10-14,Headphones,Electronics,Aswan,5,80,0.0,400.0
+1387,2025-10-15,Chair,Furniture,Aswan,4,150,0.0,600.0
+836,2025-10-15,Pen Set,Stationery,Cairo,3,12,0.1,32.4
+451,2025-10-15,Backpack,Accessories,Giza,5,45,0.2,180.0
+1615,2025-10-15,Laptop,Electronics,Giza,4,900,0.1,3240.0
+821,2025-10-15,Laptop,Electronics,Alexandria,3,900,0.1,2430.0
+487,2025-10-15,Headphones,Electronics,Alexandria,2,80,0.1,144.0
+1350,2025-10-16,Chair,Furniture,Giza,4,150,0.1,540.0
+1532,2025-10-16,Laptop,Electronics,Alexandria,1,900,0.2,720.0
+1863,2025-10-16,Pen Set,Stationery,Aswan,2,12,0.1,21.6
+99,2025-10-16,Notebook,Stationery,Cairo,4,5,0.2,16.0
+977,2025-10-16,Laptop,Electronics,Aswan,3,900,0.1,2430.0
+639,2025-10-16,Pen Set,Stationery,Aswan,1,12,0.1,10.8
+62,2025-10-16,Notebook,Stationery,Giza,3,5,0.0,15.0
+924,2025-10-16,Phone,Electronics,Alexandria,3,600,0.1,1620.0
+426,2025-10-16,Phone,Electronics,Alexandria,3,600,0.2,1440.0
+247,2025-10-16,Pen Set,Stationery,Alexandria,3,12,0.05,34.2
+1164,2025-10-17,Chair,Furniture,Aswan,2,150,0.2,240.0
+945,2025-10-17,Phone,Electronics,Cairo,5,600,0.0,3000.0
+920,2025-10-17,Notebook,Stationery,Aswan,2,5,0.1,9.0
+932,2025-10-17,Notebook,Stationery,Cairo,4,5,0.1,18.0
+1479,2025-10-17,Phone,Electronics,Alexandria,3,600,0.0,1800.0
+939,2025-10-17,Desk,Furniture,Aswan,5,250,0.05,1187.5
+1550,2025-10-17,Laptop,Electronics,Cairo,4,900,0.2,2880.0
+1478,2025-10-18,Desk,Furniture,Cairo,3,250,0.1,675.0
+694,2025-10-18,Backpack,Accessories,Aswan,3,45,0.2,108.0
+1678,2025-10-18,Desk,Furniture,Cairo,4,250,0.05,950.0
+1072,2025-10-18,Phone,Electronics,Cairo,3,600,0.1,1620.0
+179,2025-10-19,Backpack,Accessories,Giza,4,45,0.05,171.0
+1620,2025-10-19,Backpack,Accessories,Giza,1,45,0.0,45.0
+1112,2025-10-19,Phone,Electronics,Giza,4,600,0.1,2160.0
+1879,2025-10-19,Notebook,Stationery,Giza,1,5,0.1,4.5
+1452,2025-10-19,Laptop,Electronics,Alexandria,1,900,0.1,810.0
+645,2025-10-19,Pen Set,Stationery,Cairo,3,12,0.0,36.0
+1049,2025-10-19,Notebook,Stationery,Alexandria,1,5,0.05,4.75
+1172,2025-10-20,Notebook,Stationery,Aswan,5,5,0.05,23.75
+1639,2025-10-20,Phone,Electronics,Aswan,1,600,0.0,600.0
+648,2025-10-20,Chair,Furniture,Cairo,4,150,0.0,600.0
+123,2025-10-20,Notebook,Stationery,Giza,3,5,0.2,12.0
+496,2025-10-20,Desk,Furniture,Cairo,2,250,0.1,450.0
+1436,2025-10-20,Laptop,Electronics,Giza,4,900,0.2,2880.0
+339,2025-10-20,Phone,Electronics,Giza,1,600,0.1,540.0
+245,2025-10-20,Notebook,Stationery,Giza,4,5,0.05,19.0
+1278,2025-10-21,Pen Set,Stationery,Cairo,2,12,0.2,19.2
+1487,2025-10-21,Phone,Electronics,Alexandria,2,600,0.0,1200.0
+1529,2025-10-21,Laptop,Electronics,Cairo,1,900,0.0,900.0
+1182,2025-10-21,Backpack,Accessories,Cairo,1,45,0.2,36.0
+1657,2025-10-21,Pen Set,Stationery,Aswan,3,12,0.2,28.8
+1714,2025-10-21,Notebook,Stationery,Alexandria,2,5,0.1,9.0
+512,2025-10-21,Notebook,Stationery,Cairo,5,5,0.1,22.5
+953,2025-10-22,Chair,Furniture,Alexandria,5,150,0.2,600.0
+452,2025-10-22,Backpack,Accessories,Aswan,5,45,0.05,213.75
+307,2025-10-22,Headphones,Electronics,Alexandria,2,80,0.1,144.0
+1186,2025-10-22,Headphones,Electronics,Giza,5,80,0.1,360.0
+623,2025-10-22,Phone,Electronics,Aswan,1,600,0.2,480.0
+677,2025-10-22,Chair,Furniture,Aswan,5,150,0.1,675.0
+1723,2025-10-23,Notebook,Stationery,Cairo,4,5,0.1,18.0
+1437,2025-10-23,Desk,Furniture,Cairo,2,250,0.05,475.0
+1557,2025-10-23,Backpack,Accessories,Aswan,4,45,0.0,180.0
+1016,2025-10-23,Pen Set,Stationery,Cairo,3,12,0.2,28.8
+515,2025-10-23,Backpack,Accessories,Giza,1,45,0.2,36.0
+1804,2025-10-23,Headphones,Electronics,Alexandria,1,80,0.2,64.0
+1039,2025-10-23,Desk,Furniture,Aswan,2,250,0.2,400.0
+444,2025-10-24,Desk,Furniture,Cairo,2,250,0.05,475.0
+1814,2025-10-24,Desk,Furniture,Aswan,3,250,0.2,600.0
+1077,2025-10-24,Notebook,Stationery,Giza,1,5,0.05,4.75
+1132,2025-10-24,Notebook,Stationery,Giza,3,5,0.05,14.25
+903,2025-10-24,Phone,Electronics,Giza,5,600,0.1,2700.0
+812,2025-10-24,Backpack,Accessories,Giza,2,45,0.0,90.0
+405,2025-10-24,Desk,Furniture,Aswan,2,250,0.05,475.0
+1825,2025-10-24,Pen Set,Stationery,Cairo,3,12,0.1,32.4
+237,2025-10-24,Notebook,Stationery,Aswan,2,5,0.2,8.0
+941,2025-10-25,Notebook,Stationery,Cairo,4,5,0.1,18.0
+1286,2025-10-25,Laptop,Electronics,Alexandria,3,900,0.1,2430.0
+811,2025-10-25,Laptop,Electronics,Aswan,3,900,0.0,2700.0
+1759,2025-10-25,Chair,Furniture,Aswan,1,150,0.1,135.0
+365,2025-10-25,Laptop,Electronics,Aswan,4,900,0.1,3240.0
+992,2025-10-25,Chair,Furniture,Alexandria,4,150,0.1,540.0
+146,2025-10-25,Pen Set,Stationery,Alexandria,3,12,0.05,34.2
+1417,2025-10-25,Notebook,Stationery,Alexandria,4,5,0.05,19.0
+1548,2025-10-26,Pen Set,Stationery,Alexandria,5,12,0.0,60.0
+437,2025-10-26,Chair,Furniture,Cairo,4,150,0.1,540.0
+1747,2025-10-26,Backpack,Accessories,Cairo,3,45,0.05,128.25
+1820,2025-10-27,Headphones,Electronics,Cairo,5,80,0.1,360.0
+684,2025-10-27,Backpack,Accessories,Cairo,5,45,0.0,225.0
+1885,2025-10-27,Chair,Furniture,Cairo,1,150,0.0,150.0
+860,2025-10-27,Pen Set,Stationery,Cairo,3,12,0.2,28.8
+1450,2025-10-27,Laptop,Electronics,Cairo,3,900,0.0,2700.0
+1154,2025-10-27,Backpack,Accessories,Aswan,4,45,0.1,162.0
+900,2025-10-27,Chair,Furniture,Cairo,2,150,0.1,270.0
+552,2025-10-27,Desk,Furniture,Cairo,2,250,0.0,500.0
+169,2025-10-27,Headphones,Electronics,Alexandria,5,80,0.1,360.0
+1274,2025-10-28,Notebook,Stationery,Alexandria,3,5,0.05,14.25
+290,2025-10-29,Desk,Furniture,Alexandria,3,250,0.05,712.5
+105,2025-10-29,Pen Set,Stationery,Cairo,5,12,0.0,60.0
+954,2025-10-29,Desk,Furniture,Giza,3,250,0.0,750.0
+1587,2025-10-29,Pen Set,Stationery,Aswan,3,12,0.0,36.0
+367,2025-10-29,Desk,Furniture,Alexandria,2,250,0.0,500.0
+1856,2025-10-30,Pen Set,Stationery,Alexandria,4,12,0.1,43.2
+2,2025-10-30,Pen Set,Stationery,Giza,1,12,0.2,9.6
+693,2025-10-30,Backpack,Accessories,Aswan,5,45,0.2,180.0
+1777,2025-10-31,Headphones,Electronics,Aswan,3,80,0.05,228.0
+1889,2025-10-31,Laptop,Electronics,Aswan,1,900,0.1,810.0
+1432,2025-10-31,Phone,Electronics,Cairo,4,600,0.0,2400.0
+1248,2025-11-01,Desk,Furniture,Aswan,1,250,0.2,200.0
+1533,2025-11-01,Backpack,Accessories,Giza,1,45,0.1,40.5
+804,2025-11-01,Backpack,Accessories,Giza,1,45,0.2,36.0
+1564,2025-11-02,Backpack,Accessories,Aswan,4,45,0.0,180.0
+966,2025-11-02,Chair,Furniture,Aswan,3,150,0.0,450.0
+441,2025-11-02,Backpack,Accessories,Alexandria,2,45,0.05,85.5
+1058,2025-11-02,Pen Set,Stationery,Cairo,1,12,0.2,9.6
+1138,2025-11-02,Headphones,Electronics,Giza,3,80,0.1,216.0
+571,2025-11-03,Backpack,Accessories,Aswan,5,45,0.1,202.5
+1623,2025-11-03,Backpack,Accessories,Cairo,2,45,0.0,90.0
+1789,2025-11-03,Desk,Furniture,Giza,5,250,0.1,1125.0
+1640,2025-11-03,Headphones,Electronics,Giza,4,80,0.2,256.0
+529,2025-11-03,Backpack,Accessories,Aswan,1,45,0.05,42.75
+1987,2025-11-03,Pen Set,Stationery,Alexandria,2,12,0.2,19.2
+1783,2025-11-04,Laptop,Electronics,Aswan,1,900,0.2,720.0
+1237,2025-11-04,Laptop,Electronics,Giza,2,900,0.1,1620.0
+1045,2025-11-04,Notebook,Stationery,Aswan,1,5,0.2,4.0
+274,2025-11-04,Backpack,Accessories,Giza,3,45,0.05,128.25
+1743,2025-11-04,Desk,Furniture,Giza,5,250,0.2,1000.0
+117,2025-11-04,Laptop,Electronics,Cairo,5,900,0.0,4500.0
+1343,2025-11-05,Laptop,Electronics,Alexandria,1,900,0.1,810.0
+1707,2025-11-05,Backpack,Accessories,Alexandria,1,45,0.05,42.75
+411,2025-11-06,Phone,Electronics,Aswan,3,600,0.0,1800.0
+656,2025-11-06,Chair,Furniture,Giza,3,150,0.0,450.0
+652,2025-11-06,Notebook,Stationery,Giza,5,5,0.2,20.0
+1995,2025-11-06,Pen Set,Stationery,Aswan,3,12,0.0,36.0
+1035,2025-11-06,Laptop,Electronics,Aswan,1,900,0.0,900.0
+801,2025-11-07,Laptop,Electronics,Giza,4,900,0.1,3240.0
+1446,2025-11-07,Laptop,Electronics,Alexandria,4,900,0.05,3420.0
+1100,2025-11-07,Desk,Furniture,Alexandria,2,250,0.05,475.0
+840,2025-11-07,Backpack,Accessories,Giza,5,45,0.2,180.0
+55,2025-11-07,Desk,Furniture,Giza,4,250,0.0,1000.0
+1776,2025-11-07,Phone,Electronics,Giza,1,600,0.2,480.0
+186,2025-11-07,Desk,Furniture,Aswan,2,250,0.1,450.0
+793,2025-11-07,Notebook,Stationery,Giza,4,5,0.2,16.0
+315,2025-11-08,Phone,Electronics,Cairo,2,600,0.2,960.0
+431,2025-11-08,Laptop,Electronics,Cairo,1,900,0.2,720.0
+1000,2025-11-08,Chair,Furniture,Aswan,4,150,0.05,570.0
+1430,2025-11-08,Pen Set,Stationery,Giza,2,12,0.2,19.2
+746,2025-11-09,Headphones,Electronics,Giza,3,80,0.05,228.0
+1453,2025-11-09,Laptop,Electronics,Giza,3,900,0.2,2160.0
+986,2025-11-09,Notebook,Stationery,Aswan,4,5,0.0,20.0
+1486,2025-11-09,Pen Set,Stationery,Aswan,1,12,0.0,12.0
+1899,2025-11-09,Notebook,Stationery,Giza,2,5,0.1,9.0
+1300,2025-11-10,Laptop,Electronics,Alexandria,5,900,0.2,3600.0
+56,2025-11-10,Laptop,Electronics,Giza,2,900,0.05,1710.0
+1501,2025-11-10,Chair,Furniture,Aswan,1,150,0.2,120.0
+298,2025-11-10,Desk,Furniture,Alexandria,3,250,0.2,600.0
+1683,2025-11-11,Laptop,Electronics,Alexandria,2,900,0.05,1710.0
+721,2025-11-11,Phone,Electronics,Giza,4,600,0.1,2160.0
+597,2025-11-11,Chair,Furniture,Aswan,3,150,0.2,360.0
+842,2025-11-11,Notebook,Stationery,Alexandria,4,5,0.0,20.0
+1495,2025-11-11,Desk,Furniture,Giza,5,250,0.2,1000.0
+1134,2025-11-11,Pen Set,Stationery,Aswan,1,12,0.0,12.0
+111,2025-11-12,Headphones,Electronics,Alexandria,2,80,0.0,160.0
+1843,2025-11-12,Pen Set,Stationery,Giza,3,12,0.1,32.4
+1826,2025-11-12,Backpack,Accessories,Alexandria,5,45,0.1,202.5
+791,2025-11-12,Laptop,Electronics,Giza,5,900,0.0,4500.0
+727,2025-11-12,Notebook,Stationery,Aswan,1,5,0.0,5.0
+1102,2025-11-12,Desk,Furniture,Cairo,1,250,0.1,225.0
+376,2025-11-12,Laptop,Electronics,Cairo,5,900,0.1,4050.0
+1844,2025-11-13,Pen Set,Stationery,Cairo,2,12,0.0,24.0
+635,2025-11-13,Phone,Electronics,Aswan,1,600,0.0,600.0
+354,2025-11-13,Desk,Furniture,Giza,3,250,0.05,712.5
+764,2025-11-13,Backpack,Accessories,Alexandria,1,45,0.0,45.0
+745,2025-11-13,Pen Set,Stationery,Alexandria,1,12,0.1,10.8
+1422,2025-11-13,Backpack,Accessories,Aswan,4,45,0.2,144.0
+1044,2025-11-13,Headphones,Electronics,Alexandria,3,80,0.1,216.0
+1897,2025-11-13,Chair,Furniture,Aswan,3,150,0.0,450.0
+607,2025-11-14,Headphones,Electronics,Alexandria,3,80,0.0,240.0
+1194,2025-11-14,Notebook,Stationery,Alexandria,1,5,0.0,5.0
+150,2025-11-14,Laptop,Electronics,Cairo,5,900,0.05,4275.0
+1311,2025-11-15,Chair,Furniture,Aswan,3,150,0.2,360.0
+1797,2025-11-15,Backpack,Accessories,Giza,4,45,0.2,144.0
+855,2025-11-15,Headphones,Electronics,Giza,4,80,0.0,320.0
+1898,2025-11-16,Pen Set,Stationery,Giza,1,12,0.2,9.6
+182,2025-11-16,Phone,Electronics,Cairo,2,600,0.05,1140.0
+1496,2025-11-16,Desk,Furniture,Giza,3,250,0.0,750.0
+817,2025-11-16,Laptop,Electronics,Alexandria,4,900,0.2,2880.0
+31,2025-11-16,Desk,Furniture,Alexandria,3,250,0.1,675.0
+810,2025-11-17,Backpack,Accessories,Alexandria,1,45,0.2,36.0
+1352,2025-11-17,Desk,Furniture,Cairo,5,250,0.1,1125.0
+856,2025-11-17,Pen Set,Stationery,Cairo,1,12,0.1,10.8
+890,2025-11-17,Headphones,Electronics,Cairo,1,80,0.05,76.0
+1625,2025-11-17,Chair,Furniture,Aswan,5,150,0.0,750.0
+498,2025-11-17,Headphones,Electronics,Cairo,5,80,0.05,380.0
+1767,2025-11-17,Chair,Furniture,Alexandria,4,150,0.05,570.0
+1359,2025-11-17,Laptop,Electronics,Aswan,1,900,0.0,900.0
+781,2025-11-17,Backpack,Accessories,Giza,2,45,0.2,72.0
+1318,2025-11-18,Chair,Furniture,Giza,2,150,0.0,300.0
+1981,2025-11-18,Notebook,Stationery,Alexandria,3,5,0.1,13.5
+1892,2025-11-18,Phone,Electronics,Aswan,5,600,0.05,2850.0
+887,2025-11-18,Laptop,Electronics,Giza,5,900,0.1,4050.0
+1419,2025-11-18,Pen Set,Stationery,Cairo,1,12,0.1,10.8
+1816,2025-11-18,Laptop,Electronics,Cairo,1,900,0.0,900.0
+491,2025-11-18,Backpack,Accessories,Alexandria,2,45,0.0,90.0
+1196,2025-11-19,Notebook,Stationery,Cairo,1,5,0.05,4.75
+1341,2025-11-19,Chair,Furniture,Giza,3,150,0.05,427.5
+128,2025-11-19,Pen Set,Stationery,Giza,4,12,0.0,48.0
+1402,2025-11-19,Phone,Electronics,Aswan,5,600,0.1,2700.0
+697,2025-11-19,Notebook,Stationery,Giza,1,5,0.0,5.0
+676,2025-11-19,Notebook,Stationery,Cairo,3,5,0.05,14.25
+102,2025-11-20,Phone,Electronics,Aswan,4,600,0.2,1920.0
+657,2025-11-20,Pen Set,Stationery,Alexandria,1,12,0.0,12.0
+1725,2025-11-20,Chair,Furniture,Alexandria,1,150,0.0,150.0
+1254,2025-11-20,Pen Set,Stationery,Aswan,2,12,0.1,21.6
+1086,2025-11-20,Pen Set,Stationery,Aswan,2,12,0.05,22.8
+1147,2025-11-21,Chair,Furniture,Giza,4,150,0.05,570.0
+1127,2025-11-21,Pen Set,Stationery,Aswan,5,12,0.0,60.0
+701,2025-11-21,Chair,Furniture,Giza,5,150,0.2,600.0
+1228,2025-11-21,Backpack,Accessories,Alexandria,2,45,0.2,72.0
+1082,2025-11-21,Backpack,Accessories,Cairo,5,45,0.1,202.5
+1691,2025-11-21,Pen Set,Stationery,Cairo,3,12,0.05,34.2
+1326,2025-11-21,Phone,Electronics,Alexandria,4,600,0.05,2280.0
+1429,2025-11-21,Headphones,Electronics,Alexandria,4,80,0.0,320.0
+1315,2025-11-21,Backpack,Accessories,Cairo,3,45,0.05,128.25
+24,2025-11-21,Backpack,Accessories,Cairo,3,45,0.05,128.25
+1031,2025-11-22,Desk,Furniture,Cairo,4,250,0.05,950.0
+742,2025-11-22,Pen Set,Stationery,Alexandria,1,12,0.05,11.4
+705,2025-11-23,Phone,Electronics,Giza,1,600,0.1,540.0
+482,2025-11-24,Pen Set,Stationery,Aswan,5,12,0.05,57.0
+81,2025-11-24,Backpack,Accessories,Aswan,5,45,0.2,180.0
+1431,2025-11-24,Desk,Furniture,Cairo,2,250,0.2,400.0
+865,2025-11-25,Pen Set,Stationery,Aswan,1,12,0.2,9.6
+1001,2025-11-25,Pen Set,Stationery,Alexandria,4,12,0.0,48.0
+264,2025-11-25,Backpack,Accessories,Giza,3,45,0.2,108.0
+1171,2025-11-25,Notebook,Stationery,Giza,4,5,0.1,18.0
+1469,2025-11-26,Pen Set,Stationery,Aswan,3,12,0.1,32.4
+916,2025-11-26,Desk,Furniture,Giza,3,250,0.0,750.0
+191,2025-11-26,Notebook,Stationery,Cairo,2,5,0.05,9.5
+679,2025-11-26,Chair,Furniture,Giza,3,150,0.1,405.0
+967,2025-11-26,Chair,Furniture,Giza,2,150,0.0,300.0
+152,2025-11-27,Headphones,Electronics,Alexandria,2,80,0.1,144.0
+1126,2025-11-27,Pen Set,Stationery,Alexandria,5,12,0.1,54.0
+1464,2025-11-28,Laptop,Electronics,Aswan,1,900,0.05,855.0
+956,2025-11-28,Chair,Furniture,Cairo,5,150,0.0,750.0
+1953,2025-11-28,Laptop,Electronics,Cairo,4,900,0.0,3600.0
+808,2025-11-28,Laptop,Electronics,Alexandria,2,900,0.2,1440.0
+1324,2025-11-28,Backpack,Accessories,Aswan,4,45,0.05,171.0
+1305,2025-11-29,Chair,Furniture,Alexandria,1,150,0.0,150.0
+1860,2025-11-29,Notebook,Stationery,Alexandria,3,5,0.1,13.5
+75,2025-11-29,Notebook,Stationery,Aswan,4,5,0.05,19.0
+1323,2025-11-30,Chair,Furniture,Aswan,4,150,0.1,540.0
+1257,2025-11-30,Phone,Electronics,Alexandria,1,600,0.0,600.0
+1764,2025-11-30,Chair,Furniture,Giza,4,150,0.0,600.0
+133,2025-11-30,Laptop,Electronics,Giza,3,900,0.1,2430.0
+1229,2025-12-01,Phone,Electronics,Aswan,4,600,0.0,2400.0
+184,2025-12-01,Notebook,Stationery,Aswan,4,5,0.2,16.0
+1170,2025-12-01,Backpack,Accessories,Giza,4,45,0.0,180.0
+318,2025-12-01,Notebook,Stationery,Alexandria,3,5,0.05,14.25
+1033,2025-12-01,Notebook,Stationery,Giza,3,5,0.05,14.25
+756,2025-12-01,Desk,Furniture,Cairo,5,250,0.1,1125.0
+406,2025-12-01,Chair,Furniture,Cairo,5,150,0.2,600.0
+243,2025-12-02,Laptop,Electronics,Giza,3,900,0.2,2160.0
+180,2025-12-02,Chair,Furniture,Cairo,3,150,0.05,427.5
+486,2025-12-02,Phone,Electronics,Alexandria,2,600,0.05,1140.0
+1030,2025-12-02,Headphones,Electronics,Cairo,5,80,0.0,400.0
+98,2025-12-02,Notebook,Stationery,Alexandria,5,5,0.0,25.0
+766,2025-12-03,Pen Set,Stationery,Cairo,3,12,0.0,36.0
+404,2025-12-03,Backpack,Accessories,Aswan,3,45,0.2,108.0
+1835,2025-12-03,Desk,Furniture,Cairo,1,250,0.05,237.5
+613,2025-12-03,Pen Set,Stationery,Alexandria,1,12,0.2,9.6
+1848,2025-12-03,Chair,Furniture,Aswan,2,150,0.1,270.0
+1355,2025-12-04,Phone,Electronics,Alexandria,5,600,0.2,2400.0
+858,2025-12-04,Laptop,Electronics,Cairo,4,900,0.1,3240.0
+84,2025-12-04,Pen Set,Stationery,Aswan,4,12,0.2,38.4
+1790,2025-12-04,Pen Set,Stationery,Giza,2,12,0.2,19.2
+1116,2025-12-04,Desk,Furniture,Giza,3,250,0.05,712.5
+1349,2025-12-04,Notebook,Stationery,Cairo,1,5,0.05,4.75
+410,2025-12-05,Laptop,Electronics,Giza,1,900,0.05,855.0
+1883,2025-12-05,Phone,Electronics,Alexandria,3,600,0.2,1440.0
+1572,2025-12-05,Headphones,Electronics,Aswan,5,80,0.1,360.0
+1518,2025-12-05,Laptop,Electronics,Cairo,5,900,0.1,4050.0
+792,2025-12-05,Desk,Furniture,Alexandria,1,250,0.2,200.0
+1577,2025-12-05,Chair,Furniture,Alexandria,4,150,0.1,540.0
+173,2025-12-06,Pen Set,Stationery,Alexandria,5,12,0.1,54.0
+1778,2025-12-06,Phone,Electronics,Alexandria,5,600,0.0,3000.0
+400,2025-12-07,Headphones,Electronics,Cairo,4,80,0.1,288.0
+1055,2025-12-07,Laptop,Electronics,Aswan,4,900,0.0,3600.0
+622,2025-12-07,Desk,Furniture,Giza,2,250,0.2,400.0
+1566,2025-12-07,Desk,Furniture,Aswan,2,250,0.1,450.0
+1929,2025-12-07,Phone,Electronics,Cairo,4,600,0.0,2400.0
+958,2025-12-07,Notebook,Stationery,Aswan,3,5,0.05,14.25
+653,2025-12-07,Phone,Electronics,Alexandria,5,600,0.05,2850.0
+1438,2025-12-08,Notebook,Stationery,Giza,4,5,0.0,20.0
+1210,2025-12-08,Backpack,Accessories,Giza,2,45,0.0,90.0
+1621,2025-12-08,Headphones,Electronics,Cairo,5,80,0.0,400.0
+1618,2025-12-08,Chair,Furniture,Alexandria,3,150,0.0,450.0
+624,2025-12-08,Desk,Furniture,Aswan,5,250,0.0,1250.0
+1658,2025-12-08,Pen Set,Stationery,Aswan,5,12,0.2,48.0
+1462,2025-12-08,Headphones,Electronics,Alexandria,5,80,0.0,400.0
+715,2025-12-08,Backpack,Accessories,Giza,3,45,0.0,135.0
+220,2025-12-09,Backpack,Accessories,Giza,1,45,0.0,45.0
+899,2025-12-09,Laptop,Electronics,Giza,4,900,0.2,2880.0
+1113,2025-12-09,Phone,Electronics,Aswan,1,600,0.2,480.0
+541,2025-12-09,Notebook,Stationery,Giza,2,5,0.1,9.0
+914,2025-12-09,Backpack,Accessories,Cairo,2,45,0.1,81.0
+201,2025-12-09,Headphones,Electronics,Alexandria,2,80,0.1,144.0
+1705,2025-12-09,Backpack,Accessories,Cairo,5,45,0.05,213.75
+362,2025-12-09,Backpack,Accessories,Giza,4,45,0.2,144.0
+373,2025-12-09,Desk,Furniture,Giza,1,250,0.0,250.0
+775,2025-12-09,Pen Set,Stationery,Giza,3,12,0.05,34.2
+1542,2025-12-10,Phone,Electronics,Giza,3,600,0.0,1800.0
+1303,2025-12-11,Notebook,Stationery,Giza,4,5,0.0,20.0
+260,2025-12-11,Chair,Furniture,Aswan,5,150,0.0,750.0
+602,2025-12-11,Pen Set,Stationery,Alexandria,2,12,0.2,19.2
+325,2025-12-11,Backpack,Accessories,Giza,4,45,0.2,144.0
+776,2025-12-11,Backpack,Accessories,Cairo,2,45,0.0,90.0
+662,2025-12-11,Notebook,Stationery,Cairo,4,5,0.1,18.0
+1906,2025-12-11,Phone,Electronics,Cairo,4,600,0.0,2400.0
+483,2025-12-12,Headphones,Electronics,Aswan,1,80,0.2,64.0
+1916,2025-12-12,Chair,Furniture,Cairo,1,150,0.0,150.0
+1791,2025-12-13,Chair,Furniture,Cairo,1,150,0.1,135.0
+1730,2025-12-13,Laptop,Electronics,Giza,4,900,0.05,3420.0
+34,2025-12-13,Chair,Furniture,Alexandria,4,150,0.05,570.0
+507,2025-12-13,Chair,Furniture,Alexandria,3,150,0.05,427.5
+1198,2025-12-14,Backpack,Accessories,Alexandria,5,45,0.2,180.0
+1756,2025-12-14,Headphones,Electronics,Giza,2,80,0.05,152.0
+1376,2025-12-14,Backpack,Accessories,Alexandria,3,45,0.1,121.5
+202,2025-12-14,Backpack,Accessories,Alexandria,1,45,0.1,40.5
+538,2025-12-14,Laptop,Electronics,Aswan,3,900,0.1,2430.0
+1942,2025-12-15,Headphones,Electronics,Giza,2,80,0.05,152.0
+760,2025-12-15,Notebook,Stationery,Cairo,3,5,0.1,13.5
+559,2025-12-15,Pen Set,Stationery,Giza,1,12,0.2,9.6
+474,2025-12-15,Desk,Furniture,Alexandria,2,250,0.0,500.0
+595,2025-12-16,Headphones,Electronics,Cairo,2,80,0.1,144.0
+1425,2025-12-16,Headphones,Electronics,Alexandria,4,80,0.05,304.0
+985,2025-12-16,Chair,Furniture,Cairo,4,150,0.0,600.0
+1574,2025-12-17,Pen Set,Stationery,Alexandria,2,12,0.1,21.6
+1544,2025-12-17,Chair,Furniture,Alexandria,4,150,0.2,480.0
+542,2025-12-17,Laptop,Electronics,Aswan,5,900,0.1,4050.0
+206,2025-12-17,Headphones,Electronics,Giza,4,80,0.2,256.0
+1904,2025-12-17,Phone,Electronics,Giza,1,600,0.2,480.0
+1477,2025-12-17,Desk,Furniture,Alexandria,3,250,0.05,712.5
+1022,2025-12-17,Laptop,Electronics,Giza,1,900,0.05,855.0
+1690,2025-12-17,Laptop,Electronics,Alexandria,1,900,0.0,900.0
+144,2025-12-18,Desk,Furniture,Giza,4,250,0.05,950.0
+324,2025-12-18,Backpack,Accessories,Alexandria,4,45,0.05,171.0
+1240,2025-12-18,Laptop,Electronics,Giza,1,900,0.2,720.0
+1560,2025-12-18,Pen Set,Stationery,Giza,3,12,0.0,36.0
+1454,2025-12-18,Phone,Electronics,Aswan,2,600,0.2,960.0
+188,2025-12-19,Desk,Furniture,Cairo,2,250,0.0,500.0
+773,2025-12-19,Laptop,Electronics,Giza,2,900,0.0,1800.0
+1264,2025-12-19,Pen Set,Stationery,Alexandria,5,12,0.05,57.0
+592,2025-12-19,Backpack,Accessories,Alexandria,2,45,0.0,90.0
+940,2025-12-19,Chair,Furniture,Cairo,1,150,0.05,142.5
+1009,2025-12-20,Notebook,Stationery,Cairo,4,5,0.1,18.0
+1337,2025-12-20,Notebook,Stationery,Alexandria,3,5,0.1,13.5
+1959,2025-12-20,Notebook,Stationery,Alexandria,1,5,0.1,4.5
+1059,2025-12-20,Desk,Furniture,Aswan,2,250,0.05,475.0
+425,2025-12-21,Desk,Furniture,Cairo,2,250,0.05,475.0
+1028,2025-12-21,Headphones,Electronics,Cairo,4,80,0.0,320.0
+1003,2025-12-21,Chair,Furniture,Giza,5,150,0.1,675.0
+502,2025-12-21,Notebook,Stationery,Alexandria,1,5,0.1,4.5
+643,2025-12-21,Pen Set,Stationery,Aswan,2,12,0.2,19.2
+1095,2025-12-22,Headphones,Electronics,Cairo,5,80,0.05,380.0
+427,2025-12-22,Pen Set,Stationery,Alexandria,1,12,0.05,11.4
+786,2025-12-22,Chair,Furniture,Giza,1,150,0.05,142.5
+1472,2025-12-22,Notebook,Stationery,Giza,4,5,0.05,19.0
+1130,2025-12-22,Notebook,Stationery,Cairo,4,5,0.1,18.0
+1770,2025-12-22,Phone,Electronics,Aswan,2,600,0.1,1080.0
+92,2025-12-23,Pen Set,Stationery,Alexandria,2,12,0.0,24.0
+1982,2025-12-24,Chair,Furniture,Cairo,1,150,0.2,120.0
+535,2025-12-24,Chair,Furniture,Alexandria,5,150,0.0,750.0
+1063,2025-12-24,Phone,Electronics,Giza,2,600,0.1,1080.0
+419,2025-12-25,Headphones,Electronics,Giza,2,80,0.1,144.0
+453,2025-12-25,Desk,Furniture,Giza,1,250,0.05,237.5
+322,2025-12-25,Laptop,Electronics,Giza,1,900,0.05,855.0
+348,2025-12-26,Backpack,Accessories,Alexandria,4,45,0.0,180.0
+866,2025-12-26,Notebook,Stationery,Aswan,1,5,0.1,4.5
+70,2025-12-26,Desk,Furniture,Cairo,3,250,0.0,750.0
+1675,2025-12-26,Notebook,Stationery,Alexandria,4,5,0.05,19.0
+1207,2025-12-27,Chair,Furniture,Alexandria,5,150,0.1,675.0
+1026,2025-12-27,Laptop,Electronics,Aswan,4,900,0.0,3600.0
+342,2025-12-27,Headphones,Electronics,Aswan,2,80,0.05,152.0
+1407,2025-12-27,Headphones,Electronics,Aswan,2,80,0.1,144.0
+1522,2025-12-27,Notebook,Stationery,Giza,2,5,0.1,9.0
+1774,2025-12-27,Desk,Furniture,Cairo,1,250,0.0,250.0
+910,2025-12-28,Laptop,Electronics,Giza,2,900,0.1,1620.0
+371,2025-12-28,Headphones,Electronics,Aswan,1,80,0.1,72.0
+1945,2025-12-28,Desk,Furniture,Cairo,1,250,0.05,237.5
+1927,2025-12-28,Headphones,Electronics,Giza,3,80,0.1,216.0
+1051,2025-12-28,Chair,Furniture,Cairo,5,150,0.05,712.5
+1914,2025-12-28,Pen Set,Stationery,Aswan,3,12,0.0,36.0
+1391,2025-12-28,Headphones,Electronics,Alexandria,2,80,0.0,160.0
+1365,2025-12-28,Chair,Furniture,Alexandria,1,150,0.05,142.5
+1633,2025-12-28,Laptop,Electronics,Cairo,1,900,0.1,810.0
+1978,2025-12-28,Headphones,Electronics,Aswan,5,80,0.0,400.0
+873,2025-12-28,Laptop,Electronics,Aswan,5,900,0.0,4500.0
+1173,2025-12-29,Desk,Furniture,Cairo,3,250,0.2,600.0
+1426,2025-12-29,Pen Set,Stationery,Giza,5,12,0.0,60.0
+983,2025-12-29,Chair,Furniture,Aswan,5,150,0.0,750.0
+1980,2025-12-30,Pen Set,Stationery,Cairo,1,12,0.1,10.8
+286,2025-12-30,Backpack,Accessories,Cairo,5,45,0.2,180.0
+1096,2025-12-31,Laptop,Electronics,Alexandria,4,900,0.0,3600.0
+823,2025-12-31,Phone,Electronics,Giza,1,600,0.2,480.0
+1192,2025-12-31,Headphones,Electronics,Aswan,4,80,0.2,256.0
+239,2025-12-31,Headphones,Electronics,Giza,3,80,0.2,192.0
+608,2025-12-31,Chair,Furniture,Alexandria,2,150,0.05,285.0
+1750,2025-12-31,Notebook,Stationery,Giza,5,5,0.0,25.0
+1143,2025-12-31,Backpack,Accessories,Cairo,3,45,0.1,121.5
