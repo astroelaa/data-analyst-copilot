@@ -1,7 +1,7 @@
-import pandas as pd
 import streamlit as st
 
 from src.agent.agent import Session, answer
+from src.agent.tools import load_csv
 from src.rag.store import build_index
 
 DEFAULT_CSV = "data/sales.csv"
@@ -21,7 +21,7 @@ init_index()
 upload = st.sidebar.file_uploader("CSV file", type="csv")
 source = upload.name if upload else DEFAULT_CSV
 if st.session_state.get("source") != source:
-    st.session_state.session = Session(df=pd.read_csv(upload or DEFAULT_CSV))
+    st.session_state.session = Session(df=load_csv(upload or DEFAULT_CSV))
     st.session_state.source = source
 session = st.session_state.session
 

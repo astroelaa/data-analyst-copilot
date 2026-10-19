@@ -50,3 +50,11 @@ def plot_chart(result: pd.DataFrame, chart_type: str, x: str | None, y: str | No
     axis.set_title(f"{y} by {x}")
     figure.tight_layout()
     return figure
+
+
+def load_csv(source) -> pd.DataFrame:
+    df = pd.read_csv(source)
+    for column in df.columns:
+        if "date" in column.lower():
+            df[column] = pd.to_datetime(df[column], errors="coerce")
+    return df
