@@ -1,3 +1,4 @@
+import argparse
 import json
 import math
 import time
@@ -12,7 +13,8 @@ from src.agent.tools import load_csv
 QUESTIONS = Path("evaluation/questions.json")
 RESULTS = Path("evaluation/results.json")
 CSV = Path("data/sales.csv")
-PAUSE_SECONDS = 2
+PAUSE_SECONDS = 5
+MAX_LLM_ATTEMPTS = 5
 
 
 def flatten(value) -> tuple[list[float], list[str]]:
@@ -53,6 +55,11 @@ def first_try_ok(trace: list[dict]) -> bool:
     )
 
 
+def retryable(error: Exception) -> bool:
+    message = str(error)
+    return "429" in message or "504" in message
+
+
 def evaluate_one(item: dict, df: pd.DataFrame) -> dict:
     expected = reference_answer(item["reference_code"], df)
     start = time.time()
@@ -69,12 +76,16 @@ def evaluate_one(item: dict, df: pd.DataFrame) -> dict:
         "code": None,
         "error": None,
     }
-    try:
-        output = answer(Session(df=df), item["question"])
-    except Exception as exc:
-        row["error"] = str(exc)[:300]
-        row["seconds"] = round(time.time() - start, 2)
-        return row
+    for attempt in range(MAX_LLM_ATTEMPTS):
+        try:
+            output = answer(Session(df=df), item["question"])
+            break
+        except Exception as exc:
+            if not retryable(exc) or attempt == MAX_LLM_ATTEMPTS - 1:
+                row["error"] = str(exc)[:300]
+                row["seconds"] = round(time.time() - start, 2)
+                return row
+            time.sleep(20 * 2**attempt)
     row["first_try_ok"] = first_try_ok(output["trace"])
     row["final_ok"] = output["result"] is not None
     row["fixed"] = output["fixed"]
@@ -107,16 +118,24 @@ def summarize(rows: list[dict]) -> dict:
 
 
 def main() -> None:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--only")
+    args = parser.parse_args()
     df = load_csv(CSV)
     items = json.loads(QUESTIONS.read_text(encoding="utf-8"))
-    rows = []
-    for item in items:
+    selected = args.only.split(",") if args.only else [item["id"] for item in items]
+    selected_items = [item for item in items if item["id"] in selected]
+    existing = json.loads(RESULTS.read_text(encoding="utf-8")) if args.only and RESULTS.exists() else {"rows": []}
+    rows = {row["id"]: row for row in existing["rows"]}
+    for index, item in enumerate(selected_items):
         row = evaluate_one(item, df)
-        rows.append(row)
+        rows[item["id"]] = row
         print(row["id"], "correct" if row["correct"] else "WRONG", row["seconds"], row["error"] or "")
-        time.sleep(PAUSE_SECONDS)
-    summary = summarize(rows)
-    RESULTS.write_text(json.dumps({"summary": summary, "rows": rows}, ensure_ascii=False, indent=2), encoding="utf-8")
+        if index < len(selected_items) - 1:
+            time.sleep(PAUSE_SECONDS)
+    ordered = [rows[item["id"]] for item in items if item["id"] in rows]
+    summary = summarize(ordered)
+    RESULTS.write_text(json.dumps({"summary": summary, "rows": ordered}, ensure_ascii=False, indent=2), encoding="utf-8")
     print(json.dumps(summary, indent=2))
 
 
