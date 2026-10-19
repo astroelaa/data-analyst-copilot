@@ -192,8 +192,7 @@ def make_local_plan(question: str, available_columns: list[str]) -> tuple[Analys
         )
     else:
         raise ValueError(
-            "Hosted providers are unavailable, and this question is not supported by the local fallback. "
-            "Add a hosted Groq or Gemini key for open-ended analysis, or ask about columns, missing values, row counts, or supported local analysis."
+            "The question is not supported by the available offline analysis capabilities."
         )
 
     entries = load_entries()

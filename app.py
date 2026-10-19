@@ -5,6 +5,7 @@ from src.agent.tools import load_csv
 from src.rag.store import build_index
 
 DEFAULT_CSV = "data/sales.csv"
+USER_ERROR = "I couldn't complete that analysis. Please check the question and uploaded data, then try again."
 
 st.set_page_config(page_title="Data Analyst Copilot", layout="wide")
 st.title("Data Analyst Copilot")
@@ -28,7 +29,7 @@ def init_index() -> int:
 try:
     init_index()
 except Exception as exc:
-    st.warning(f"Semantic search is unavailable: {exc}. Using the local data dictionary instead.")
+    st.warning("Semantic search is unavailable. Using the local data dictionary instead.")
 
 upload = st.sidebar.file_uploader("CSV file", type="csv")
 source = upload.name if upload else DEFAULT_CSV
@@ -71,7 +72,7 @@ def render_analysis(output: dict) -> None:
         if output["figure"] is not None:
             st.pyplot(output["figure"])
     else:
-        st.error(output["error"])
+        st.error(USER_ERROR)
     tools = [item["tool"] for item in output["trace"]]
     st.caption("Tools used: " + " → ".join(tools))
     with st.expander("What the agent did"):
@@ -113,7 +114,7 @@ if question:
             output = answer(session, question)
         except Exception as exc:
             status.update(label="Analysis could not be completed", state="error", expanded=False)
-            message = f"I could not complete that analysis: {exc}"
+            message = USER_ERROR
             active_session["messages"].append({"role": "assistant", "content": message})
             st.error(message)
         else:

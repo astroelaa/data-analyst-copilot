@@ -56,8 +56,7 @@ def make_plan(
             return deepcopy(result[0]), deepcopy(result[1])
         except ValueError as fallback_error:
             raise ValueError(
-                "Hosted LLM providers are temporarily unavailable. "
-                f"The local fallback could not answer this question: {fallback_error}"
+                "The question could not be answered from the available analysis capabilities."
             ) from error
 
 
