@@ -3,7 +3,7 @@
 ## Current status
 
 - The English-only Streamlit agent is implemented and deployed from `master`.
-- Groq is the primary hosted planner, Gemini is the provider fallback, and a small deterministic fallback handles basic schema questions and common sales examples when both hosted providers are unavailable.
+- The planner uses a layered flow: local generic handlers first, Groq as the primary hosted planner, Gemini as the provider fallback, and restricted pandas tools for execution.
 - Uploaded CSVs are profiled dynamically with columns, types, null counts, cardinalities, sample values, and numeric statistics.
 - The planner receives the current uploaded dataframe profile, so hosted analysis can work with new CSV schemas and new column names.
 - Pydantic validates every analysis plan before restricted pandas execution.
@@ -19,7 +19,7 @@ main.py                CLI entrypoint
 src/                   Agent, LLM, RAG, schemas, and prompts
 data/                  Default sales CSV and data dictionary
 evaluation/            Questions, results, and evaluation runner
-tests/                 Automated tests
+tests/                 Local validation tests, kept outside the deployed repository
 scripts/               Dataset generation and model-list utilities
 README.md              Setup, architecture, deployment, and evaluation docs
 PROJECT_HANDOFF.md     Current implementation handoff
@@ -49,13 +49,7 @@ Unknown Groq models currently use zero configured cost until their prices are ad
 
 ## Validation
 
-Run the full test suite:
-
-```powershell
-.\.venv\Scripts\python -m pytest tests -q
-```
-
-The latest validation passed 35 tests, including provider fallback, agent retries, uploaded-data profiling, chart modes, and execution safety.
+The implementation was validated with 35 tests covering provider fallback, agent retries, uploaded-data profiling, chart modes, and execution safety. Test files are intentionally kept outside the deployed repository for manual use.
 
 Run the evaluation from the repository root:
 

@@ -1,6 +1,6 @@
 # Data Analyst Copilot
 
-Data Analyst Copilot is a Streamlit application that turns English questions about any uploaded CSV into validated pandas analysis plans, executes the plans safely, and displays tables, charts, citations, and tool traces. It profiles each uploaded dataframe so the hosted agent can work with new schemas and general analysis questions. It uses Groq as the hosted planning provider, Gemini as a provider fallback, and a small deterministic fallback for basic schema questions and common sales examples.
+Data Analyst Copilot is a Streamlit application that turns English questions about any uploaded CSV into validated pandas analysis plans, executes the plans safely, and displays tables, charts, citations, and tool traces. It profiles each uploaded dataframe so the hosted agent can work with new schemas and general analysis questions. It uses local deterministic handling for basic questions, Groq as the hosted planning provider, Gemini as a provider fallback, and restricted pandas tools for execution.
 
 ## Setup
 
@@ -74,6 +74,7 @@ flowchart LR
     UI --> A[Agent]
     A --> D[Profile uploaded dataframe]
     A --> P[Planner]
+    P --> L[Local deterministic basics]
     P --> R[Rule-based router]
     R --> C[Cheap Groq model]
     R --> S[Strong Groq model]
@@ -83,9 +84,6 @@ flowchart LR
     S -. provider failure .-> G
     P --> D1[Uploaded schema context]
     D1 --> E[Columns, types, samples, stats]
-    P --> F{Hosted models available?}
-    F -->|No or quota exhausted| L[Local deterministic fallback]
-    F -->|Yes| V
     A --> T[Agent tools]
     T --> DP[describe_data]
     T --> RP[run_pandas]
@@ -99,17 +97,17 @@ flowchart LR
 
 1. Streamlit creates a session for the uploaded dataset.
 2. The agent profiles the data with `describe_data` and builds uploaded-schema context.
-3. The router sends the question to the cheap or strong Groq model based on complexity.
-4. The planner returns a structured `AnalysisPlan`, validated by Pydantic.
-5. If Groq fails, the router retries the request with the corresponding Gemini model.
-6. If both hosted providers fail, the local fallback creates a plan for supported sales patterns.
+3. The planner checks local generic handlers first for basic schema questions.
+4. Unsupported questions go to the router, which selects the cheap or strong Groq model.
+5. If Groq fails, the router retries with the corresponding Gemini model.
+6. The planner returns a structured `AnalysisPlan`, validated by Pydantic.
 7. `run_pandas` executes only validated code against a copy of the dataframe.
 8. `plot_chart` creates a chart when the plan requests one.
 9. The UI displays the answer, code, result, chart, citations, and tool trace.
 
 The hosted planner is data-agnostic within the uploaded CSV: it can use new column names and new analysis questions because the current dataframe profile is included in the planning context. The fixed RAG dictionary remains available for the default sales dataset and citations.
 
-The fallback is intentionally conservative. It computes only recognized operations and does not pretend to answer unsupported questions.
+The local layer is intentionally conservative. It handles basic schema questions and selected examples without an API, while hosted models provide general open-ended analysis. Unsupported questions produce an explicit limitation instead of a fabricated answer.
 
 ## Branch architecture
 
@@ -126,15 +124,11 @@ The fallback is intentionally conservative. It computes only recognized operatio
 - Use Chroma and Gemini embeddings for data-dictionary retrieval, with citations and a local dictionary fallback when embeddings are unavailable.
 - Execute generated code only through restricted pandas tools that block imports, file access, and other unsafe operations.
 - Keep the evaluation honest by recording quota and timeout failures instead of treating them as correct answers.
-- Use a small deterministic local fallback for basic schema questions and common sales examples when hosted providers are unavailable; unsupported open-ended questions remain explicit failures.
+- Use a small deterministic local layer for basic schema questions and selected examples; unsupported open-ended questions remain explicit failures without hosted providers.
 
-## Tests
+## Validation
 
-```powershell
-.\.venv\Scripts\python -m pytest tests -v
-```
-
-The test suite has 35 passing unit tests, including uploaded-data profiling, dynamic planner context, provider fallback, agent retries, chart modes, and execution safety.
+The project was validated with 35 automated tests covering uploaded-data profiling, dynamic planner context, provider fallback, agent retries, chart modes, and execution safety. The test files are kept outside the deployed repository so you can run or paste them into your own development workspace.
 
 ## Evaluation
 
@@ -155,12 +149,12 @@ Run it from the repository root with:
 .\.venv\Scripts\python -m evaluation.run_eval
 ```
 
-The recorded rows identify the provider used for each question. In the latest local run, the deterministic fallback handled the supported sales questions after hosted-provider calls were unavailable; this measures answer correctness for the included dataset, not unlimited open-ended model capability.
+The recorded rows identify the provider used for each question. The benchmark measures the included dataset and does not prove unlimited open-ended model capability.
 
 ## Limitations
 
 - Gemini free-tier quota is limited to 20 requests per day per model and can prevent a full evaluation or live demo.
 - Groq is the primary hosted provider for deployment availability, while Gemini remains configured as a second provider and fallback. The local fallback does not replace the hosted LLM layer.
-- The fallback is designed for common sales analysis, not unlimited natural-language understanding. Production deployments should add rate limiting, caching, and a higher-quota or secondary model provider for many users.
+- The local layer is not an unlimited language model. Production deployments should add rate limiting, caching, and a higher-quota or secondary model provider for many users.
 - The sales data is synthetic.
 - `prices.json` contains configured standard Flash price estimates, but actual billing and account-specific pricing are not validated.
