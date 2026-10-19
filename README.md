@@ -70,6 +70,7 @@ flowchart LR
 - Use Chroma and Gemini embeddings for data-dictionary retrieval, with citations and a local dictionary fallback when embeddings are unavailable.
 - Execute generated code only through restricted pandas tools that block imports, file access, and other unsafe operations.
 - Keep the evaluation honest by recording quota and timeout failures instead of treating them as correct answers.
+- Use a deterministic local fallback for common sales questions when Gemini quota is exhausted; unsupported questions remain explicit failures.
 
 ## Tests
 
@@ -77,7 +78,7 @@ flowchart LR
 .\.venv\Scripts\python -m pytest tests -v
 ```
 
-The test suite has 15 passing unit tests.
+The test suite has 16 passing unit tests.
 
 ## Evaluation
 
@@ -95,5 +96,6 @@ The evaluation contains 11 English reference-answer questions. The recorded run 
 ## Limitations
 
 - Gemini free-tier quota is limited to 20 requests per day per model and can prevent a full evaluation or live demo.
+- Gemini remains the primary LLM because the project brief requires an LLM layer with two models. The local fallback does not replace that requirement.
 - The sales data is synthetic.
 - `prices.json` contains configured standard Flash price estimates, but actual billing and account-specific pricing are not validated.
