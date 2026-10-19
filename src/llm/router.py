@@ -32,16 +32,17 @@ def estimate_cost(model_name: str, input_tokens: int, output_tokens: int) -> flo
     return (input_tokens * price["input"] + output_tokens * price["output"]) / 1_000_000
 
 
-def ask(question: str) -> tuple[str, dict]:
+def ask(question: str, prompt: str | None = None, schema=None) -> tuple[str, dict]:
     decision = route(question)
     model = decision.model_name
+    body = prompt or question
     fell_back = False
     try:
-        result = generate(model, question)
+        result = generate(model, body, schema)
     except Exception:
         model = STRONG_MODEL if model == CHEAP_MODEL else CHEAP_MODEL
         fell_back = True
-        result = generate(model, question)
+        result = generate(model, body, schema)
     record = {
         "model": model,
         "tier": decision.tier,

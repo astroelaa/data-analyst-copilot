@@ -1,4 +1,8 @@
-from src.llm.router import ask
+from pathlib import Path
+
+from src.llm.planner import make_plan
+
+DICTIONARY = Path("data/data_dictionary.md").read_text(encoding="utf-8")
 
 
 def main() -> None:
@@ -6,8 +10,8 @@ def main() -> None:
         question = input("question: ").strip()
         if question in ("", "exit"):
             break
-        answer, record = ask(question)
-        print(answer)
+        plan, record = make_plan(question, DICTIONARY)
+        print(plan.model_dump_json(indent=2))
         print(record)
 
 

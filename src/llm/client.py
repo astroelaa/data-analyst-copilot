@@ -1,7 +1,7 @@
 import time
 
 from google import genai
-from google.genai import errors
+from google.genai import errors, types
 
 from src.config import GEMINI_API_KEY
 
@@ -9,11 +9,19 @@ client = genai.Client(api_key=GEMINI_API_KEY)
 RETRYABLE = (429, 503)
 
 
-def generate(model_name: str, prompt: str, retries: int = 3) -> dict:
+def generate(model_name: str, prompt: str, response_schema=None, retries: int = 3) -> dict:
+    config = None
+    if response_schema is not None:
+        config = types.GenerateContentConfig(
+            response_mime_type="application/json",
+            response_schema=response_schema,
+        )
     for attempt in range(retries):
         start = time.time()
         try:
-            response = client.models.generate_content(model=model_name, contents=prompt)
+            response = client.models.generate_content(
+                model=model_name, contents=prompt, config=config
+            )
         except errors.APIError as error:
             if error.code in RETRYABLE and attempt < retries - 1:
                 time.sleep(2 ** (attempt + 1))
