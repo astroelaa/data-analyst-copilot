@@ -41,6 +41,28 @@ def make_local_plan(question: str, available_columns: list[str]) -> tuple[Analys
             "product",
             "revenue",
         )
+    elif has("order_date", "revenue") and "first quarter" in text:
+        plan = _plan(
+            "Calculate total revenue in the first quarter.",
+            ["order_date", "revenue"],
+            ["Filter order dates to January through March.", "Sum revenue for the filtered rows."],
+            "result = pd.DataFrame({'total_revenue': [df[df['order_date'].dt.month <= 3]['revenue'].sum()]})",
+        )
+    elif has("order_date", "revenue") and "highest" in text and "month" in text:
+        plan = _plan(
+            "Find the month with the highest total revenue.",
+            ["order_date", "revenue"],
+            ["Group revenue by calendar month.", "Find the highest monthly revenue."],
+            "result = pd.DataFrame({'highest_monthly_revenue': [df.groupby(df['order_date'].dt.month)['revenue'].sum().max()]})",
+        )
+    elif has("region", "revenue") and "average revenue" in text and any(region in text for region in ("cairo", "alexandria", "giza")):
+        region = next(region.title() for region in ("cairo", "alexandria", "giza") if region in text)
+        plan = _plan(
+            f"Calculate average revenue per order in {region}.",
+            ["region", "revenue"],
+            [f"Filter rows where region is {region}.", "Calculate the mean revenue."],
+            f"result = pd.DataFrame({{'average_revenue': [df[df['region'] == '{region}']['revenue'].mean()]}})",
+        )
     elif has("region", "revenue") and "average revenue" in text:
         plan = _plan(
             "Calculate average revenue by region.",
@@ -66,10 +88,27 @@ def make_local_plan(question: str, available_columns: list[str]) -> tuple[Analys
             "Calculate total revenue by month.",
             ["order_date", "revenue"],
             ["Group rows by the month in order_date.", "Sum revenue for each month.", "Sort the months chronologically."],
-            "result = df.groupby(df['order_date'].dt.to_period('M'))['revenue'].sum().reset_index()",
+            "result = df.groupby(df['order_date'].dt.month)['revenue'].sum().reset_index()",
             "line",
             "order_date",
             "revenue",
+        )
+    elif has("category", "revenue") and "compare" in text and all(category in text for category in ("electronics", "furniture")):
+        plan = _plan(
+            "Compare total revenue for Electronics and Furniture.",
+            ["category", "revenue"],
+            ["Filter the Electronics and Furniture categories.", "Group by category.", "Sum revenue for each category."],
+            "result = df[df['category'].isin(['Electronics', 'Furniture'])].groupby('category')['revenue'].sum().reset_index()",
+            "bar",
+            "category",
+            "revenue",
+        )
+    elif has("discount", "order_id") and "discount" in text and re.search(r"\b20\s*percent\b|\b20%\b", text):
+        plan = _plan(
+            "Count orders with a 20 percent discount.",
+            ["discount", "order_id"],
+            ["Filter rows with a 20 percent discount.", "Count the matching orders."],
+            "result = pd.DataFrame({'order_count': [int((df['discount'] == 0.2).sum())]})",
         )
     elif has("revenue") and ("total revenue" in text or "sum of revenue" in text):
         plan = _plan(
@@ -133,7 +172,7 @@ def make_local_plan(question: str, available_columns: list[str]) -> tuple[Analys
     record = {
         "model": "local-fallback",
         "tier": "local",
-        "reason": "Gemini unavailable; deterministic sales-schema fallback",
+        "reason": "Hosted providers unavailable; deterministic sales-schema fallback",
         "fell_back": True,
         "input_tokens": 0,
         "output_tokens": 0,

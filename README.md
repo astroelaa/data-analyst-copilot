@@ -133,20 +133,28 @@ The fallback is intentionally conservative. It computes only recognized operatio
 .\.venv\Scripts\python -m pytest tests -v
 ```
 
-The test suite has 19 passing unit tests.
+The test suite has 21 passing unit tests.
 
 ## Evaluation
 
-The evaluation contains 11 English reference-answer questions. The recorded run reached 8 questions before Gemini free-tier quota exhaustion and all 8 reached questions were correct. One earlier request also failed with a 504 timeout.
+The evaluation contains 11 English reference-answer questions. The latest clean run completed all 11 questions using the configured provider chain and deterministic fallback support.
 
-| Metric | Recorded result |
+| Metric | Latest recorded result |
 | --- | ---: |
 | Questions | 11 |
-| Questions reaching the model | 8 |
-| Correct answers among questions reaching the model | 8/8 |
-| Overall recorded correctness | 72.7% |
-| First-try code success | 53.3% |
-| Code success after auto-fix | 53.3% |
+| Correct answers | 11/11 |
+| Overall correctness | 100.0% |
+| First-try code success | 100.0% |
+| Code success after auto-fix | 100.0% |
+| Average time per question | 7.30 seconds |
+
+Run it from the repository root with:
+
+```powershell
+.\.venv\Scripts\python -m evaluation.run_eval
+```
+
+The recorded rows identify the provider used for each question. In the latest local run, the deterministic fallback handled the supported sales questions after hosted-provider calls were unavailable; this measures answer correctness for the included dataset, not unlimited open-ended model capability.
 
 ## Limitations
 

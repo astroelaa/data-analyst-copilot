@@ -36,7 +36,7 @@ def make_plan(question: str, available_columns: list[str] | None = None) -> tupl
             return deepcopy(result[0]), deepcopy(result[1])
         except ValueError as fallback_error:
             raise ValueError(
-                "Gemini is temporarily unavailable because its API quota is exhausted. "
+                "Hosted LLM providers are temporarily unavailable. "
                 f"The local fallback could not answer this question: {fallback_error}"
             ) from error
 
