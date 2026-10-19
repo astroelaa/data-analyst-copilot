@@ -107,7 +107,6 @@ def summarize(rows: list[dict]) -> dict:
     return {
         "questions": total,
         "correct_pct": pct("correct", rows),
-        "correct_pct_en": pct("correct", rows),
         "code_success_first_try_pct": pct("first_try_ok", rows),
         "code_success_after_autofix_pct": pct("final_ok", rows),
         "avg_seconds": round(sum(r["seconds"] for r in rows) / total, 2),

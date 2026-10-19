@@ -7,8 +7,8 @@
 - v3 Chroma RAG with citations done
 - v4 agent tools, trace, session state, and Streamlit UI done
 - English-only question handling is now used throughout the project
-- Targeted evaluation rerun is in progress for `q01,q10,q11,q12,q13,q14,q15`
-- README and push remain
+- The evaluation contains 11 English questions
+- README updates and push remain
 
 ## Pricing
 
@@ -19,4 +19,4 @@
 
 ## Evaluation
 
-The evaluation runner includes 5-second pauses between questions and exponential backoff for 429 and 504 errors.
+The evaluation runner uses a three-second pause between questions and records quota or timeout failures without fabricating results.
