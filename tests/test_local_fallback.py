@@ -4,6 +4,14 @@ from src.agent.tools import run_pandas
 from src.llm.local_fallback import make_local_plan
 
 
+def test_local_fallback_handles_greeting():
+    df = pd.DataFrame({"revenue": [10.0]})
+    plan, record = make_local_plan("hello", list(df.columns))
+    result = run_pandas(plan.pandas_code, df)
+    assert record["model"] == "local-fallback"
+    assert "Data Analyst Copilot" in result.iloc[0]["message"]
+
+
 def test_local_fallback_builds_executable_revenue_plan():
     df = pd.DataFrame(
         {

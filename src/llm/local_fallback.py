@@ -23,7 +23,14 @@ def make_local_plan(question: str, available_columns: list[str]) -> tuple[Analys
     def has(*columns: str) -> bool:
         return set(columns).issubset(required)
 
-    if has("product", "revenue") and re.search(r"top\s+(\d+)", text) and "product" in text and "revenue" in text:
+    if re.fullmatch(r"(hello|hi|hey|good morning|good afternoon|good evening)[!. ]*", text):
+        plan = _plan(
+            "Greet the user and explain the analyst role.",
+            [],
+            ["Respond as the Data Analyst Copilot.", "Invite the user to ask a question about the uploaded CSV."],
+            "result = pd.DataFrame({'message': ['Hello! I am your Data Analyst Copilot. Ask me about revenue, products, orders, categories, regions, or discounts.']})",
+        )
+    elif has("product", "revenue") and re.search(r"top\s+(\d+)", text) and "product" in text and "revenue" in text:
         count = int(re.search(r"top\s+(\d+)", text).group(1))
         plan = _plan(
             f"Find the top {count} products by total revenue.",
