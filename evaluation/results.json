@@ -6,7 +6,7 @@
     "correct_pct_ar": 0.0,
     "code_success_first_try_pct": 53.3,
     "code_success_after_autofix_pct": 53.3,
-    "avg_seconds": 21.3
+    "avg_seconds": 21.19
   },
   "rows": [
     {
@@ -21,7 +21,7 @@
       "model": null,
       "code": null,
       "error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. ",
-      "seconds": 14.73
+      "seconds": 14.05
     },
     {
       "id": "q02",
@@ -147,7 +147,7 @@
       "model": null,
       "code": null,
       "error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. ",
-      "seconds": 13.74
+      "seconds": 13.62
     },
     {
       "id": "q11",
@@ -161,7 +161,7 @@
       "model": null,
       "code": null,
       "error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. ",
-      "seconds": 13.63
+      "seconds": 13.59
     },
     {
       "id": "q12",
@@ -175,7 +175,7 @@
       "model": null,
       "code": null,
       "error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. ",
-      "seconds": 13.68
+      "seconds": 13.51
     },
     {
       "id": "q13",
@@ -189,7 +189,7 @@
       "model": null,
       "code": null,
       "error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. ",
-      "seconds": 13.88
+      "seconds": 13.49
     },
     {
       "id": "q14",
@@ -203,7 +203,7 @@
       "model": null,
       "code": null,
       "error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. ",
-      "seconds": 13.65
+      "seconds": 13.58
     },
     {
       "id": "q15",
@@ -217,7 +217,7 @@
       "model": null,
       "code": null,
       "error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. ",
-      "seconds": 13.68
+      "seconds": 13.57
     }
   ]
 }
