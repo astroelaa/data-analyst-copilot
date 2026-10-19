@@ -105,7 +105,7 @@ flowchart LR
 8. `plot_chart` creates a chart when the plan requests one.
 9. The UI displays the answer, code, result, chart, citations, and tool trace.
 
-The hosted planner is data-agnostic within the uploaded CSV: it can use new column names and new analysis questions because the current dataframe profile is included in the planning context. The optional RAG dictionary is not required for uploaded-data planning.
+The hosted planner is data-agnostic within the uploaded CSV: it can use new column names and new analysis questions because the current dataframe profile is included in the planning context. Its role, goal, tools, and plan→execute→verify workflow are defined in the system instructions. The optional RAG dictionary is not required for uploaded-data planning.
 
 The local layer is intentionally conservative. It handles basic schema questions and selected examples without an API, while hosted models provide general open-ended analysis. Unsupported questions produce an explicit limitation instead of a fabricated answer.
 
@@ -120,6 +120,7 @@ The local layer is intentionally conservative. It handles basic schema questions
 
 - Use two Groq models with rule-based routing so simple questions use the cheaper tier and complex questions use the stronger tier, with Gemini as a provider fallback.
 - Use Pydantic validation for structured analysis plans before executing generated pandas code.
+- Define the analyst role, goal, tools, workflow, and failure behavior explicitly instead of relying on a framework-specific persona.
 - Profile every uploaded dataframe and provide its live schema, samples, and numeric statistics to the planner.
 - Keep Chroma and embeddings optional; uploaded-data profiling is the primary planning context and does not require a startup embedding call.
 - Execute generated code only through restricted pandas tools that block imports, file access, and other unsafe operations.

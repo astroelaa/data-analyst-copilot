@@ -8,6 +8,7 @@
 - The planner receives the current uploaded dataframe profile, so hosted analysis can work with new CSV schemas and new column names.
 - Pydantic validates every analysis plan before restricted pandas execution.
 - The agent tools are `describe_data`, `profile_data`, `run_pandas`, and `plot_chart`.
+- The hosted agent receives an explicit analyst role, goal, tool contract, plan→execute→verify workflow, and no-fabrication rules.
 - Chat sessions, result tables, charts, generated code, citations, and tool traces are supported in the Streamlit UI.
 - The latest source and documentation changes are pushed to the `master` branch.
 

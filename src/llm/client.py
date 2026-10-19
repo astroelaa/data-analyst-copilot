@@ -6,6 +6,11 @@ from openai import OpenAI
 
 from src.config import GEMINI_API_KEY, GROQ_API_KEY
 
+SYSTEM_PROMPT = (
+    "You are a careful data-analysis agent. Follow the user's request exactly, use only "
+    "the provided schema, produce the requested structured output, and never invent data."
+)
+
 client = genai.Client(
     api_key=GEMINI_API_KEY,
     http_options=types.HttpOptions(
@@ -54,7 +59,10 @@ def generate_groq(model_name: str, prompt: str, response_schema=None) -> dict:
     start = time.time()
     request = {
         "model": model_name,
-        "messages": [{"role": "user", "content": prompt}],
+        "messages": [
+            {"role": "system", "content": SYSTEM_PROMPT},
+            {"role": "user", "content": prompt},
+        ],
     }
     if response_schema is not None:
         request["response_format"] = {"type": "json_object"}
