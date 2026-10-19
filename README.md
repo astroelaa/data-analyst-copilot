@@ -16,6 +16,8 @@ Create `.env` in the repository root:
 GEMINI_API_KEY=your_api_key
 CHEAP_MODEL=gemini-3.7-flash
 STRONG_MODEL=gemini-3.8-flash
+OLLAMA_BASE_URL=http://localhost:11434
+OLLAMA_MODEL=llama3.2:3b
 ```
 
 ## Run
@@ -50,6 +52,16 @@ Which product sold the most units?
 ```
 
 The local fallback handles the common sales patterns listed above without using the Gemini API. New or more complex questions are sent to Gemini when quota is available. If Gemini is unavailable and the fallback cannot recognize the question, the app displays a clear limitation instead of inventing an answer.
+
+### Optional Ollama fallback
+
+To answer open-ended questions locally when Gemini quota is exhausted, install [Ollama](https://ollama.com), start it, and pull a model:
+
+```powershell
+ollama pull llama3.2:3b
+```
+
+Keep Ollama running at `http://localhost:11434`. The planner tries Gemini first, then Ollama, then the deterministic fallback. Ollama is local to the machine running the app; it is not available inside Streamlit Community Cloud unless you provide a separately hosted Ollama endpoint and set `OLLAMA_BASE_URL` to that endpoint.
 
 For Streamlit Community Cloud, add these values under App settings > Secrets:
 
@@ -144,5 +156,6 @@ The evaluation contains 11 English reference-answer questions. The recorded run 
 - Gemini free-tier quota is limited to 20 requests per day per model and can prevent a full evaluation or live demo.
 - Gemini remains the primary LLM because the project brief requires an LLM layer with two models. The local fallback does not replace that requirement.
 - The fallback is designed for common sales analysis, not unlimited natural-language understanding. Production deployments should add rate limiting, caching, and a higher-quota or secondary model provider for many users.
+- Ollama is optional and intended for local open-ended questions. Streamlit Community Cloud cannot access an Ollama server running on your personal computer.
 - The sales data is synthetic.
 - `prices.json` contains configured standard Flash price estimates, but actual billing and account-specific pricing are not validated.

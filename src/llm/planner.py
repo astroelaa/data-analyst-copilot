@@ -1,6 +1,7 @@
 from pydantic import ValidationError
 
 from src.llm.router import ask
+from src.llm.client import generate_ollama
 from src.llm.local_fallback import make_local_plan
 from src.prompts import build_fix_prompt, build_plan_prompt
 from src.rag.store import citation, known_columns, load_entries, retrieve
@@ -22,12 +23,38 @@ def make_plan(question: str) -> tuple[AnalysisPlan, dict]:
         return _make_remote_plan(question, prompt, valid, chunks)
     except Exception as error:
         try:
+            return _make_ollama_plan(question, prompt, valid, chunks)
+        except Exception:
+            pass
+        try:
             return make_local_plan(question, valid)
         except ValueError as fallback_error:
             raise ValueError(
-                "Gemini is temporarily unavailable because its API quota is exhausted. "
+                "Gemini is unavailable and Ollama is not running. "
                 f"The local fallback could not answer this question: {fallback_error}"
             ) from error
+
+
+def _make_ollama_plan(question: str, prompt: str, valid: list[str], chunks: list[dict]) -> tuple[AnalysisPlan, dict]:
+    result = generate_ollama(question + "\n\n" + prompt, AnalysisPlan)
+    text = result["text"]
+    plan = AnalysisPlan.model_validate_json(text)
+    unknown = [column for column in plan.columns if column not in valid]
+    if unknown:
+        raise ValueError(f"Ollama used unknown columns: {unknown}")
+    record = result
+    record.update(
+        {
+            "model": "ollama-local",
+            "tier": "local-llm",
+            "reason": "Gemini unavailable; Ollama local fallback",
+            "fell_back": True,
+            "cost": 0.0,
+            "attempts": 1,
+            "citations": [citation(chunk) for chunk in chunks],
+        }
+    )
+    return plan, record
 
 
 def _make_remote_plan(question: str, prompt: str, valid: list[str], chunks: list[dict]) -> tuple[AnalysisPlan, dict]:
