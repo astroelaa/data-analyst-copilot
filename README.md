@@ -63,6 +63,14 @@ flowchart LR
 - `v3-rag`: Chroma retrieval over the data dictionary with citations.
 - `v4-agent`: pandas execution tools, charts, traces, session state, and Streamlit UI.
 
+## Technical decisions
+
+- Use two Gemini Flash models with rule-based routing so simple questions use the cheaper tier and complex questions use the stronger tier.
+- Use Pydantic validation for structured analysis plans before executing generated pandas code.
+- Use Chroma and Gemini embeddings for data-dictionary retrieval, with citations and a local dictionary fallback when embeddings are unavailable.
+- Execute generated code only through restricted pandas tools that block imports, file access, and other unsafe operations.
+- Keep the evaluation honest by recording quota and timeout failures instead of treating them as correct answers.
+
 ## Tests
 
 ```powershell
