@@ -8,6 +8,7 @@ from src.config import GEMINI_API_KEY
 client = genai.Client(
     api_key=GEMINI_API_KEY,
     http_options=types.HttpOptions(
+        timeout=120000,
         retry_options=types.HttpRetryOptions(attempts=1),
     ),
 )
