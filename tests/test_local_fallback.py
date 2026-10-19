@@ -10,6 +10,7 @@ def test_local_fallback_handles_greeting():
     result = run_pandas(plan.pandas_code, df)
     assert record["model"] == "local-fallback"
     assert "Data Analyst Copilot" in result.iloc[0]["message"]
+    assert "draw charts" in result.iloc[0]["message"]
 
 
 def test_local_fallback_builds_executable_revenue_plan():

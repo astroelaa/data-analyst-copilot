@@ -10,6 +10,15 @@ st.set_page_config(page_title="Data Analyst Copilot", layout="wide")
 st.title("Data Analyst Copilot")
 st.caption("Your English-language data analyst for sales.csv. I create plans, run pandas analysis, and explain the results.")
 
+with st.sidebar:
+    st.subheader("Agent skills")
+    st.caption("The agent can use these tools on the uploaded CSV:")
+    st.markdown(
+        "- **describe_data**: inspect columns, types, and values\n"
+        "- **run_pandas**: execute restricted analysis code\n"
+        "- **plot_chart**: create a chart from the result"
+    )
+
 
 @st.cache_resource
 def init_index() -> int:

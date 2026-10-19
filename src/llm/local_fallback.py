@@ -25,10 +25,10 @@ def make_local_plan(question: str, available_columns: list[str]) -> tuple[Analys
 
     if re.fullmatch(r"(hello|hi|hey|good morning|good afternoon|good evening)[!. ]*", text):
         plan = _plan(
-            "Greet the user and explain the analyst role.",
+            "Introduce the Data Analyst Copilot and explain its capabilities.",
             [],
-            ["Respond as the Data Analyst Copilot.", "Invite the user to ask a question about the uploaded CSV."],
-            "result = pd.DataFrame({'message': ['Hello! I am your Data Analyst Copilot. Ask me about revenue, products, orders, categories, regions, or discounts.']})",
+            ["Explain that the assistant analyzes the uploaded CSV.", "Invite the user to ask an English data question."],
+            "result = pd.DataFrame({'message': ['Hello! I am Data Analyst Copilot, your English-language data analyst. I can describe your CSV, create pandas analysis, calculate results, and draw charts. Ask about revenue, products, orders, categories, regions, or discounts.']})",
         )
     elif has("product", "revenue") and re.search(r"top\s+(\d+)", text) and "product" in text and "revenue" in text:
         count = int(re.search(r"top\s+(\d+)", text).group(1))
