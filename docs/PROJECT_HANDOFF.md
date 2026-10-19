@@ -3,7 +3,7 @@
 ## Current status
 
 - The English-only Streamlit agent is implemented and deployed from `master`.
-- Groq is the primary hosted planner, Gemini is the provider fallback, and the deterministic fallback handles recognized sales questions when both hosted providers are unavailable.
+- Groq is the primary hosted planner, Gemini is the provider fallback, and a small deterministic fallback handles basic schema questions and common sales examples when both hosted providers are unavailable.
 - Uploaded CSVs are profiled dynamically with columns, types, null counts, cardinalities, sample values, and numeric statistics.
 - The planner receives the current uploaded dataframe profile, so hosted analysis can work with new CSV schemas and new column names.
 - Pydantic validates every analysis plan before restricted pandas execution.
@@ -68,6 +68,6 @@ The benchmark contains 11 English questions. The latest recorded run reached 11/
 ## Known limitations
 
 - Arbitrary questions on new datasets require a working Groq or Gemini API key.
-- The offline deterministic fallback is intentionally limited to recognized sales patterns.
+- The offline deterministic fallback is intentionally limited; general open-ended analysis requires a hosted provider.
 - The sales data is synthetic.
 - Evaluation results should be regenerated after provider, prompt, planner, or fallback changes.

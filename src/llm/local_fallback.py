@@ -28,14 +28,35 @@ def make_local_plan(question: str, available_columns: list[str]) -> tuple[Analys
             "Introduce the Data Analyst Copilot and explain its capabilities.",
             [],
             ["Explain that the assistant analyzes the uploaded CSV.", "Invite the user to ask an English data question."],
-            "result = pd.DataFrame({'message': ['Hello! I am Data Analyst Copilot, your English-language data analyst. I can describe your CSV, create pandas analysis, calculate results, and draw charts. Ask about revenue, products, orders, categories, regions, or discounts.']})",
+            "result = pd.DataFrame({'message': ['Hello! I am Data Analyst Copilot, your data analyst. I can inspect your CSV, answer questions with safe pandas analysis, calculate results, and create charts. Ask me anything about the data in your file.']})",
         )
     elif re.fullmatch(r"(what do you do|what can you do|how can you help)[?.! ]*", text):
         plan = _plan(
             "Explain the Data Analyst Copilot's role and capabilities.",
             [],
             ["Inspect the uploaded dataframe.", "Apply requested filters, groupings, aggregations, or rankings.", "Return a result and chart when useful."],
-            "result = pd.DataFrame({'message': ['I inspect the uploaded CSV, answer English questions with safe pandas analysis, and show results and charts when useful. Ask me about the data in your file.']})",
+            "result = pd.DataFrame({'message': ['I inspect your uploaded CSV, answer questions with safe pandas analysis, and show results and charts when useful. Ask me anything about the data in your file.']})",
+        )
+    elif "column" in text or "field" in text:
+        plan = _plan(
+            "List the columns in the uploaded dataframe.",
+            list(available_columns),
+            ["Read the dataframe columns.", "Return the column names."],
+            "result = pd.DataFrame({'column': list(df.columns)})",
+        )
+    elif "missing" in text or "null" in text or "empty" in text:
+        plan = _plan(
+            "Check missing values in the uploaded dataframe.",
+            list(available_columns),
+            ["Count missing values for every column.", "Return columns with their missing-value counts."],
+            "result = pd.DataFrame({'column': df.columns, 'missing_values': df.isna().sum().to_numpy()})",
+        )
+    elif "how many rows" in text or "number of rows" in text or "row count" in text:
+        plan = _plan(
+            "Count rows in the uploaded dataframe.",
+            [],
+            ["Count the dataframe rows.", "Return the row count."],
+            "result = pd.DataFrame({'row_count': [len(df)]})",
         )
     elif has("product", "revenue") and re.search(r"top\s+(\d+)", text) and "product" in text and "revenue" in text:
         count = int(re.search(r"top\s+(\d+)", text).group(1))
@@ -172,7 +193,7 @@ def make_local_plan(question: str, available_columns: list[str]) -> tuple[Analys
     else:
         raise ValueError(
             "Hosted providers are unavailable, and this question is not supported by the local fallback. "
-            "Try a revenue, product, category, quantity, discount, or regional order question."
+            "Add a hosted Groq or Gemini key for open-ended analysis, or ask about columns, missing values, row counts, or supported local analysis."
         )
 
     entries = load_entries()

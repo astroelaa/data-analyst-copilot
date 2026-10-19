@@ -1,6 +1,6 @@
 # Data Analyst Copilot
 
-Data Analyst Copilot is a Streamlit application that turns English questions about any uploaded CSV into validated pandas analysis plans, executes the plans safely, and displays tables, charts, citations, and tool traces. It profiles each uploaded dataframe so the hosted agent can work with new schemas. It uses Groq as the hosted planning provider, Gemini as a provider fallback, and a deterministic local fallback for common sales questions.
+Data Analyst Copilot is a Streamlit application that turns English questions about any uploaded CSV into validated pandas analysis plans, executes the plans safely, and displays tables, charts, citations, and tool traces. It profiles each uploaded dataframe so the hosted agent can work with new schemas and general analysis questions. It uses Groq as the hosted planning provider, Gemini as a provider fallback, and a small deterministic fallback for basic schema questions and common sales examples.
 
 ## Setup
 
@@ -52,7 +52,7 @@ How many orders per category?
 Which product sold the most units?
 ```
 
-The agent profiles every uploaded CSV and sends its actual columns, types, sample values, cardinalities, and numeric ranges to the planner. New or complex questions are sent to Groq first, then Gemini if Groq fails. The local fallback handles the common sales patterns listed above without using a hosted API. If both providers are unavailable and the fallback cannot recognize the question, the app displays a clear limitation instead of inventing an answer.
+The agent profiles every uploaded CSV and sends its actual columns, types, sample values, cardinalities, and numeric ranges to the planner. New or complex questions are sent to Groq first, then Gemini if Groq fails. The local fallback handles basic schema questions and common sales examples without using a hosted API. If both providers are unavailable and the fallback cannot recognize the question, the app displays a clear limitation instead of inventing an answer.
 
 For Streamlit Community Cloud, add these values under App settings > Secrets:
 
@@ -126,7 +126,7 @@ The fallback is intentionally conservative. It computes only recognized operatio
 - Use Chroma and Gemini embeddings for data-dictionary retrieval, with citations and a local dictionary fallback when embeddings are unavailable.
 - Execute generated code only through restricted pandas tools that block imports, file access, and other unsafe operations.
 - Keep the evaluation honest by recording quota and timeout failures instead of treating them as correct answers.
-- Use a deterministic local fallback for common sales questions when Gemini quota is exhausted; unsupported questions remain explicit failures.
+- Use a small deterministic local fallback for basic schema questions and common sales examples when hosted providers are unavailable; unsupported open-ended questions remain explicit failures.
 
 ## Tests
 

@@ -8,7 +8,7 @@ DEFAULT_CSV = "data/sales.csv"
 
 st.set_page_config(page_title="Data Analyst Copilot", layout="wide")
 st.title("Data Analyst Copilot")
-st.caption("Your English-language data analyst for any uploaded CSV. I inspect the data, create plans, run pandas analysis, and explain the results.")
+st.caption("Your general-purpose data analyst for any uploaded CSV. I inspect the data, answer questions, create plans, run pandas analysis, and explain the results.")
 
 with st.sidebar:
     st.subheader("Agent skills")
