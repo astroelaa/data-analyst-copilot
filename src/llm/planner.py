@@ -23,6 +23,12 @@ def make_plan(
         plan, record = PLAN_CACHE[key]
         return deepcopy(plan), deepcopy(record)
     try:
+        result = make_local_plan(question, valid)
+        PLAN_CACHE[key] = result
+        return deepcopy(result[0]), deepcopy(result[1])
+    except ValueError:
+        pass
+    try:
         if data_context is None:
             chunks = retrieve(question)
         else:
