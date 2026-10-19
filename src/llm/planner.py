@@ -2,14 +2,17 @@ from pydantic import ValidationError
 
 from src.llm.router import ask
 from src.prompts import build_fix_prompt, build_plan_prompt
-from src.rag.store import citation, known_columns, retrieve
+from src.rag.store import citation, known_columns, load_entries, retrieve
 from src.schemas import AnalysisPlan, CodeFix
 
 MAX_ATTEMPTS = 2
 
 
 def make_plan(question: str) -> tuple[AnalysisPlan, dict]:
-    chunks = retrieve(question)
+    try:
+        chunks = retrieve(question)
+    except Exception:
+        chunks = load_entries()
     context = "\n".join(chunk["text"] for chunk in chunks)
     prompt = build_plan_prompt(question, context)
     valid = known_columns()
