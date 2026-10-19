@@ -24,6 +24,7 @@ Use only columns that appear in the uploaded schema profile below. Never invent,
 pandas_code must use only pandas and df, must not import anything or read files, and must assign the final table to a variable named result.
 Write a specific goal and ordered steps in English. Keep code and column names in English.
 The goal, steps, and code must describe the same operation and answer the user's exact question.
+Return an intent object with the requested metric, aggregation, filters, grouping, ranking limit, comparison values, and date range.
 Use explicit filters before groupby or aggregation when the question specifies a subset.
 Use unique counts only when the question asks for orders or distinct entities.
 Do not silently answer a different question because a broader calculation is easier.

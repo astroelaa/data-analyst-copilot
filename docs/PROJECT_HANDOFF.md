@@ -9,6 +9,7 @@
 - Pydantic validates every analysis plan before restricted pandas execution.
 - The agent tools are `describe_data`, `profile_data`, `run_pandas`, and `plot_chart`.
 - The hosted agent receives an explicit analyst role, goal, tool contract, plan→execute→verify workflow, and no-fabrication rules.
+- Plans include structured intent fields, results receive a conservative verification pass, and recent session context supports follow-up questions.
 - Chat sessions, result tables, charts, generated code, citations, and tool traces are supported in the Streamlit UI.
 - The latest source and documentation changes are pushed to the `master` branch.
 
@@ -23,7 +24,7 @@ evaluation/            Questions, results, and evaluation runner
 tests/                 Local validation tests, kept outside the deployed repository
 scripts/               Dataset generation and model-list utilities
 README.md              Setup, architecture, deployment, and evaluation docs
-PROJECT_HANDOFF.md     Current implementation handoff
+docs/PROJECT_HANDOFF.md Current implementation handoff
 ```
 
 Root entrypoints and configuration files intentionally remain at the repository root because Streamlit Cloud expects `app.py` there and the Python commands reference the root package layout.

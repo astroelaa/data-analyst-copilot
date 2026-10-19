@@ -88,7 +88,9 @@ flowchart LR
     T --> DP[describe_data]
     T --> RP[run_pandas]
     T --> PC[plot_chart]
-    V --> T
+    V --> Q[Result verification]
+    Q -->|valid| T
+    Q -->|invalid| X[One repair attempt]
     L --> T
     T --> O[Result, trace, citations, session history]
 ```
@@ -100,10 +102,11 @@ flowchart LR
 3. The planner checks local generic handlers first for basic schema questions.
 4. Unsupported questions go to the router, which selects the cheap or strong Groq model.
 5. If Groq fails, the router retries with the corresponding Gemini model.
-6. The planner returns a structured `AnalysisPlan`, validated by Pydantic.
+6. The planner returns a structured `AnalysisPlan` with explicit intent fields, validated by Pydantic.
 7. `run_pandas` executes only validated code against a copy of the dataframe.
-8. `plot_chart` creates a chart when the plan requests one.
-9. The UI displays the answer, code, result, chart, citations, and tool trace.
+8. The verifier checks the result shape and requested comparisons, allowing one bounded repair attempt.
+9. `plot_chart` creates a chart when the plan requests one.
+10. The UI displays the answer, code, result, chart, citations, and tool trace without provider internals.
 
 The hosted planner is data-agnostic within the uploaded CSV: it can use new column names and new analysis questions because the current dataframe profile is included in the planning context. Its role, goal, tools, and plan→execute→verify workflow are defined in the system instructions. The optional RAG dictionary is not required for uploaded-data planning.
 
@@ -120,6 +123,8 @@ The local layer is intentionally conservative. It handles basic schema questions
 
 - Use two Groq models with rule-based routing so simple questions use the cheaper tier and complex questions use the stronger tier, with Gemini as a provider fallback.
 - Use Pydantic validation for structured analysis plans before executing generated pandas code.
+- Verify result shape and requested comparisons after execution, with one bounded repair attempt.
+- Preserve recent questions and result columns as context for follow-up questions.
 - Define the analyst role, goal, tools, workflow, and failure behavior explicitly instead of relying on a framework-specific persona.
 - Profile every uploaded dataframe and provide its live schema, samples, and numeric statistics to the planner.
 - Keep Chroma and embeddings optional; uploaded-data profiling is the primary planning context and does not require a startup embedding call.

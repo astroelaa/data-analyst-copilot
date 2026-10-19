@@ -70,7 +70,7 @@ def render_analysis(output: dict) -> None:
         st.json(output["trace"])
     with st.expander("Analysis details"):
         st.caption(
-            f"model {record['model']} | tier {record['tier']} | tokens {record['input_tokens']}/{record['output_tokens']} | cost {output['cost']:.6f} | auto-fixed {output['fixed']}"
+            f"tokens {record['input_tokens']}/{record['output_tokens']} | cost {output['cost']:.6f} | auto-fixed {output['fixed']}"
         )
         st.caption("Sources: " + ", ".join(record["citations"]))
 
@@ -110,7 +110,7 @@ if question:
         else:
             record = output["record"]
             status.update(
-                label=f"Analysis complete using {record['model']}",
+                label="Analysis complete",
                 state="complete",
                 expanded=False,
             )

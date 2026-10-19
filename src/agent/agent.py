@@ -3,6 +3,7 @@ from dataclasses import dataclass, field
 import pandas as pd
 
 from src.agent.tools import describe_data, plot_chart, profile_data, run_pandas
+from src.agent.verify import verify_result
 from src.llm.planner import fix_code, make_plan
 
 MAX_RUN_ATTEMPTS = 2
@@ -14,6 +15,13 @@ class Session:
     history: list[dict] = field(default_factory=list)
 
 
+def _conversation_context(session: Session) -> str:
+    return "\n".join(
+        f"Question: {item['question']}\nResult columns: {item.get('result_columns', [])}"
+        for item in session.history[-3:]
+    )
+
+
 def answer(session: Session, question: str) -> dict:
     trace = [
         {"tool": "describe_data", "output": describe_data(session.df)},
@@ -23,8 +31,9 @@ def answer(session: Session, question: str) -> dict:
         question,
         list(session.df.columns),
         profile_data(session.df),
+        _conversation_context(session),
     )
-    trace.append({"tool": "make_plan", "model": record["model"], "attempts": record["attempts"]})
+    trace.append({"tool": "make_plan", "attempts": record["attempts"]})
     code = plan.pandas_code
     cost = record["cost"]
     fixed = False
@@ -34,8 +43,14 @@ def answer(session: Session, question: str) -> dict:
         try:
             result = run_pandas(code, session.df)
             trace.append({"tool": "run_pandas", "attempt": attempt, "status": "ok"})
-            error = None
-            break
+            valid, verification_error = verify_result(question, plan, result)
+            if valid:
+                error = None
+                break
+            error = verification_error
+            trace.append({"tool": "verify_result", "status": "error", "error": verification_error})
+            if attempt == MAX_RUN_ATTEMPTS:
+                result = None
         except Exception as exc:
             error = str(exc)
             trace.append({"tool": "run_pandas", "attempt": attempt, "status": "error", "error": error})
@@ -48,7 +63,14 @@ def answer(session: Session, question: str) -> dict:
     if result is not None:
         figure = plot_chart(result, plan.chart_type, plan.x, plan.y)
         trace.append({"tool": "plot_chart", "status": "drawn" if figure else "skipped"})
-    session.history.append({"question": question, "ok": result is not None, "fixed": fixed})
+    session.history.append(
+        {
+            "question": question,
+            "ok": result is not None and error is None,
+            "fixed": fixed,
+            "result_columns": list(result.columns) if result is not None else [],
+        }
+    )
     return {
         "plan": plan,
         "code": code,
