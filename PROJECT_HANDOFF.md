@@ -55,7 +55,7 @@ Run the full test suite:
 .\.venv\Scripts\python -m pytest tests -q
 ```
 
-The latest validation passed 25 tests.
+The latest validation passed 35 tests, including provider fallback, agent retries, uploaded-data profiling, chart modes, and execution safety.
 
 Run the evaluation from the repository root:
 

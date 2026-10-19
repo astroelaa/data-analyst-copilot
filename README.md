@@ -134,7 +134,7 @@ The fallback is intentionally conservative. It computes only recognized operatio
 .\.venv\Scripts\python -m pytest tests -v
 ```
 
-The test suite has 25 passing unit tests, including coverage for uploaded-data profiling and dynamic planner context.
+The test suite has 35 passing unit tests, including uploaded-data profiling, dynamic planner context, provider fallback, agent retries, chart modes, and execution safety.
 
 ## Evaluation
 

@@ -1,7 +1,7 @@
 import pandas as pd
 import pytest
 
-from src.agent.tools import plot_chart, profile_data, run_pandas
+from src.agent.tools import load_csv, plot_chart, profile_data, run_pandas
 
 DF = pd.DataFrame({"region": ["a", "b", "a"], "revenue": [1.0, 2.0, 3.0]})
 
@@ -36,3 +36,27 @@ def test_profile_data_describes_uploaded_dataframe():
     assert "- region:" in profile
     assert "sample_values=a, b" in profile
     assert "min=1.0" in profile
+
+
+def test_run_pandas_blocks_file_and_introspection_access():
+    for code in (
+        "result = open('secret.txt').read()",
+        "result = df.__class__",
+        "result = __import__('os')",
+    ):
+        with pytest.raises(ValueError):
+            run_pandas(code, DF)
+
+
+def test_plot_chart_supports_bar_line_and_pie():
+    for chart_type in ("bar", "line", "pie"):
+        figure = plot_chart(DF, chart_type, "region", "revenue")
+        assert figure is not None
+
+
+def test_load_csv_parses_date_columns(tmp_path):
+    path = tmp_path / "custom.csv"
+    path.write_text("event_date,amount\n2026-01-02,4\n2026-02-03,5\n", encoding="utf-8")
+    loaded = load_csv(path)
+    assert str(loaded["event_date"].dtype).startswith("datetime")
+    assert loaded["amount"].sum() == 9
