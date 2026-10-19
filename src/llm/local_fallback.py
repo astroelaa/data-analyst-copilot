@@ -30,6 +30,13 @@ def make_local_plan(question: str, available_columns: list[str]) -> tuple[Analys
             ["Explain that the assistant analyzes the uploaded CSV.", "Invite the user to ask an English data question."],
             "result = pd.DataFrame({'message': ['Hello! I am Data Analyst Copilot, your English-language data analyst. I can describe your CSV, create pandas analysis, calculate results, and draw charts. Ask about revenue, products, orders, categories, regions, or discounts.']})",
         )
+    elif re.fullmatch(r"(what do you do|what can you do|how can you help)[?.! ]*", text):
+        plan = _plan(
+            "Explain the Data Analyst Copilot's role and capabilities.",
+            [],
+            ["Inspect the uploaded dataframe.", "Apply requested filters, groupings, aggregations, or rankings.", "Return a result and chart when useful."],
+            "result = pd.DataFrame({'message': ['I inspect the uploaded CSV, answer English questions with safe pandas analysis, and show results and charts when useful. Ask me about the data in your file.']})",
+        )
     elif has("product", "revenue") and re.search(r"top\s+(\d+)", text) and "product" in text and "revenue" in text:
         count = int(re.search(r"top\s+(\d+)", text).group(1))
         plan = _plan(
@@ -164,7 +171,7 @@ def make_local_plan(question: str, available_columns: list[str]) -> tuple[Analys
         )
     else:
         raise ValueError(
-            "The Gemini API is unavailable because its quota is exhausted, and this question is not supported by the local fallback. "
+            "Hosted providers are unavailable, and this question is not supported by the local fallback. "
             "Try a revenue, product, category, quantity, discount, or regional order question."
         )
 

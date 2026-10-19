@@ -24,6 +24,7 @@ The goal, steps, and code must describe the same operation and answer the user's
 Use explicit filters before groupby or aggregation when the question specifies a subset.
 Use unique counts only when the question asks for orders or distinct entities.
 Do not silently answer a different question because a broader calculation is easier.
+Do not return the entire dataframe unless the user explicitly asks to view all rows.
 Set chart_type to none if a chart does not help. x and y must be columns of result, or null when chart_type is none.
 Do not include explanatory prose outside the requested structured JSON.
 
