@@ -7,7 +7,7 @@
 - Uploaded CSVs are profiled dynamically with columns, types, null counts, cardinalities, sample values, and numeric statistics.
 - The planner receives the current uploaded dataframe profile, so hosted analysis can work with new CSV schemas and new column names.
 - Pydantic validates every analysis plan before restricted pandas execution.
-- The agent tools are `describe_data`, `run_pandas`, and `plot_chart`.
+- The agent tools are `describe_data`, `profile_data`, `run_pandas`, and `plot_chart`.
 - Chat sessions, result tables, charts, generated code, citations, and tool traces are supported in the Streamlit UI.
 - The latest source and documentation changes are pushed to the `master` branch.
 
@@ -62,6 +62,6 @@ The benchmark contains 11 English questions. The latest recorded run reached 11/
 ## Known limitations
 
 - Arbitrary questions on new datasets require a working Groq or Gemini API key.
-- The offline deterministic fallback is intentionally limited; general open-ended analysis requires a hosted provider.
+- The offline deterministic layer is intentionally limited; general open-ended analysis requires a hosted provider.
 - The sales data is synthetic.
 - Evaluation results should be regenerated after provider, prompt, planner, or fallback changes.

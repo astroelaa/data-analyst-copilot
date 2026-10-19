@@ -2,7 +2,6 @@ import streamlit as st
 
 from src.agent.agent import Session, answer
 from src.agent.tools import load_csv
-from src.rag.store import build_index
 
 DEFAULT_CSV = "data/sales.csv"
 USER_ERROR = "I couldn't complete that analysis. Please check the question and uploaded data, then try again."
@@ -16,20 +15,11 @@ with st.sidebar:
     st.caption("The agent can use these tools on the uploaded CSV:")
     st.markdown(
         "- **describe_data**: inspect columns, types, and values\n"
+        "- **profile_data**: build live schema context for the uploaded CSV\n"
         "- **run_pandas**: execute restricted analysis code\n"
         "- **plot_chart**: create a chart from the result"
     )
 
-
-@st.cache_resource
-def init_index() -> int:
-    return build_index()
-
-
-try:
-    init_index()
-except Exception as exc:
-    st.warning("Semantic search is unavailable. Using the local data dictionary instead.")
 
 upload = st.sidebar.file_uploader("CSV file", type="csv")
 source = upload.name if upload else DEFAULT_CSV
@@ -76,7 +66,7 @@ def render_analysis(output: dict) -> None:
     tools = [item["tool"] for item in output["trace"]]
     st.caption("Tools used: " + " → ".join(tools))
     with st.expander("What the agent did"):
-        st.write("I described the data, created an analysis plan, ran the pandas code, and prepared the result.")
+        st.write("I described and profiled the data, created an analysis plan, ran the pandas code, and prepared the result.")
         st.json(output["trace"])
     with st.expander("Analysis details"):
         st.caption(

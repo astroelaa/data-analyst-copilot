@@ -1,6 +1,5 @@
 import re
 
-from src.rag.store import citation, load_entries
 from src.schemas import AnalysisPlan
 
 
@@ -17,20 +16,21 @@ def _plan(goal: str, columns: list[str], steps: list[str], code: str, chart_type
 
 
 def make_local_plan(question: str, available_columns: list[str]) -> tuple[AnalysisPlan, dict]:
-    text = question.lower()
+    text = re.sub(r"\s+", " ", question.casefold().strip())
+    text = re.sub(r"[?.!]+$", "", text).strip()
     required = set(available_columns)
 
     def has(*columns: str) -> bool:
         return set(columns).issubset(required)
 
-    if re.fullmatch(r"(hello|hi|hey|good morning|good afternoon|good evening)[!. ]*", text):
+    if text in {"hello", "hi", "hey", "good morning", "good afternoon", "good evening"}:
         plan = _plan(
             "Introduce the Data Analyst Copilot and explain its capabilities.",
             [],
             ["Explain that the assistant analyzes the uploaded CSV.", "Invite the user to ask an English data question."],
             "result = pd.DataFrame({'message': ['Hello! I am Data Analyst Copilot, your data analyst. I can inspect your CSV, answer questions with safe pandas analysis, calculate results, and create charts. Ask me anything about the data in your file.']})",
         )
-    elif re.fullmatch(r"(what do you do|what can you do|how can you help)[?.! ]*", text):
+    elif text in {"what do you do", "what can you do", "how can you help"}:
         plan = _plan(
             "Explain the Data Analyst Copilot's role and capabilities.",
             [],
@@ -195,7 +195,6 @@ def make_local_plan(question: str, available_columns: list[str]) -> tuple[Analys
             "The question is not supported by the available offline analysis capabilities."
         )
 
-    entries = load_entries()
     record = {
         "model": "local-fallback",
         "tier": "local",
@@ -206,6 +205,6 @@ def make_local_plan(question: str, available_columns: list[str]) -> tuple[Analys
         "latency": 0,
         "cost": 0.0,
         "attempts": 1,
-        "citations": [citation(entry) for entry in entries if any(column in entry["text"] for column in plan.columns)],
+        "citations": [],
     }
     return plan, record

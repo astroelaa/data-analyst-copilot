@@ -1,20 +1,27 @@
-from src.llm.planner import make_plan
-from src.rag.store import build_index
+from src.agent.agent import Session, answer
+from src.agent.tools import load_csv
+
+DEFAULT_CSV = "data/sales.csv"
 
 
 def main() -> None:
-    build_index()
+    session = Session(load_csv(DEFAULT_CSV))
     while True:
         question = input("question: ").strip()
         if question in ("", "exit"):
             break
         try:
-            plan, record = make_plan(question, list(df.columns))
-        except ValueError as error:
-            print(f"rejected: {error}")
+            output = answer(session, question)
+        except Exception:
+            print("I couldn't complete that analysis. Please check the question and uploaded data, then try again.")
             continue
-        print(plan.model_dump_json(indent=2))
-        print(record)
+        if output["result"] is None:
+            print("I couldn't complete that analysis. Please check the question and uploaded data, then try again.")
+            continue
+        try:
+            print(output["result"].to_string(index=False))
+        except Exception:
+            print("I couldn't display that result. Please try again.")
 
 
 if __name__ == "__main__":

@@ -74,7 +74,7 @@ flowchart LR
     UI --> A[Agent]
     A --> D[Profile uploaded dataframe]
     A --> P[Planner]
-    P --> L[Local deterministic basics]
+    P --> L[Local generic basics]
     P --> R[Rule-based router]
     R --> C[Cheap Groq model]
     R --> S[Strong Groq model]
@@ -105,7 +105,7 @@ flowchart LR
 8. `plot_chart` creates a chart when the plan requests one.
 9. The UI displays the answer, code, result, chart, citations, and tool trace.
 
-The hosted planner is data-agnostic within the uploaded CSV: it can use new column names and new analysis questions because the current dataframe profile is included in the planning context. The fixed RAG dictionary remains available for the default sales dataset and citations.
+The hosted planner is data-agnostic within the uploaded CSV: it can use new column names and new analysis questions because the current dataframe profile is included in the planning context. The optional RAG dictionary is not required for uploaded-data planning.
 
 The local layer is intentionally conservative. It handles basic schema questions and selected examples without an API, while hosted models provide general open-ended analysis. Unsupported questions produce an explicit limitation instead of a fabricated answer.
 
@@ -121,7 +121,7 @@ The local layer is intentionally conservative. It handles basic schema questions
 - Use two Groq models with rule-based routing so simple questions use the cheaper tier and complex questions use the stronger tier, with Gemini as a provider fallback.
 - Use Pydantic validation for structured analysis plans before executing generated pandas code.
 - Profile every uploaded dataframe and provide its live schema, samples, and numeric statistics to the planner.
-- Use Chroma and Gemini embeddings for data-dictionary retrieval, with citations and a local dictionary fallback when embeddings are unavailable.
+- Keep Chroma and embeddings optional; uploaded-data profiling is the primary planning context and does not require a startup embedding call.
 - Execute generated code only through restricted pandas tools that block imports, file access, and other unsafe operations.
 - Keep the evaluation honest by recording quota and timeout failures instead of treating them as correct answers.
 - Use a small deterministic local layer for basic schema questions and selected examples; unsupported open-ended questions remain explicit failures without hosted providers.

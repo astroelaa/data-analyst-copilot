@@ -15,7 +15,10 @@ class Session:
 
 
 def answer(session: Session, question: str) -> dict:
-    trace = [{"tool": "describe_data", "output": describe_data(session.df)}]
+    trace = [
+        {"tool": "describe_data", "output": describe_data(session.df)},
+        {"tool": "profile_data", "output": profile_data(session.df)},
+    ]
     plan, record = make_plan(
         question,
         list(session.df.columns),
