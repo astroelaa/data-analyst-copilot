@@ -104,13 +104,10 @@ def summarize(rows: list[dict]) -> dict:
     def pct(key: str, subset: list[dict]) -> float:
         return round(100 * sum(r[key] for r in subset) / len(subset), 1) if subset else 0.0
 
-    arabic = [r for r in rows if r["lang"] == "ar"]
-    english = [r for r in rows if r["lang"] == "en"]
     return {
         "questions": total,
         "correct_pct": pct("correct", rows),
-        "correct_pct_en": pct("correct", english),
-        "correct_pct_ar": pct("correct", arabic),
+        "correct_pct_en": pct("correct", rows),
         "code_success_first_try_pct": pct("first_try_ok", rows),
         "code_success_after_autofix_pct": pct("final_ok", rows),
         "avg_seconds": round(sum(r["seconds"] for r in rows) / total, 2),

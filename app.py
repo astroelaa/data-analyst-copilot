@@ -8,7 +8,7 @@ DEFAULT_CSV = "data/sales.csv"
 
 st.set_page_config(page_title="Data Analyst Copilot", layout="wide")
 st.title("Data Analyst Copilot")
-st.caption("Ask in Arabic or English. The data dictionary in data/data_dictionary.md describes sales.csv.")
+st.caption("Ask questions in English. The data dictionary in data/data_dictionary.md describes sales.csv.")
 
 
 @st.cache_resource

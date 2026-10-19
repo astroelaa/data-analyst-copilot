@@ -24,7 +24,7 @@ STRONG_MODEL=gemini-3.8-flash
 .\.venv\Scripts\streamlit run app.py
 ```
 
-Open `http://localhost:8501`, upload a compatible CSV if needed, and ask a question in English or Arabic.
+Open `http://localhost:8501`, upload a compatible CSV if needed, and ask a question in English.
 
 ## Tests
 
@@ -43,7 +43,7 @@ The test suite has 15 passing unit tests.
 
 ## Evaluation
 
-The evaluation contains 15 reference-answer questions. In the completed run, all 8 questions that reached the model returned correct results, including 8/8 English questions. The remaining questions were blocked by Gemini free-tier quota exhaustion, with one earlier request also failing with a 504 timeout. Arabic questions could not be evaluated in that run. An Arabic routing fix was added afterward in commit `5102926`.
+The evaluation contains 11 English reference-answer questions. In the completed run, 8 questions that reached the model returned correct results. The remaining questions were blocked by Gemini free-tier quota exhaustion, with one earlier request also failing with a 504 timeout.
 
 ## Limitations
 

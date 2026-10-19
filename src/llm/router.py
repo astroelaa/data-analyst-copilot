@@ -6,8 +6,6 @@ from src.llm.client import generate
 COMPLEX_WORDS = (
     "group", "compare", "trend", "correlation", "percentage", "growth",
     "monthly", "per month", "ratio",
-    "قارن", "مقارنة", "اتجاه", "ارتباط", "نسبة", "نمو", "شهري",
-    "إيراد", "إيرادات", "منطقة", "فئة", "طلبات", "أعلى", "منتجات",
 )
 LONG_QUESTION_WORDS = 15
 
