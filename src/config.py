@@ -6,8 +6,26 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
-CHEAP_MODEL = os.getenv("CHEAP_MODEL")
-STRONG_MODEL = os.getenv("STRONG_MODEL")
-EMBED_MODEL = os.getenv("EMBED_MODEL", "gemini-embedding-001")
+try:
+    import streamlit as st
+except ImportError:
+    st = None
+
+
+def setting(name: str, default: str | None = None) -> str | None:
+    value = os.getenv(name)
+    if value:
+        return value
+    if st is not None:
+        try:
+            return st.secrets.get(name, default)
+        except st.errors.StreamlitSecretNotFoundError:
+            return default
+    return default
+
+
+GEMINI_API_KEY = setting("GEMINI_API_KEY")
+CHEAP_MODEL = setting("CHEAP_MODEL")
+STRONG_MODEL = setting("STRONG_MODEL")
+EMBED_MODEL = setting("EMBED_MODEL", "gemini-embedding-001")
 PRICES = json.loads((Path(__file__).resolve().parent.parent / "prices.json").read_text())
