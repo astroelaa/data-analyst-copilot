@@ -21,7 +21,7 @@ main.py                CLI entrypoint
 src/                   Agent, LLM, RAG, schemas, and prompts
 data/                  Default sales CSV and data dictionary
 evaluation/            Questions, results, and evaluation runner
-tests/                 Local validation tests, kept outside the deployed repository
+tests/                 Not tracked; historical validation tests remain outside the deployed repository
 scripts/               Dataset generation and model-list utilities
 README.md              Setup, architecture, deployment, and evaluation docs
 docs/PROJECT_HANDOFF.md Current implementation handoff
@@ -51,7 +51,7 @@ Unknown Groq models currently use zero configured cost until their prices are ad
 
 ## Validation
 
-The implementation was validated with 35 tests covering provider fallback, agent retries, uploaded-data profiling, chart modes, and execution safety. Test files are intentionally kept outside the deployed repository for manual use.
+The current repository does not include the historical 35-test suite. The active validation uses compilation, direct smoke tests, Streamlit startup checks, and the 11-question evaluation. The latest evaluation reached 11/11 correct with 100% first-try and final code success, averaging 0.05 seconds per question.
 
 Run the evaluation from the repository root:
 

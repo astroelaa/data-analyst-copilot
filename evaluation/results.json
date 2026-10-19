@@ -4,7 +4,7 @@
     "correct_pct": 100.0,
     "code_success_first_try_pct": 100.0,
     "code_success_after_autofix_pct": 100.0,
-    "avg_seconds": 0.1
+    "avg_seconds": 0.05
   },
   "rows": [
     {
@@ -19,7 +19,7 @@
       "model": "local-fallback",
       "code": "result = df.groupby('product')['revenue'].sum().nlargest(5).reset_index()",
       "error": null,
-      "seconds": 0.74
+      "seconds": 0.18
     },
     {
       "id": "q02",
@@ -47,7 +47,7 @@
       "model": "local-fallback",
       "code": "result = pd.DataFrame({'order_count': [df[df['region'] == 'Cairo']['order_id'].nunique()]})",
       "error": null,
-      "seconds": 0.02
+      "seconds": 0.03
     },
     {
       "id": "q04",
@@ -159,7 +159,7 @@
       "model": "local-fallback",
       "code": "result = df[df['category'].isin(['Electronics', 'Furniture'])].groupby('category')['revenue'].sum().reset_index()",
       "error": null,
-      "seconds": 0.07
+      "seconds": 0.08
     }
   ]
 }

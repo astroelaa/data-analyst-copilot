@@ -36,7 +36,7 @@ Open `http://localhost:8501`, upload a CSV, and ask an English question about it
 3. Type a normal English question in the chat box.
 4. Watch the status message while the agent profiles the uploaded data, creates a plan, and runs the pandas code.
 5. Review the goal, steps, generated code, result table, and chart.
-6. Expand **What the agent did** to inspect the tool trace and **Analysis details** to see the model, tier, token usage, cost estimate, and citations.
+6. Expand **What the agent did** to inspect the tool trace and **Analysis details** to see token usage, cost estimate, and citations.
 
 Example questions:
 
@@ -88,8 +88,7 @@ flowchart LR
     T --> DP[describe_data]
     T --> RP[run_pandas]
     T --> PC[plot_chart]
-    V --> Q[Result verification]
-    Q -->|valid| T
+    T --> Q[Result verification]
     Q -->|invalid| X[One repair attempt]
     L --> T
     T --> O[Result, trace, citations, session history]
@@ -134,7 +133,7 @@ The local layer is intentionally conservative. It handles basic schema questions
 
 ## Validation
 
-The project was validated with 35 automated tests covering uploaded-data profiling, dynamic planner context, provider fallback, agent retries, chart modes, and execution safety. The test files are kept outside the deployed repository so you can run or paste them into your own development workspace.
+The historical 35-test suite is not included in the deployed repository. Current validation uses Python compilation, direct agent smoke tests, custom uploaded-data checks, Streamlit startup checks, and the evaluation below.
 
 ## Evaluation
 
@@ -147,7 +146,7 @@ The evaluation contains 11 English reference-answer questions. The latest clean 
 | Overall correctness | 100.0% |
 | First-try code success | 100.0% |
 | Code success after auto-fix | 100.0% |
-| Average time per question | 7.30 seconds |
+| Average time per question | 0.05 seconds |
 
 Run it from the repository root with:
 
@@ -161,6 +160,6 @@ The recorded rows identify the provider used for each question. The benchmark me
 
 - Gemini free-tier quota is limited to 20 requests per day per model and can prevent a full evaluation or live demo.
 - Groq is the primary hosted provider for deployment availability, while Gemini remains configured as a second provider and fallback. The local fallback does not replace the hosted LLM layer.
-- The local layer is not an unlimited language model. Production deployments should add rate limiting, caching, and a higher-quota or secondary model provider for many users.
+- The local layer is not an unlimited language model. Open-ended questions on arbitrary datasets need a configured hosted provider. Production deployments should add rate limiting, caching, and a higher-quota or secondary model provider for many users.
 - The sales data is synthetic.
 - `prices.json` contains configured standard Flash price estimates, but actual billing and account-specific pricing are not validated.
