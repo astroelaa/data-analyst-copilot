@@ -26,6 +26,15 @@ STRONG_MODEL=gemini-3.8-flash
 
 Open `http://localhost:8501`, upload a compatible CSV if needed, and ask a question in English.
 
+For Streamlit Community Cloud, add these values under App settings > Secrets:
+
+```toml
+GEMINI_API_KEY = "your_api_key"
+CHEAP_MODEL = "gemini-3.7-flash"
+STRONG_MODEL = "gemini-3.8-flash"
+EMBED_MODEL = "gemini-embedding-001"
+```
+
 ## Tests
 
 ```powershell
