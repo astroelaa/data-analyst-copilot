@@ -1,4 +1,6 @@
 {
   "gemini-3.7-flash": {"input": 0.75, "output": 3.75},
-  "gemini-3.8-flash": {"input": 0.75, "output": 3.75}
+  "gemini-3.8-flash": {"input": 0.75, "output": 3.75},
+  "openai/gpt-oss-20b": {"input": 0.075, "output": 0.30},
+  "openai/gpt-oss-120b": {"input": 0.15, "output": 0.60}
 }
